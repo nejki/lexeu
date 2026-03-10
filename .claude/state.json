@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Shield logo: tight crop, full favicon set for all platforms, logo 44px in nav+footer, OG image generated",
-    "commits": ["87b389d", "cfe5fd7"]
+    "summary": "Replaced logo/favicon with simplified shield design, all sizes regenerated edge-to-edge",
+    "commits": ["b16e4ee"]
   },
   "backlog": [
     {
@@ -33,6 +33,7 @@
     }
   ],
   "shipped": [
+    "Simplified shield logo: regenerated all favicon/icon sizes edge-to-edge, new SVG favicon",
     "Shield logo: tight crop, full favicon set (ico/png/apple/android/ms), OG image, web manifest",
     "Hero chat demo as flowing feed with scroll + top fade mask",
     "Pricing recommended badge clip fix (inline instead of absolute)",
