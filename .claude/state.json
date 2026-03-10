@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Added 12 SEO content page routes (delovno-pravo hub + sub-pages, pogodbe, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog). Full ~1,900 word copy on /delovno-pravo/ with FAQ schema. Shared ContentLayout with breadcrumbs + CTA.",
-    "commits": ["3733f88"]
+    "summary": "Fixed hero chat auto-scroll: no longer force-scrolls when user scrolls up, preventing animation stutter. Also pushed prior pricing fix and eslint upgrade.",
+    "commits": ["a19613b", "f1e088e", "8e2a7fa"]
   },
   "backlog": [
     {
@@ -45,15 +45,15 @@
     }
   ],
   "shipped": [
+    "Hero chat: stop force-scrolling when user scrolls up",
+    "ESLint setup upgraded for Next.js 16, all lint errors fixed",
+    "Pricing overflow fix for Po povpraševanju text",
     "12 SEO content pages: delovno-pravo hub (full copy + FAQ schema), sub-pages, pogodbe, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog",
     "Simplified shield logo: regenerated all favicon/icon sizes edge-to-edge, new SVG favicon",
     "Shield logo: tight crop, full favicon set (ico/png/apple/android/ms), OG image, web manifest",
     "Hero chat demo as flowing feed with scroll + top fade mask",
     "Pricing recommended badge clip fix (inline instead of absolute)",
     "Interactive AI chat demo in hero section — typing animation with 6 legal Q&A pairs",
-    "FAQ rewrite with objection-handling copy + updated FAQPage schema",
-    "CTA simplified with centered layout, €15 anchor, ghost link",
-    "Footer restructured: 3 columns, <p> headers, social icons, company details",
-    "SEO meta tags, OG tags, heading hierarchy, pricing overhaul with comparison table"
+    "FAQ rewrite with objection-handling copy + updated FAQPage schema"
   ]
 }
