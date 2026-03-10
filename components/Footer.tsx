@@ -4,9 +4,21 @@ const col1 = [
   { label: "Kako deluje", href: "#namen" },
   { label: "Modeli", href: "#modeli" },
   { label: "Cenik", href: "#cenik" },
+  { label: "Za podjetja", href: "/za-podjetja/" },
+  { label: "Za pravnike", href: "/za-pravnike/" },
+  { label: "Navodila", href: "/navodila/" },
+  { label: "Blog", href: "/blog/" },
 ];
 
 const col2 = [
+  { label: "Delovno pravo", href: "/delovno-pravo/" },
+  { label: "Pogodbe", href: "/pogodbe/" },
+  { label: "Dedovanje", href: "/dedovanje/" },
+  { label: "Družinsko pravo", href: "/druzinsko-pravo/" },
+  { label: "Brezplačna pravna pomoč", href: "/brezplacna-pravna-pomoc/" },
+];
+
+const col3 = [
   { label: "Pogoji uporabe", href: "https://www.aikrpan.com/pogoji/" },
   { label: "Politika zasebnosti", href: "https://www.aikrpan.com/zasebnost/" },
   { label: "Kontakt", href: "mailto:info@aikrpan.com" },
@@ -47,7 +59,7 @@ export default function Footer() {
     <footer className="border-t border-site-border">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-16 pb-10">
         {/* Top */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16 mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-12 mb-14">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
@@ -90,10 +102,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 2: Pravno */}
+          {/* Column 2: Pravna področja */}
           <div>
             <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
-              Pravno
+              Pravna področja
             </p>
             <ul className="flex flex-col gap-3">
               {col2.map((l) => (
@@ -109,7 +121,26 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Podjetje */}
+          {/* Column 3: Pravno */}
+          <div>
+            <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
+              Pravno
+            </p>
+            <ul className="flex flex-col gap-3">
+              {col3.map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    className="text-[14px] text-site-muted hover:text-sage-dark transition-colors duration-200"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Podjetje */}
           <div>
             <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
               Podjetje

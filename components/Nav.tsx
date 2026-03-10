@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Namen", href: "#namen" },
   { label: "Modeli", href: "#modeli" },
   { label: "Cenik", href: "#cenik" },
-  { label: "Navodila", href: "https://www.aikrpan.com/video-navodila/" },
+  { label: "Navodila", href: "/navodila/" },
   { label: "Mediji", href: "#mediji" },
 ];
 
