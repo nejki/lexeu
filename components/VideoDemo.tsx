@@ -27,7 +27,7 @@ export default function VideoDemo() {
           <div className="rounded-xl overflow-hidden border border-site-border shadow-lg bg-stone-dark">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://www.aikrpan.com/wp-content/uploads/2024/09/image00001.gif"
+              src="/demo.gif"
               alt="AI KRPAN v akciji — demo"
               className="w-full h-auto block"
               loading="lazy"
