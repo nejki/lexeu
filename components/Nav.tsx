@@ -39,7 +39,7 @@ export default function Nav() {
       >
         {/* Logo */}
         <a href="#" aria-label="AI KRPAN — domov">
-          <Logo variant="full" size={32} />
+          <Logo variant="full" size={44} />
         </a>
 
         {/* Links — desktop */}
