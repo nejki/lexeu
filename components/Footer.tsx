@@ -67,8 +67,8 @@ export default function Footer() {
           </p>
           <p className="text-[13px] text-site-muted">
             Ustvaril{" "}
-            <a href="https://stejt.si" className="hover:text-sage-dark transition-colors duration-200">
-              Stejt digital agency
+            <a href="https://futuristica.si" className="hover:text-sage-dark transition-colors duration-200">
+              Futuristica d.o.o.
             </a>
           </p>
         </div>
