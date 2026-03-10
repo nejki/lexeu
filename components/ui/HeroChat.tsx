@@ -64,34 +64,31 @@ export function HeroChat() {
   ]);
   const [phase, setPhase] = useState<"typing-q" | "thinking" | "typing-a" | "pause">("typing-q");
   const nextIdx = useRef(1);
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const mounted = useRef(true);
-
-  const clear = () => { if (timer.current) clearTimeout(timer.current); };
 
   /* auto-scroll to bottom */
   const scrollToBottom = useCallback(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTo({
-        top: scrollRef.current.scrollHeight,
-        behavior: "smooth",
-      });
-    }
+    requestAnimationFrame(() => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollTo({
+          top: scrollRef.current.scrollHeight,
+          behavior: "smooth",
+        });
+      }
+    });
   }, []);
 
   /* get the current (last) entry */
   const current = entries[entries.length - 1];
 
-  /* main animation loop */
+  /* main animation loop — each phase schedules one timeout */
   useEffect(() => {
-    mounted.current = true;
     if (!current) return;
+    let id: ReturnType<typeof setTimeout>;
 
     if (phase === "typing-q") {
       if (current.qVisible.length < current.q.length) {
-        timer.current = setTimeout(() => {
-          if (!mounted.current) return;
+        id = setTimeout(() => {
           setEntries((prev) => {
             const next = [...prev];
             const last = { ...next[next.length - 1] };
@@ -102,16 +99,12 @@ export function HeroChat() {
           scrollToBottom();
         }, Q_CHAR_MS);
       } else {
-        timer.current = setTimeout(() => {
-          if (!mounted.current) return;
-          setPhase("thinking");
-        }, 200);
+        id = setTimeout(() => setPhase("thinking"), 200);
       }
     }
 
     if (phase === "thinking") {
-      timer.current = setTimeout(() => {
-        if (!mounted.current) return;
+      id = setTimeout(() => {
         setPhase("typing-a");
         scrollToBottom();
       }, THINKING_MS);
@@ -119,8 +112,7 @@ export function HeroChat() {
 
     if (phase === "typing-a") {
       if (current.aVisible.length < current.a.length) {
-        timer.current = setTimeout(() => {
-          if (!mounted.current) return;
+        id = setTimeout(() => {
           setEntries((prev) => {
             const next = [...prev];
             const last = { ...next[next.length - 1] };
@@ -131,35 +123,37 @@ export function HeroChat() {
           scrollToBottom();
         }, A_CHAR_MS);
       } else {
-        /* mark done, pause, then add next */
+        // mark current as done
         setEntries((prev) => {
           const next = [...prev];
           next[next.length - 1] = { ...next[next.length - 1], done: true };
           return next;
         });
         setPhase("pause");
-        timer.current = setTimeout(() => {
-          if (!mounted.current) return;
-          const convIdx = nextIdx.current % conversations.length;
-          nextIdx.current++;
-          setEntries((prev) => [
-            ...prev,
-            {
-              id: nextIdx.current,
-              q: conversations[convIdx].q,
-              a: conversations[convIdx].a,
-              qVisible: "",
-              aVisible: "",
-              done: false,
-            },
-          ]);
-          setPhase("typing-q");
-          scrollToBottom();
-        }, PAUSE_AFTER_A);
       }
     }
 
-    return () => { clear(); mounted.current = false; };
+    if (phase === "pause") {
+      id = setTimeout(() => {
+        const convIdx = nextIdx.current % conversations.length;
+        nextIdx.current++;
+        setEntries((prev) => [
+          ...prev,
+          {
+            id: Date.now(),
+            q: conversations[convIdx].q,
+            a: conversations[convIdx].a,
+            qVisible: "",
+            aVisible: "",
+            done: false,
+          },
+        ]);
+        setPhase("typing-q");
+        scrollToBottom();
+      }, PAUSE_AFTER_A);
+    }
+
+    return () => clearTimeout(id);
   }, [phase, current, scrollToBottom]);
 
   /* trim old entries to avoid unbounded growth */
@@ -175,7 +169,6 @@ export function HeroChat() {
 
       {/* Scrollable chat feed */}
       <div ref={scrollRef} className="hero-chat-feed">
-        {/* Top fade mask is handled by CSS */}
         {entries.map((entry) => (
           <div key={entry.id} className="hero-chat-entry">
             {/* Question */}
