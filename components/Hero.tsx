@@ -1,6 +1,6 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
-import { CountUp } from "@/components/ui/CountUp";
+import { HeroChat } from "@/components/ui/HeroChat";
 import { IconBolt, IconScales, IconDocument, IconGlobe } from "@/components/ui/Icons";
 
 const features = [
@@ -64,16 +64,11 @@ export default function Hero() {
           §
         </span>
 
-        {/* Big stat */}
-        <div className="mb-12">
-          <p className="font-serif text-[80px] font-semibold leading-none text-white mb-2">
-            <CountUp target={6} duration={1200} />
-          </p>
-          <p className="text-sm text-white/60 font-normal">Specializiranih AI modelov</p>
-        </div>
+        {/* Interactive AI demo */}
+        <HeroChat />
 
         {/* Divider */}
-        <div className="h-px bg-white/10 mb-10" />
+        <div className="h-px bg-white/10 my-10" />
 
         {/* Feature list */}
         <ul className="flex flex-col gap-6">
