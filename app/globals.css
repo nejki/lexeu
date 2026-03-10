@@ -108,7 +108,6 @@
   max-height: 340px;
   overflow-y: auto;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   -webkit-mask-image: linear-gradient(
     to bottom,
     transparent 0%,
@@ -272,6 +271,28 @@
   border-radius: 50%;
   background: rgba(122, 158, 142, 0.7);
   animation: heroChatPulse 2s ease-in-out infinite;
+}
+
+/* Scroll position indicator */
+.hero-chat-scroll-track {
+  position: absolute;
+  right: 4px;
+  top: 15%;
+  bottom: 0;
+  width: 3px;
+  z-index: 2;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hero-chat-scroll-thumb {
+  position: absolute;
+  width: 100%;
+  height: 28px;
+  border-radius: 3px;
+  background: rgba(122, 158, 142, 0.45);
+  transform: translateY(-50%);
+  transition: top 0.15s ease-out;
 }
 
 /* Keyframes */

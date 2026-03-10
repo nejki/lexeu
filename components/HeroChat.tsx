@@ -66,15 +66,39 @@ export function HeroChat() {
   const nextIdx = useRef(1);
   const scrollRef = useRef<HTMLDivElement>(null);
   const userScrolledUp = useRef(false);
+  const isAutoScrolling = useRef(false);
+  const [scrollProgress, setScrollProgress] = useState(1); // 0-1, 1 = at bottom
+  const [showTrack, setShowTrack] = useState(false);
 
   /* detect if user scrolled away from bottom */
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
     const onScroll = () => {
+      // Update scroll progress for the indicator
+      const maxScroll = el.scrollHeight - el.clientHeight;
+      if (maxScroll > 0) {
+        setScrollProgress(el.scrollTop / maxScroll);
+        setShowTrack(maxScroll > 20);
+      } else {
+        setScrollProgress(1);
+        setShowTrack(false);
+      }
+
+      // If this scroll was triggered by our auto-scroll, ignore it
+      if (isAutoScrolling.current) return;
+
       const threshold = 40;
-      userScrolledUp.current =
-        el.scrollTop + el.clientHeight < el.scrollHeight - threshold;
+      const isAtBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - threshold;
+
+      if (!isAtBottom) {
+        // User scrolled up — lock it
+        userScrolledUp.current = true;
+      }
+      // Only unlock if user manually scrolls back to bottom
+      if (isAtBottom && userScrolledUp.current) {
+        userScrolledUp.current = false;
+      }
     };
     el.addEventListener("scroll", onScroll, { passive: true });
     return () => el.removeEventListener("scroll", onScroll);
@@ -83,13 +107,15 @@ export function HeroChat() {
   /* auto-scroll to bottom — only if user hasn't scrolled up */
   const scrollToBottom = useCallback(() => {
     if (userScrolledUp.current) return;
+    const el = scrollRef.current;
+    if (!el) return;
+    isAutoScrolling.current = true;
     requestAnimationFrame(() => {
-      if (scrollRef.current) {
-        scrollRef.current.scrollTo({
-          top: scrollRef.current.scrollHeight,
-          behavior: "smooth",
-        });
-      }
+      el.scrollTop = el.scrollHeight;
+      // Reset flag after scroll event fires
+      requestAnimationFrame(() => {
+        isAutoScrolling.current = false;
+      });
     });
   }, []);
 
@@ -222,6 +248,16 @@ export function HeroChat() {
           </div>
         ))}
       </div>
+
+      {/* Scroll position indicator */}
+      {showTrack && (
+        <div className="hero-chat-scroll-track">
+          <div
+            className="hero-chat-scroll-thumb"
+            style={{ top: `${scrollProgress * 100}%` }}
+          />
+        </div>
+      )}
 
       {/* Bottom tag */}
       <div className="hero-chat-tag">
