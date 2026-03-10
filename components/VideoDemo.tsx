@@ -1,6 +1,3 @@
-// TODO: Replace VIDEO_URL with the actual YouTube/Vimeo embed URL
-const VIDEO_URL = "https://www.youtube.com/embed/PLACEHOLDER_ID";
-
 export default function VideoDemo() {
   return (
     <section id="demo" className="bg-site-white border-t border-b border-site-border py-24">
@@ -26,14 +23,14 @@ export default function VideoDemo() {
             </a>
           </div>
 
-          {/* Video embed */}
-          <div className="rounded-xl overflow-hidden border border-site-border shadow-lg aspect-video bg-stone-dark">
-            <iframe
-              src={VIDEO_URL}
-              title="AI KRPAN demo video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
+          {/* GIF demo */}
+          <div className="rounded-xl overflow-hidden border border-site-border shadow-lg bg-stone-dark">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://www.aikrpan.com/wp-content/uploads/2024/09/image00001.gif"
+              alt="AI KRPAN v akciji — demo"
+              className="w-full h-auto block"
+              loading="lazy"
             />
           </div>
         </div>
