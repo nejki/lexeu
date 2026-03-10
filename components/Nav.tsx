@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { IconMenu, IconX } from "@/components/ui/Icons";
 import Logo from "@/components/Logo";
 
@@ -28,6 +29,13 @@ export default function Nav() {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  /* On subpages, prefix hash links with / so they navigate back to landing */
+  const resolveHref = (href: string) =>
+    !isHome && href.startsWith("#") ? `/${href}` : href;
+
   return (
     <>
       <nav
@@ -38,7 +46,7 @@ export default function Nav() {
         }`}
       >
         {/* Logo */}
-        <a href="#" aria-label="AI KRPAN — domov">
+        <a href="/" aria-label="AI KRPAN — domov">
           <Logo variant="full" size={44} />
         </a>
 
@@ -47,7 +55,7 @@ export default function Nav() {
           {navLinks.map((link) => (
             <a
               key={link.label}
-              href={link.href}
+              href={resolveHref(link.href)}
               className="text-[13px] font-medium tracking-[0.04em] uppercase text-site-mid hover:text-sage-dark transition-colors duration-200"
             >
               {link.label}
@@ -64,7 +72,7 @@ export default function Nav() {
             Prijava
           </a>
           <a
-            href="#cenik"
+            href={resolveHref("#cenik")}
             className="bg-sage-dark text-white px-5 py-2.5 rounded-sm text-[12px] font-semibold tracking-[0.08em] uppercase hover:bg-sage transition-colors duration-200"
           >
             Naroči se
@@ -89,7 +97,7 @@ export default function Nav() {
         {navLinks.map((link, i) => (
           <a
             key={link.label}
-            href={link.href}
+            href={resolveHref(link.href)}
             onClick={() => setOpen(false)}
             style={{ transitionDelay: open ? `${i * 40}ms` : "0ms" }}
             className={`py-4 border-b border-site-border text-[15px] font-medium tracking-[0.05em] uppercase text-site-mid hover:text-sage-dark transition-all duration-200 ${
@@ -108,7 +116,7 @@ export default function Nav() {
             Prijava
           </a>
           <a
-            href="#cenik"
+            href={resolveHref("#cenik")}
             onClick={() => setOpen(false)}
             className="text-center bg-sage-dark text-white py-3.5 rounded-sm text-[13px] font-semibold tracking-[0.06em] uppercase hover:bg-sage transition-colors duration-200"
           >
