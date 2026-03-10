@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Updated meta tags (title, description, OG), restructured heading hierarchy (H1>H2>H3), overhauled pricing section with ROI framing, comparison table, and 5-tier plans",
-    "commits": ["3f70bab"]
+    "summary": "Full landing page copy overhaul: meta/OG tags, heading hierarchy, pricing with ROI framing, FAQ objection-handling, CTA simplification, footer restructure",
+    "commits": ["3f70bab", "bc28072", "6562f08", "c22d817"]
   },
   "backlog": [
     {
@@ -32,18 +32,19 @@
       "priority": "low"
     },
     {
-      "id": "next16-build",
-      "title": "Next.js 16 _global-error build bug",
-      "status": "resolved",
-      "desc": "Fixed by adding app/global-error.tsx. Build passes cleanly."
+      "id": "zasebnost-page",
+      "title": "Create privacy policy page",
+      "desc": "Footer links to /zasebnost/ but page doesn't exist yet. Needs content for Politika zasebnosti.",
+      "priority": "medium"
     }
   ],
   "shipped": [
+    "FAQ rewrite with objection-handling copy + updated FAQPage schema",
+    "CTA simplified with centered layout, €15 anchor, ghost link",
+    "Footer restructured: 3 columns, <p> headers, social icons, company details",
     "SEO meta tags, OG tags, heading hierarchy, pricing overhaul with comparison table",
-    "Next.js 16 + Tailwind landing page",
-    "All 10 sections: Nav, Hero, Marquee, About, VideoDemo, Models, Pricing, Testimonials, FAQ, CTA, Footer",
-    "SEO: 6x JSON-LD schema, sitemap.xml, robots.txt, canonical, hreflang, OG, Twitter",
-    "GIF optimized: 28MB → 3MB MP4 / 2.6MB WebM",
+    "Next.js 16 + Tailwind landing page with all sections",
+    "SEO: 6x JSON-LD schema, sitemap.xml, robots.txt, canonical, hreflang",
     "Deployed to Vercel at aikrpan-git-main-futuristica.vercel.app"
   ]
 }
