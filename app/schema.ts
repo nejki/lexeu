@@ -7,9 +7,9 @@ export const organizationSchema = {
   url: "https://www.aikrpan.com",
   logo: {
     "@type": "ImageObject",
-    url: "https://www.aikrpan.com/logo.png",
-    width: 200,
-    height: 60,
+    url: "https://www.aikrpan.com/logo-256.png",
+    width: 256,
+    height: 256,
   },
   contactPoint: {
     "@type": "ContactPoint",

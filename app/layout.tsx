@@ -106,10 +106,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
-    apple: "/favicon.svg",
+    apple: "/apple-touch-icon.png",
+    other: [
+      { rel: "mask-icon", url: "/favicon.svg", color: "#4A7060" },
+    ],
   },
+  manifest: "/site.webmanifest",
 };
 
 const schemas = [
@@ -129,6 +135,9 @@ export default function RootLayout({
   return (
     <html lang="sl" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
+        <meta name="theme-color" content="#4A7060" />
+        <meta name="msapplication-TileColor" content="#4A7060" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
