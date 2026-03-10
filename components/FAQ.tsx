@@ -4,32 +4,32 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Kaj je AI KRPAN?",
-    a: "AI KRPAN je napreden pravni pomočnik, ki temelji na umetni inteligenci. Analizira celotno slovensko zakonodajo in sodno prakso ter odgovori na pravna vprašanja v sekundah — z navajanjem konkretnih zakonskih členov in sodb.",
+    q: "Ali AI KRPAN nadomešča odvetnika?",
+    a: "Ne. AI KRPAN je orodje za pravno orientacijo — pomaga vam razumeti, kje stojite, preden se odločite za naslednji korak. Za kompleksne zadeve, sodno zastopanje ali pravno zavezujoče dokumente potrebujete odvetnika. Mnogi odvetniki AI KRPAN uporabljajo kot izhodišče za lastno raziskavo.",
   },
   {
-    q: "Za koga je AI KRPAN primeren?",
-    a: "Primeren je za odvetnike, pravnike, notarje, računovodje, stečajne upravitelje in podjetja vseh velikosti, ki potrebujejo pravno jasnost brez dragih svetovalnih ur.",
+    q: "Kako zanesljivi so odgovori?",
+    a: "Vsak odgovor navede zakonske člene in sodne odločbe, na katerih temelji. To pomeni, da lahko vsako trditev sami preverite v uradnih virih. AI KRPAN ne ugiba — odgovarja na podlagi dejanske zakonodaje in sodne prakse.",
   },
   {
-    q: "Ali AI KRPAN pokriva EU zakonodajo?",
-    a: "Da. AI KRPAN vključuje poseben model za EU zakonodajo — direktive, uredbe in ostale predpise Evropske unije, poleg celotne slovenske zakonodaje.",
+    q: "Katere pravne teme pokriva?",
+    a: "Slovensko zakonodajo v celoti — civilno, delovno, gospodarsko, kazensko pravo. Dejansko sodno prakso slovenskih sodišč. Pravo EU z direktivami, uredbami in pravilniki. Smernice informacijske pooblaščenke za varstvo osebnih podatkov in GDPR.",
   },
   {
-    q: "Kako hitro dobim odgovor?",
-    a: "AI KRPAN odgovori povprečno v 3 sekundah. Vsak odgovor je podkrepljen s konkretnimi zakonskimi členi in relevantno sodno prakso.",
+    q: "Koliko časa potrebujem za odgovor?",
+    a: "Povprečno 1–2 minuti. Zastavite vprašanje v naravnem jeziku — kot bi ga zastavili odvetniku. AI KRPAN analizira vaše vprašanje, identificira relevantne pravne vire in oblikuje utemeljeno stališče.",
   },
   {
-    q: "Ali so moji podatki varni?",
-    a: "Da. Vaše poizvedbe in dokumenti niso nikoli deljeni z zunanjimi stranmi. AI KRPAN zagotavlja popolno zasebnost vaših pravnih vprašanj.",
+    q: "Ali so moja vprašanja zaupna?",
+    a: "Da. Vaša vprašanja in odgovori so zaupni in niso deljeni s tretjimi osebami. Sistem ne hrani vaših podatkov za učenje AI modela.",
   },
   {
-    q: "Ali lahko naložim lasten dokument?",
-    a: "Da. Model Document QA vam omogoča nalaganje lastnih dokumentov (pogodb, sodb, aktov) in postavljanje vprašanj neposredno o vsebini dokumenta.",
+    q: "Kako se AI KRPAN razlikuje od ChatGPT?",
+    a: "ChatGPT je splošno AI orodje brez dostopa do slovenske zakonodaje in sodne prakse. Pogosto halucinira — citira zakone in sodbe, ki ne obstajajo. AI KRPAN je specializiran za pravo: dostopa do dejanske zakonodaje in sodne prakse, vsak odgovor pa vsebuje preverljive navedbe virov.",
   },
   {
-    q: "Kaj se zgodi, ko porabim vsa vprašanja?",
-    a: "Vprašanja lahko kadarkoli dokupite, ne glede na paket. Paketi Mini in Standard nimajo datumske omejitve — vprašanja se ne iztečejo.",
+    q: "Ali potrebujem pravno predznanje?",
+    a: "Ne. Vprašanja postavljate v vsakdanjem jeziku. AI KRPAN razume kontekst in odgovori jasno — tudi če niste pravnik. Orodje je zasnovano tako za odvetnike kot za fizične osebe brez pravnega znanja.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function FAQ() {
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  open === i ? "max-h-48 pb-6" : "max-h-0"
+                  open === i ? "max-h-64 pb-6" : "max-h-0"
                 }`}
               >
                 <p className="text-[14px] text-site-mid leading-[1.8]">{faq.a}</p>

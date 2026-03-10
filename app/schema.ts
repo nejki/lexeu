@@ -147,58 +147,58 @@ export const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Kaj je AI KRPAN?",
+      name: "Ali AI KRPAN nadomešča odvetnika?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "AI KRPAN je napreden pravni pomočnik, ki temelji na umetni inteligenci. Analizira celotno slovensko zakonodajo in sodno prakso ter odgovori na pravna vprašanja v sekundah, pri čemer navaja konkretne zakonske člene in sodbe.",
+        text: "Ne. AI KRPAN je orodje za pravno orientacijo — pomaga vam razumeti, kje stojite, preden se odločite za naslednji korak. Za kompleksne zadeve, sodno zastopanje ali pravno zavezujoče dokumente potrebujete odvetnika. Mnogi odvetniki AI KRPAN uporabljajo kot izhodišče za lastno raziskavo.",
       },
     },
     {
       "@type": "Question",
-      name: "Za koga je AI KRPAN primeren?",
+      name: "Kako zanesljivi so odgovori?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "AI KRPAN je primeren za odvetnike, pravnike, notarje, računovodje, stečajne upravitelje in podjetja, ki potrebujejo pravno jasnost brez dragih svetovalnih ur.",
+        text: "Vsak odgovor navede zakonske člene in sodne odločbe, na katerih temelji. To pomeni, da lahko vsako trditev sami preverite v uradnih virih. AI KRPAN ne ugiba — odgovarja na podlagi dejanske zakonodaje in sodne prakse.",
       },
     },
     {
       "@type": "Question",
-      name: "Ali AI KRPAN pokriva EU zakonodajo?",
+      name: "Katere pravne teme pokriva AI KRPAN?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Da, AI KRPAN vključuje poseben model za EU zakonodajo — direktive, uredbe in ostale predpise Evropske unije.",
+        text: "Slovensko zakonodajo v celoti — civilno, delovno, gospodarsko, kazensko pravo. Dejansko sodno prakso slovenskih sodišč. Pravo EU z direktivami, uredbami in pravilniki. Smernice informacijske pooblaščenke za varstvo osebnih podatkov in GDPR.",
       },
     },
     {
       "@type": "Question",
-      name: "Kako hitro dobim odgovor?",
+      name: "Koliko časa potrebujem za odgovor?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "AI KRPAN odgovori povprečno v 3 sekundah. Vsak odgovor je podkrepljen s konkretnimi zakonskimi členi in relevantno sodno prakso.",
+        text: "Povprečno 1–2 minuti. Zastavite vprašanje v naravnem jeziku — kot bi ga zastavili odvetniku. AI KRPAN analizira vaše vprašanje, identificira relevantne pravne vire in oblikuje utemeljeno stališče.",
       },
     },
     {
       "@type": "Question",
-      name: "Ali so moji podatki varni?",
+      name: "Ali so moja vprašanja zaupna?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Da. Vaše poizvedbe in dokumenti niso nikoli deljeni z zunanjimi stranmi. AI KRPAN zagotavlja popolno zasebnost vaših pravnih vprašanj.",
+        text: "Da. Vaša vprašanja in odgovori so zaupni in niso deljeni s tretjimi osebami. Sistem ne hrani vaših podatkov za učenje AI modela.",
       },
     },
     {
       "@type": "Question",
-      name: "Kaj vključuje paket Mini?",
+      name: "Kako se AI KRPAN razlikuje od ChatGPT?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Paket Mini za 15 € vključuje 5 pravnih vprašanj brez datumske omejitve in dostop do vseh modelov.",
+        text: "ChatGPT je splošno AI orodje brez dostopa do slovenske zakonodaje in sodne prakse. Pogosto halucinira — citira zakone in sodbe, ki ne obstajajo. AI KRPAN je specializiran za pravo: dostopa do dejanske zakonodaje in sodne prakse, vsak odgovor pa vsebuje preverljive navedbe virov.",
       },
     },
     {
       "@type": "Question",
-      name: "Ali lahko naložim lasten dokument za analizo?",
+      name: "Ali potrebujem pravno predznanje?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Da. Model Document QA vam omogoča nalaganje lastnih dokumentov (pogodb, sodb, aktov) in postavljanje vprašanj neposredno o njih.",
+        text: "Ne. Vprašanja postavljate v vsakdanjem jeziku. AI KRPAN razume kontekst in odgovori jasno — tudi če niste pravnik. Orodje je zasnovano tako za odvetnike kot za fizične osebe brez pravnega znanja.",
       },
     },
   ],
