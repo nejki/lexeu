@@ -28,8 +28,8 @@ export default function About() {
       <FadeIn>
         <SectionLabel className="mb-5">Namen</SectionLabel>
         <h2 className="font-serif text-[clamp(36px,4vw,54px)] font-semibold leading-[1.1] mb-7 text-site-text">
-          Ne iščemo zakonov.{" "}
-          <em className="italic text-sage-dark">Razumemo jih.</em>
+          Pravna vprašanja zaslužijo{" "}
+          <em className="italic text-sage-dark">pravne odgovore</em>
         </h2>
         <p className="text-[15px] text-site-mid leading-[1.85] mb-5">
           Klasični pravni iskalniki vam pokažejo besedilo zakona. AI KRPAN ga

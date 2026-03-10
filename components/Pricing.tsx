@@ -2,9 +2,9 @@ const plans = [
   {
     name: "Mini",
     price: "€15",
-    per: "5 vprašanj · brez roka",
-    features: ["5 pravnih vprašanj", "Vsi modeli vključeni", "Brez datumske omejitve", "Dokup vprašanj možen"],
-    cta: "Naroči Mini",
+    per: "Enkratni nakup · 5 vprašanj",
+    desc: "Za posamezno pravno dilemo. Postavite vprašanje in v 2 minutah dobite utemeljeno stališče.",
+    cta: "Začnite z MINI →",
     href: "https://app.aikrpan.com",
     featured: false,
     recommended: false,
@@ -12,44 +12,65 @@ const plans = [
   {
     name: "Standard",
     price: "€35",
-    per: "15 vprašanj · brez roka",
-    features: ["15 pravnih vprašanj", "Vsi modeli vključeni", "Analiza dokumentov", "Dokup vprašanj možen"],
-    cta: "Naroči Standard",
+    per: "Enkratni nakup · 15 vprašanj",
+    desc: "Za temeljitejšo pravno raziskavo. Pokrijte več vidikov istega problema ali več različnih vprašanj.",
+    cta: "Izberite STANDARD →",
     href: "https://app.aikrpan.com",
     featured: false,
     recommended: false,
   },
   {
-    name: "Poslovni",
+    name: "Poslovni — mesečni",
     price: "€80",
     per: "/ mesec · 100 vprašanj",
-    features: [
-      "100 vprašanj/mesec",
-      "Vsi 6 modelov",
-      "Analiza dokumentov",
-      "Dokup vprašanj možen",
-      "Prioritetna podpora",
-    ],
-    cta: "Naroči Poslovni",
+    desc: "Za pisarne, ki se redno srečujejo s pravnimi vprašanji. Pravna usmeritev kadarkoli jo potrebujete.",
+    cta: "Izberite POSLOVNI →",
     href: "https://app.aikrpan.com",
     featured: true,
     recommended: true,
   },
   {
-    name: "Letni Poslovni",
+    name: "Poslovni — letni",
     price: "€960",
-    per: "/ leto · 1.200 vprašanj",
-    features: [
-      "1.200 vprašanj/leto",
-      "Prihranite 2 meseca",
-      "Vsi modeli vključeni",
-      "Dokup vprašanj možen",
-      "Prioritetna podpora",
-    ],
-    cta: "Naroči Letni",
+    per: "/ leto · 1.200 vprašanj · €0,80 na vprašanje",
+    desc: "Za pisarne, ki AI KRPAN uporabljajo vsak dan. Najnižja cena na vprašanje.",
+    cta: "Izberite letni paket →",
     href: "https://app.aikrpan.com",
     featured: false,
     recommended: false,
+  },
+  {
+    name: "Po meri",
+    price: "Po povpraševanju",
+    per: "",
+    desc: "Za organizacije s specifičnimi potrebami — več uporabnikov, prilagojena baza, integracija v obstoječe sisteme.",
+    cta: "Kontaktirajte nas →",
+    href: "https://www.aikrpan.com/#kontakt",
+    featured: false,
+    recommended: false,
+  },
+];
+
+const comparison = [
+  {
+    label: "Cena za osnovno usmeritev",
+    lawyer: "€150–300",
+    aikrpan: "€15 (5 vprašanj)",
+  },
+  {
+    label: "Čas do odgovora",
+    lawyer: "2–5 delovnih dni",
+    aikrpan: "2 minuti",
+  },
+  {
+    label: "Dostopnost",
+    lawyer: "Uradne ure",
+    aikrpan: "24/7",
+  },
+  {
+    label: "Navedeni pravni viri",
+    lawyer: "Odvisno od odvetnika",
+    aikrpan: "Vedno — zakonski členi + sodbe",
   },
 ];
 
@@ -57,24 +78,21 @@ export default function Pricing() {
   return (
     <section id="cenik" className="max-w-[1200px] mx-auto px-6 md:px-12 py-24">
       {/* Intro */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-end mb-14">
-        <div>
-          <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-4">
-            Cenik
-          </p>
-          <h2 className="font-serif text-[clamp(36px,4vw,52px)] font-semibold leading-[1.1] text-site-text">
-            Preprosto<br />in pošteno.
-          </h2>
-        </div>
-        <p className="text-[15px] text-site-mid leading-[1.8] lg:self-end">
-          Transparentne cene brez skritih stroškov. Paketi za vsakogar — od
-          posameznika do večje odvetniške pisarne. Vse cene vključujejo dostop
-          do vseh modelov.
+      <div className="mb-14">
+        <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-4">
+          Cenik
+        </p>
+        <h2 className="font-serif text-[clamp(36px,4vw,52px)] font-semibold leading-[1.1] text-site-text mb-5">
+          Cenik
+        </h2>
+        <p className="text-[17px] text-site-mid leading-[1.7] max-w-2xl">
+          Ura odvetnikovega časa stane €150–300. AI KRPAN vam da pravno
+          usmeritev od €3 na vprašanje.
         </p>
       </div>
 
       {/* Cards grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-site-border rounded-xl overflow-hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border border-site-border rounded-xl overflow-hidden">
         {plans.map((plan, i) => (
           <div
             key={plan.name}
@@ -88,7 +106,7 @@ export default function Pricing() {
           >
             {plan.recommended && (
               <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-warm text-white text-[10px] font-bold tracking-[0.1em] uppercase px-3 py-1 rounded-full whitespace-nowrap">
-                ✦ Priporočamo
+                Priporočamo
               </span>
             )}
 
@@ -96,29 +114,23 @@ export default function Pricing() {
               {plan.name}
             </p>
 
-            <p className={`font-serif text-[52px] font-semibold leading-none mb-1 ${plan.featured ? "text-white" : "text-site-text"}`}>
+            <p className={`font-serif text-[42px] font-semibold leading-none mb-1 ${plan.featured ? "text-white" : "text-site-text"} ${plan.price === "Po povpraševanju" ? "text-[24px]" : ""}`}>
               {plan.price}
             </p>
-            <p className={`text-[13px] ${plan.featured ? "text-white/60" : "text-site-muted"}`}>
-              {plan.per}
-            </p>
-            <p className={`text-[11px] mb-8 ${plan.featured ? "text-white/40" : "text-site-muted/70"}`}>
-              brez DDV
+            {plan.per && (
+              <p className={`text-[13px] ${plan.featured ? "text-white/60" : "text-site-muted"}`}>
+                {plan.per}
+              </p>
+            )}
+            <p className={`text-[11px] mb-6 ${plan.featured ? "text-white/40" : "text-site-muted/70"}`}>
+              {plan.price !== "Po povpraševanju" ? "brez DDV" : "\u00A0"}
             </p>
 
-            <div className={`h-px mb-7 ${plan.featured ? "bg-white/15" : "bg-site-border"}`} />
+            <div className={`h-px mb-6 ${plan.featured ? "bg-white/15" : "bg-site-border"}`} />
 
-            <ul className="flex flex-col gap-3 mb-9 flex-1">
-              {plan.features.map((f) => (
-                <li
-                  key={f}
-                  className={`text-[13px] leading-snug flex gap-2.5 ${plan.featured ? "text-white/80" : "text-site-mid"}`}
-                >
-                  <span className={`flex-shrink-0 font-normal ${plan.featured ? "text-sage-light" : "text-sage"}`}>—</span>
-                  {f}
-                </li>
-              ))}
-            </ul>
+            <p className={`text-[13px] leading-[1.7] mb-8 flex-1 ${plan.featured ? "text-white/80" : "text-site-mid"}`}>
+              {plan.desc}
+            </p>
 
             <a
               href={plan.href}
@@ -134,13 +146,35 @@ export default function Pricing() {
         ))}
       </div>
 
-      {/* Footer note */}
-      <p className="mt-8 text-center text-[13px] text-site-muted">
-        Potrebujete prilagojeni paket?{" "}
-        <a href="https://www.aikrpan.com/#kontakt" className="text-sage-dark underline underline-offset-2 hover:text-sage transition-colors">
-          Pišite nam
-        </a>{" "}
-        — pripravimo vam ponudbo po meri.
+      {/* Comparison table */}
+      <div className="mt-16">
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-site-border">
+                <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted"></th>
+                <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted">Odvetnik</th>
+                <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-sage-dark">AI KRPAN</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparison.map((row) => (
+                <tr key={row.label} className="border-b border-site-border last:border-b-0">
+                  <td className="py-5 px-4 text-[14px] font-semibold text-site-text">{row.label}</td>
+                  <td className="py-5 px-4 text-[14px] text-site-muted">{row.lawyer}</td>
+                  <td className="py-5 px-4 text-[14px] text-sage-dark font-medium">{row.aikrpan}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Disclaimer */}
+      <p className="mt-10 text-center text-[13px] text-site-muted leading-[1.7] max-w-2xl mx-auto">
+        AI KRPAN ne nadomešča odvetnika. Je orodje, ki vam pomaga razumeti
+        pravno situacijo, preden se odločite za naslednji korak — ali kot
+        dnevni pomočnik za pravne strokovnjake.
       </p>
     </section>
   );

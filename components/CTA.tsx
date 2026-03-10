@@ -16,8 +16,8 @@ export default function CTA() {
           {/* Left */}
           <FadeIn className="bg-sage-dark px-10 md:px-16 py-16">
             <h2 className="font-serif text-[clamp(40px,5vw,62px)] font-semibold leading-[1.05] text-white mb-6">
-              Začnite danes.<br />
-              <em className="italic text-sage-light">Pravo odgovorjeno.</em>
+              Postavite svoje prvo<br />
+              <em className="italic text-sage-light">pravno vprašanje</em>
             </h2>
             <p className="text-[16px] text-white/65 leading-[1.7] mb-10">
               Pridružite se stotim podjetjem in pravnikom, ki že varčujejo čas z

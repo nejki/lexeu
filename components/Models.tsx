@@ -52,19 +52,30 @@ export default function Models() {
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         {/* Header */}
         <FadeIn>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
-            <div>
-              <SectionLabel className="mb-4">Modeli</SectionLabel>
-              <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text">
-                6 specializiranih modelov
-              </h2>
+          <div className="mb-14">
+            <SectionLabel className="mb-4">Modeli</SectionLabel>
+            <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-10">
+              Zakaj pravniki izberejo{" "}
+              <em className="italic text-sage-dark">AI KRPAN</em>
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-14">
+              <div>
+                <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] font-semibold leading-[1.2] text-site-text mb-3">
+                  Stališče, analiza vključena
+                </h3>
+                <p className="text-[15px] text-site-mid leading-[1.85]">
+                  AI KRPAN ne samo išče — zavzame stališče in ga utemelji z zakonskimi členi ter sodno prakso.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] font-semibold leading-[1.2] text-site-text mb-3">
+                  6 specializiranih modelov
+                </h3>
+                <p className="text-[15px] text-site-mid leading-[1.85]">
+                  Od slovenskega prava do EU zakonodaje — vsak model je specializiran za svoje pravno področje.
+                </p>
+              </div>
             </div>
-            <a
-              href="https://app.aikrpan.com"
-              className="self-start sm:self-auto text-[13px] font-medium tracking-[0.04em] uppercase text-sage-dark hover:text-sage transition-colors duration-200"
-            >
-              Vsi modeli →
-            </a>
           </div>
         </FadeIn>
 

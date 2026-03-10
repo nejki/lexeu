@@ -37,8 +37,8 @@ export default function Testimonials() {
           <FadeIn className="lg:pt-2">
             <SectionLabel className="mb-5">Stranke</SectionLabel>
             <h2 className="font-serif text-[clamp(36px,4vw,52px)] font-semibold leading-[1.1] text-site-text">
-              Besede naših{" "}
-              <em className="italic text-sage-dark">uporabnikov</em>
+              Kaj pravijo{" "}
+              <em className="italic text-sage-dark">uporabniki</em>
             </h2>
           </FadeIn>
 

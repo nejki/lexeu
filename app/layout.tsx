@@ -30,11 +30,11 @@ const BASE_URL = "https://www.aikrpan.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "AI KRPAN — Najnaprednejši pravni AI v Sloveniji",
+    default: "Pravni nasvet z AI | zakonodaja in sodna praksa - AI KRPAN",
     template: "%s | AI KRPAN",
   },
   description:
-    "AI KRPAN analizira celotno slovensko zakonodajo in sodno prakso. Natančni, z zakonom utemeljeni pravni odgovori v sekundah. Za odvetnike, pravnike, podjetja.",
+    "AI KRPAN preučí vaše pravno vprašanje, zavzame stališče in ga utemelji z zakonskimi členi ter sodno prakso. Ceneje in hitreje od odvetnika. Od €15.",
   keywords: [
     "pravni AI",
     "AI pravo slovenija",
@@ -68,9 +68,9 @@ export const metadata: Metadata = {
     locale: "sl_SI",
     url: BASE_URL,
     siteName: "AI KRPAN",
-    title: "AI KRPAN — Najnaprednejši pravni AI v Sloveniji",
+    title: "AI KRPAN - Pravni nasvet, ne pravno iskanje",
     description:
-      "Natančni pravni odgovori, utemeljeni z zakonom in sodno prakso — v sekundah. Za odvetnike, notarje, računovodje in podjetja.",
+      "Postavite pravno vprašanje. Dobite stališče, utemeljeno z zakonskimi členi in sodno prakso. 6 AI modelov za slovensko in EU pravo. Od €15.",
     images: [
       {
         url: "/og-image.png",
@@ -84,9 +84,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@aikrpan",
     creator: "@aikrpan",
-    title: "AI KRPAN — Najnaprednejši pravni AI v Sloveniji",
+    title: "AI KRPAN - Pravni nasvet, ne pravno iskanje",
     description:
-      "Natančni pravni odgovori, utemeljeni z zakonom in sodno prakso — v sekundah.",
+      "Postavite pravno vprašanje. Dobite stališče, utemeljeno z zakonskimi členi in sodno prakso. 6 AI modelov za slovensko in EU pravo. Od €15.",
     images: ["/og-image.png"],
   },
   robots: {

@@ -45,7 +45,8 @@ export default function FAQ() {
             Pogosta vprašanja
           </p>
           <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-6">
-            Imate <em className="italic text-sage-dark">vprašanje?</em>
+            Pogosta{" "}
+            <em className="italic text-sage-dark">vprašanja</em>
           </h2>
           <p className="text-[14px] text-site-muted leading-relaxed mb-8">
             Ne najdete odgovora? Pišite nam na{" "}

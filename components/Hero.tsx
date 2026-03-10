@@ -36,13 +36,11 @@ export default function Hero() {
         </SectionLabel>
 
         <h1 className="font-serif text-[clamp(52px,6vw,80px)] font-semibold leading-[1.05] tracking-tight text-site-text mb-7">
-          Pravo,<br />
-          ki{" "}
+          Pravni nasvet,<br />
+          ne pravno{" "}
           <em className="italic text-sage-dark" style={{ fontStyle: "italic" }}>
-            odgovori
+            iskanje.
           </em>
-          <br />
-          takoj.
         </h1>
 
         <p className="text-[16px] text-site-mid leading-[1.8] mb-12 max-w-md">
