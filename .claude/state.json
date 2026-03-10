@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Fixed CTA button invisible text caused by Tailwind class conflict between Button primary variant and custom className override.",
-    "commits": ["1a207ef"]
+    "summary": "Added tailwind-merge for safe className overrides in UI components. Fixed CTA button invisible text and removed custom variant workaround.",
+    "commits": ["1a207ef", "cded8d0"]
   },
   "backlog": [
     {
@@ -42,15 +42,10 @@
       "title": "next lint fails with spaces in project path",
       "desc": "next lint parses path incorrectly when working dir contains spaces (iCloud Drive). Works fine on Vercel. Low priority — only affects local DX.",
       "priority": "low"
-    },
-    {
-      "id": "tailwind-merge",
-      "title": "Consider adding tailwind-merge to prevent class conflicts",
-      "desc": "Button component uses string concatenation for className merging. Without tailwind-merge, variant classes can conflict with overrides (e.g. text-white vs text-sage-dark). Added custom variant as workaround but twMerge would be more robust.",
-      "priority": "low"
     }
   ],
   "shipped": [
+    "tailwind-merge integration for safe className overrides",
     "CTA button text visibility fix (Tailwind class conflict)",
     "Hero chat: stop force-scrolling when user scrolls up",
     "ESLint setup upgraded for Next.js 16, all lint errors fixed",
@@ -59,7 +54,6 @@
     "Simplified shield logo: regenerated all favicon/icon sizes edge-to-edge, new SVG favicon",
     "Shield logo: tight crop, full favicon set (ico/png/apple/android/ms), OG image, web manifest",
     "Hero chat demo as flowing feed with scroll + top fade mask",
-    "Pricing recommended badge clip fix (inline instead of absolute)",
-    "Interactive AI chat demo in hero section — typing animation with 6 legal Q&A pairs"
+    "Pricing recommended badge clip fix (inline instead of absolute)"
   ]
 }
