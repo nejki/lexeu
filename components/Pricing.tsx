@@ -116,7 +116,7 @@ export default function Pricing() {
               {plan.name}
             </p>
 
-            <p className={`font-serif text-[42px] font-semibold leading-none mb-1 ${plan.featured ? "text-white" : "text-site-text"} ${plan.price === "Po povpraševanju" ? "text-[20px] leading-tight" : ""}`}>
+            <p className={`font-serif font-semibold mb-1 ${plan.featured ? "text-white" : "text-site-text"} ${plan.price === "Po povpraševanju" ? "text-[28px] leading-tight" : "text-[42px] leading-none"}`}>
               {plan.price}
             </p>
             {plan.per && (
