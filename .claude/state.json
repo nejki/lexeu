@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Codebase analysis and refactoring: unified 3 FAQ accordion implementations into FAQAccordion component, simplified 11 content pages by auto-generating schema in ContentLayout, consolidated 4 inline SVG icons into Icons.tsx, moved HeroChat to correct directory.",
-    "commits": ["e12acee"]
+    "summary": "Fixed hero chat scroll: stopped auto-scroll from fighting user input, added scroll position indicator thumb.",
+    "commits": ["bff6281"]
   },
   "backlog": [
     {
@@ -51,6 +51,7 @@
     }
   ],
   "shipped": [
+    "Hero chat: improved scroll behavior + scroll position indicator",
     "Codebase refactor: unified FAQ accordion, simplified 11 content pages, consolidated icons, moved HeroChat",
     "tailwind-merge integration for safe className overrides",
     "CTA button text visibility fix (Tailwind class conflict)",
@@ -59,7 +60,6 @@
     "Pricing overflow fix for Po povpraševanju text",
     "12 SEO content pages: delovno-pravo hub (full copy + FAQ schema), sub-pages, pogodbe, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog",
     "Simplified shield logo: regenerated all favicon/icon sizes edge-to-edge, new SVG favicon",
-    "Shield logo: tight crop, full favicon set (ico/png/apple/android/ms), OG image, web manifest",
-    "Hero chat demo as flowing feed with scroll + top fade mask"
+    "Shield logo: tight crop, full favicon set (ico/png/apple/android/ms), OG image, web manifest"
   ]
 }
