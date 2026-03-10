@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Fixed hero chat scroll: stopped auto-scroll from fighting user input, added scroll position indicator thumb.",
-    "commits": ["bff6281"]
+    "summary": "Removed auto-scroll from hero chat animation to fix stuttering, kept feed as plain scrollable container.",
+    "commits": ["bff6281", "6a03c0a"]
   },
   "backlog": [
     {
@@ -51,6 +51,7 @@
     }
   ],
   "shipped": [
+    "Hero chat: removed auto-scroll to fix stutter",
     "Hero chat: improved scroll behavior + scroll position indicator",
     "Codebase refactor: unified FAQ accordion, simplified 11 content pages, consolidated icons, moved HeroChat",
     "tailwind-merge integration for safe className overrides",
@@ -59,7 +60,6 @@
     "ESLint setup upgraded for Next.js 16, all lint errors fixed",
     "Pricing overflow fix for Po povpraševanju text",
     "12 SEO content pages: delovno-pravo hub (full copy + FAQ schema), sub-pages, pogodbe, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog",
-    "Simplified shield logo: regenerated all favicon/icon sizes edge-to-edge, new SVG favicon",
-    "Shield logo: tight crop, full favicon set (ico/png/apple/android/ms), OG image, web manifest"
+    "Simplified shield logo: regenerated all favicon/icon sizes edge-to-edge, new SVG favicon"
   ]
 }
