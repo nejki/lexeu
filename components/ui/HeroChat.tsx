@@ -65,9 +65,24 @@ export function HeroChat() {
   const [phase, setPhase] = useState<"typing-q" | "thinking" | "typing-a" | "pause">("typing-q");
   const nextIdx = useRef(1);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const userScrolledUp = useRef(false);
 
-  /* auto-scroll to bottom */
+  /* detect if user scrolled away from bottom */
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const threshold = 40;
+      userScrolledUp.current =
+        el.scrollTop + el.clientHeight < el.scrollHeight - threshold;
+    };
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => el.removeEventListener("scroll", onScroll);
+  }, []);
+
+  /* auto-scroll to bottom — only if user hasn't scrolled up */
   const scrollToBottom = useCallback(() => {
+    if (userScrolledUp.current) return;
     requestAnimationFrame(() => {
       if (scrollRef.current) {
         scrollRef.current.scrollTo({
