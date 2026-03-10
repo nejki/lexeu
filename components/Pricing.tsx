@@ -105,9 +105,11 @@ export default function Pricing() {
             }`}
           >
             {plan.recommended && (
-              <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-warm text-white text-[10px] font-bold tracking-[0.1em] uppercase px-3 py-1 rounded-full whitespace-nowrap">
-                Priporočamo
-              </span>
+              <div className="flex justify-center mb-4">
+                <span className="bg-warm text-white text-[10px] font-bold tracking-[0.1em] uppercase px-3 py-1 rounded-full whitespace-nowrap">
+                  Priporočamo
+                </span>
+              </div>
             )}
 
             <p className={`text-[11px] font-semibold tracking-[0.12em] uppercase mb-5 ${plan.featured ? "text-white/60" : "text-site-muted"}`}>
