@@ -1,4 +1,6 @@
 .claude/*.backup
 node_modules
 .next
+out
 *.backup
+tsconfig.tsbuildinfo
