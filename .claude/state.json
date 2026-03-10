@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Replaced logo/favicon with simplified shield design, all sizes regenerated edge-to-edge",
-    "commits": ["b16e4ee"]
+    "summary": "Added 12 SEO content page routes (delovno-pravo hub + sub-pages, pogodbe, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog). Full ~1,900 word copy on /delovno-pravo/ with FAQ schema. Shared ContentLayout with breadcrumbs + CTA.",
+    "commits": ["3733f88"]
   },
   "backlog": [
     {
@@ -30,9 +30,22 @@
       "title": "Create privacy policy page",
       "desc": "Footer links to /zasebnost/ but page doesn't exist yet. Needs content for Politika zasebnosti.",
       "priority": "medium"
+    },
+    {
+      "id": "content-sub-pages",
+      "title": "Add content to remaining placeholder pages",
+      "desc": "9 pages still have ContentPlaceholder: odpoved, odpravnina, regres, minimalna-placa, pogodbe, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog. Regres and minimalna-placa need yearly updates each January.",
+      "priority": "high"
+    },
+    {
+      "id": "lint-spaces-bug",
+      "title": "next lint fails with spaces in project path",
+      "desc": "next lint parses path incorrectly when working dir contains spaces (iCloud Drive). Works fine on Vercel. Low priority — only affects local DX.",
+      "priority": "low"
     }
   ],
   "shipped": [
+    "12 SEO content pages: delovno-pravo hub (full copy + FAQ schema), sub-pages, pogodbe, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog",
     "Simplified shield logo: regenerated all favicon/icon sizes edge-to-edge, new SVG favicon",
     "Shield logo: tight crop, full favicon set (ico/png/apple/android/ms), OG image, web manifest",
     "Hero chat demo as flowing feed with scroll + top fade mask",
@@ -41,8 +54,6 @@
     "FAQ rewrite with objection-handling copy + updated FAQPage schema",
     "CTA simplified with centered layout, €15 anchor, ghost link",
     "Footer restructured: 3 columns, <p> headers, social icons, company details",
-    "SEO meta tags, OG tags, heading hierarchy, pricing overhaul with comparison table",
-    "Next.js 16 + Tailwind landing page with all sections",
-    "Deployed to Vercel at aikrpan-git-main-futuristica.vercel.app"
+    "SEO meta tags, OG tags, heading hierarchy, pricing overhaul with comparison table"
   ]
 }
