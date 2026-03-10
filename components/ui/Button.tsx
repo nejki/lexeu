@@ -1,6 +1,7 @@
 import { AnchorHTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
-type Variant = "primary" | "outline" | "ghost" | "custom";
+type Variant = "primary" | "outline" | "ghost";
 type Size = "sm" | "md" | "lg";
 
 interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -12,7 +13,6 @@ const variants: Record<Variant, string> = {
   primary: "bg-sage-dark text-white hover:bg-sage",
   outline: "border border-site-border text-site-mid hover:border-sage hover:text-sage-dark",
   ghost: "text-sage-dark hover:text-sage",
-  custom: "",
 };
 
 const sizes: Record<Size, string> = {
@@ -31,7 +31,12 @@ export function Button({
   return (
     <a
       {...props}
-      className={`inline-block rounded-sm font-semibold uppercase transition-all duration-200 ${variants[variant]} ${sizes[size]} ${className}`}
+      className={twMerge(
+        "inline-block rounded-sm font-semibold uppercase transition-all duration-200",
+        variants[variant],
+        sizes[size],
+        className,
+      )}
     >
       {children}
     </a>
