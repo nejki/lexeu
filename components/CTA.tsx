@@ -5,7 +5,7 @@ export default function CTA() {
   return (
     <section className="px-6 md:px-12 py-20">
       <div className="max-w-[1200px] mx-auto">
-        <FadeIn className="bg-sage-dark rounded-xl px-10 md:px-20 py-20 text-center">
+        <FadeIn className="bg-sage-dark rounded-xl px-6 md:px-20 py-14 md:py-20 text-center">
           <h2 className="font-serif text-[clamp(36px,5vw,58px)] font-semibold leading-[1.1] text-white mb-6">
             Postavite svoje prvo<br />
             <em className="italic text-sage-light">pravno vprašanje</em>

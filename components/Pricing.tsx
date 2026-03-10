@@ -76,7 +76,7 @@ const comparison = [
 
 export default function Pricing() {
   return (
-    <section id="cenik" className="max-w-[1200px] mx-auto px-6 md:px-12 py-24">
+    <section id="cenik" className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24">
       {/* Intro */}
       <div className="mb-14">
         <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-4">
@@ -96,8 +96,10 @@ export default function Pricing() {
         {plans.map((plan, i) => (
           <div
             key={plan.name}
-            className={`relative flex flex-col p-8 sm:p-10 transition-colors duration-200 ${
-              i < plans.length - 1 ? "border-b lg:border-b-0 lg:border-r border-site-border" : ""
+            className={`relative flex flex-col p-8 sm:p-10 transition-colors duration-200 border-site-border ${
+              i < plans.length - 1 ? "border-b lg:border-b-0 lg:border-r" : ""
+            } ${
+              i % 2 === 0 && i < plans.length - 1 ? "sm:border-r" : ""
             } ${
               plan.featured
                 ? "bg-sage-dark text-white"
@@ -150,7 +152,29 @@ export default function Pricing() {
 
       {/* Comparison table */}
       <div className="mt-16">
-        <div className="overflow-x-auto">
+        {/* Mobile: stacked cards */}
+        <div className="md:hidden space-y-4">
+          {comparison.map((row) => (
+            <div key={row.label} className="border border-site-border rounded-lg p-5">
+              <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted mb-3">
+                {row.label}
+              </p>
+              <div className="flex justify-between items-baseline gap-4">
+                <div>
+                  <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-site-muted/60 mb-1">Odvetnik</p>
+                  <p className="text-[14px] text-site-muted">{row.lawyer}</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-sage-dark/60 mb-1">AI KRPAN</p>
+                  <p className="text-[14px] text-sage-dark font-medium">{row.aikrpan}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: table */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
               <tr className="border-b border-site-border">

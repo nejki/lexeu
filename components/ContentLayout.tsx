@@ -100,7 +100,7 @@ export default function ContentLayout({
       {/* CTA */}
       <section className="px-6 md:px-12 pb-20">
         <div className="max-w-[1200px] mx-auto">
-          <FadeIn className="bg-sage-dark rounded-xl px-10 md:px-20 py-16 text-center">
+          <FadeIn className="bg-sage-dark rounded-xl px-6 md:px-20 py-12 md:py-16 text-center">
             <h2 className="font-serif text-[clamp(28px,4vw,44px)] font-semibold leading-[1.1] text-white mb-4">
               Imate pravno vprašanje?
             </h2>

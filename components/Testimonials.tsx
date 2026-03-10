@@ -30,7 +30,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="mediji" className="bg-site-white border-t border-site-border py-24">
+    <section id="mediji" className="bg-site-white border-t border-site-border py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24">
           {/* Left label */}
@@ -47,7 +47,7 @@ export default function Testimonials() {
             {testimonials.map((t, i) => (
               <FadeIn key={i} delay={i * 80}>
                 <div className={`group py-9 border-b border-site-border hover:pl-6 transition-all duration-300 cursor-default${i === 0 ? " border-t" : ""}`}>
-                  <blockquote className="font-serif text-[19px] font-normal italic leading-[1.65] text-site-text mb-5">
+                  <blockquote className="font-serif text-[16px] md:text-[19px] font-normal italic leading-[1.65] text-site-text mb-5">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <div className="flex items-center justify-between">

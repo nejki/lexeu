@@ -28,14 +28,14 @@ const features = [
 
 export default function Hero() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 min-h-screen pt-16">
+    <section className="grid grid-cols-1 lg:grid-cols-2 min-h-0 lg:min-h-screen pt-16">
       {/* Left — stone */}
-      <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-20 bg-site-bg border-r border-site-border">
+      <div className="flex flex-col justify-center px-6 md:px-16 lg:px-20 py-12 lg:py-20 bg-site-bg border-r border-site-border">
         <SectionLabel className="mb-6">
           Najnaprednejši pravni AI v Sloveniji
         </SectionLabel>
 
-        <h1 className="font-serif text-[clamp(52px,6vw,80px)] font-semibold leading-[1.05] tracking-tight text-site-text mb-7">
+        <h1 className="font-serif text-[clamp(36px,6vw,80px)] font-semibold leading-[1.05] tracking-tight text-site-text mb-7">
           Pravni nasvet,<br />
           ne pravno{" "}
           <em className="italic text-sage-dark" style={{ fontStyle: "italic" }}>
@@ -55,7 +55,7 @@ export default function Hero() {
       </div>
 
       {/* Right — sage dark */}
-      <div className="relative flex flex-col justify-center px-10 md:px-16 py-20 bg-sage-dark overflow-hidden">
+      <div className="relative flex flex-col justify-center px-6 md:px-16 py-12 lg:py-20 bg-sage-dark overflow-hidden">
         {/* Decorative § */}
         <span
           aria-hidden

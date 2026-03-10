@@ -1,8 +1,8 @@
 export default function VideoDemo() {
   return (
-    <section id="demo" className="bg-site-white border-t border-b border-site-border py-24">
+    <section id="demo" className="bg-site-white border-t border-b border-site-border py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
           {/* Text */}
           <div>
             <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-5">

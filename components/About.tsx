@@ -23,7 +23,7 @@ const cards = [
 
 export default function About() {
   return (
-    <section id="namen" className="max-w-[1200px] mx-auto px-6 md:px-12 py-24 grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-24 items-center">
+    <section id="namen" className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
       {/* Left text */}
       <FadeIn>
         <SectionLabel className="mb-5">Namen</SectionLabel>

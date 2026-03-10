@@ -75,7 +75,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-8 h-8 rounded-full border border-site-border flex items-center justify-center text-site-muted hover:text-sage-dark hover:border-sage transition-colors duration-200"
+                  className="w-10 h-10 rounded-full border border-site-border flex items-center justify-center text-site-muted hover:text-sage-dark hover:border-sage transition-colors duration-200"
                 >
                   {s.icon}
                 </a>
@@ -88,12 +88,12 @@ export default function Footer() {
             <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
               AI KRPAN
             </p>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-1">
               {col1.map((l) => (
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="text-[14px] text-site-muted hover:text-sage-dark transition-colors duration-200"
+                    className="py-1 text-[14px] text-site-muted hover:text-sage-dark transition-colors duration-200"
                   >
                     {l.label}
                   </a>
@@ -107,12 +107,12 @@ export default function Footer() {
             <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
               Pravna področja
             </p>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-1">
               {col2.map((l) => (
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="text-[14px] text-site-muted hover:text-sage-dark transition-colors duration-200"
+                    className="py-1 text-[14px] text-site-muted hover:text-sage-dark transition-colors duration-200"
                   >
                     {l.label}
                   </a>
@@ -126,12 +126,12 @@ export default function Footer() {
             <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
               Pravno
             </p>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-1">
               {col3.map((l) => (
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="text-[14px] text-site-muted hover:text-sage-dark transition-colors duration-200"
+                    className="py-1 text-[14px] text-site-muted hover:text-sage-dark transition-colors duration-200"
                   >
                     {l.label}
                   </a>

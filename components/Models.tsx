@@ -48,7 +48,7 @@ const models = [
 
 export default function Models() {
   return (
-    <section id="modeli" className="bg-site-white border-t border-site-border py-24">
+    <section id="modeli" className="bg-site-white border-t border-site-border py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         {/* Header */}
         <FadeIn>
@@ -79,9 +79,29 @@ export default function Models() {
           </div>
         </FadeIn>
 
-        {/* Table */}
+        {/* Table (lg+) / Cards (mobile) */}
         <FadeIn delay={100}>
-          <div className="overflow-x-auto">
+          {/* Mobile card layout */}
+          <div className="lg:hidden">
+            {models.map((m) => (
+              <div
+                key={m.num}
+                className="p-6 border-b border-site-border last:border-b-0"
+              >
+                <span className="text-[12px] text-site-muted font-medium">{m.num}</span>
+                <h3 className="font-serif text-[22px] font-semibold text-site-text leading-none mt-2 mb-3">
+                  {m.name}
+                </h3>
+                <p className="text-[14px] text-site-mid leading-relaxed mb-4">{m.desc}</p>
+                <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
+                  {m.tag}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop table layout */}
+          <div className="hidden lg:block overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="border-b border-site-border">
