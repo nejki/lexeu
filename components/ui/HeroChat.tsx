@@ -123,13 +123,15 @@ export function HeroChat() {
           scrollToBottom();
         }, A_CHAR_MS);
       } else {
-        // mark current as done
-        setEntries((prev) => {
-          const next = [...prev];
-          next[next.length - 1] = { ...next[next.length - 1], done: true };
-          return next;
-        });
-        setPhase("pause");
+        // mark current as done — use timeout to avoid synchronous setState in effect
+        id = setTimeout(() => {
+          setEntries((prev) => {
+            const next = [...prev];
+            next[next.length - 1] = { ...next[next.length - 1], done: true };
+            return next;
+          });
+          setPhase("pause");
+        }, 0);
       }
     }
 
@@ -137,17 +139,20 @@ export function HeroChat() {
       id = setTimeout(() => {
         const convIdx = nextIdx.current % conversations.length;
         nextIdx.current++;
-        setEntries((prev) => [
-          ...prev,
-          {
-            id: Date.now(),
-            q: conversations[convIdx].q,
-            a: conversations[convIdx].a,
-            qVisible: "",
-            aVisible: "",
-            done: false,
-          },
-        ]);
+        setEntries((prev) => {
+          const trimmed = prev.length > 12 ? prev.slice(-8) : prev;
+          return [
+            ...trimmed,
+            {
+              id: Date.now(),
+              q: conversations[convIdx].q,
+              a: conversations[convIdx].a,
+              qVisible: "",
+              aVisible: "",
+              done: false,
+            },
+          ];
+        });
         setPhase("typing-q");
         scrollToBottom();
       }, PAUSE_AFTER_A);
@@ -155,13 +160,6 @@ export function HeroChat() {
 
     return () => clearTimeout(id);
   }, [phase, current, scrollToBottom]);
-
-  /* trim old entries to avoid unbounded growth */
-  useEffect(() => {
-    if (entries.length > 12) {
-      setEntries((prev) => prev.slice(-8));
-    }
-  }, [entries.length]);
 
   return (
     <div className="hero-chat-wrap">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
@@ -34,12 +35,12 @@ export default function ContentLayout({
       >
         <ol className="flex items-center gap-2 text-[13px] text-site-muted">
           <li>
-            <a
+            <Link
               href="/"
               className="hover:text-sage-dark transition-colors duration-200"
             >
               Domov
-            </a>
+            </Link>
           </li>
           {breadcrumbs.map((crumb, i) => (
             <li key={crumb.href} className="flex items-center gap-2">
