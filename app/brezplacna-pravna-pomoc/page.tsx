@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "Brezplačna pravna pomoč v Sloveniji - Pogoji, postopek, vloga",
@@ -40,23 +38,15 @@ export default function BrezplacnaPravnaPomocPage() {
       ]}
       title="Brezplačna pravna pomoč"
       subtitle="Kdo je upravičen do brezplačne pravne pomoči v Sloveniji, kakšni so pogoji in kako AI KRPAN dopolnjuje ta sistem."
+      article={{
+        title: "Brezplačna pravna pomoč v Sloveniji",
+        description:
+          "Pogoji za BPP, postopek, vloga in vloga AI pri pravni pomoči.",
+        url: "/brezplacna-pravna-pomoc/",
+        datePublished: "2026-03-10",
+        dateModified: "2026-03-10",
+      }}
     >
-      <SchemaScript
-        schema={breadcrumbSchema([
-          { name: "Brezplačna pravna pomoč", url: "/brezplacna-pravna-pomoc/" },
-        ])}
-      />
-      <SchemaScript
-        schema={articleSchema({
-          title: "Brezplačna pravna pomoč v Sloveniji",
-          description:
-            "Pogoji za BPP, postopek, vloga in vloga AI pri pravni pomoči.",
-          url: "/brezplacna-pravna-pomoc/",
-          datePublished: "2026-03-10",
-          dateModified: "2026-03-10",
-        })}
-      />
-
       <ContentPlaceholder topic="brezplačna pravna pomoč — bridge stran za konverzijo" />
     </ContentLayout>
   );

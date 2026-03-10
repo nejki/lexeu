@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "Odpoved pogodbe o zaposlitvi - Pravice, roki, vzorci",
@@ -39,24 +37,15 @@ export default function OdpovedPage() {
       ]}
       title="Odpoved pogodbe o zaposlitvi"
       subtitle="Redna in izredna odpoved, odpovedni roki, pravice delavcev, vzorci odpovedi in predloge dokumentov."
+      article={{
+        title: "Odpoved pogodbe o zaposlitvi v Sloveniji",
+        description:
+          "Redna in izredna odpoved, odpovedni roki, vzorci odpovedi.",
+        url: "/delovno-pravo/odpoved/",
+        datePublished: "2026-03-10",
+        dateModified: "2026-03-10",
+      }}
     >
-      <SchemaScript
-        schema={breadcrumbSchema([
-          { name: "Delovno pravo", url: "/delovno-pravo/" },
-          { name: "Odpoved", url: "/delovno-pravo/odpoved/" },
-        ])}
-      />
-      <SchemaScript
-        schema={articleSchema({
-          title: "Odpoved pogodbe o zaposlitvi v Sloveniji",
-          description:
-            "Redna in izredna odpoved, odpovedni roki, vzorci odpovedi.",
-          url: "/delovno-pravo/odpoved/",
-          datePublished: "2026-03-10",
-          dateModified: "2026-03-10",
-        })}
-      />
-
       <ContentPlaceholder topic="odpoved pogodbe o zaposlitvi" />
     </ContentLayout>
   );

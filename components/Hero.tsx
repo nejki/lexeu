@@ -1,6 +1,6 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
-import { HeroChat } from "@/components/ui/HeroChat";
+import { HeroChat } from "@/components/HeroChat";
 import { IconBolt, IconScales, IconDocument, IconGlobe } from "@/components/ui/Icons";
 
 const features = [

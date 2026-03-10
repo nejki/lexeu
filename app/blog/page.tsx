@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "Blog - Pravni nasveti in novosti",
@@ -34,10 +32,6 @@ export default function BlogPage() {
       title="Blog"
       subtitle="Pravni nasveti, odgovori na pogosta vprašanja in novosti v zakonodaji."
     >
-      <SchemaScript
-        schema={breadcrumbSchema([{ name: "Blog", url: "/blog/" }])}
-      />
-
       <ContentPlaceholder topic="blog — sezonski in Q&A vsebinski hub" />
     </ContentLayout>
   );

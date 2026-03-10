@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
+import FAQAccordion from "@/components/FAQAccordion";
 import SchemaScript from "@/components/SchemaScript";
 import {
   breadcrumbSchema,
@@ -507,26 +508,7 @@ export default function DelovnoPravoPage() {
         <h2 className="font-serif text-[clamp(28px,4vw,38px)] font-semibold leading-[1.15] text-site-text mb-8">
           Pogosta vprašanja o delovnem pravu
         </h2>
-        <div className="flex flex-col divide-y divide-site-border">
-          {faqs.map((faq) => (
-            <details
-              key={faq.question}
-              className="group py-5 [&[open]]:pb-6"
-            >
-              <summary className="flex items-start justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-                <h3 className="font-serif text-[18px] font-semibold text-site-text group-open:text-sage-dark transition-colors duration-200">
-                  {faq.question}
-                </h3>
-                <span className="mt-1 shrink-0 text-site-muted group-open:rotate-45 transition-transform duration-200 text-[20px] leading-none">
-                  +
-                </span>
-              </summary>
-              <p className="text-[15px] text-site-mid leading-[1.8] mt-3 pr-8">
-                {faq.answer}
-              </p>
-            </details>
-          ))}
-        </div>
+        <FAQAccordion items={faqs.map((faq) => ({ q: faq.question, a: faq.answer }))} />
       </div>
     </ContentLayout>
   );

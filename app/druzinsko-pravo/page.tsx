@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "Družinsko pravo - Ločitev, preživnina, skrbništvo",
@@ -39,23 +37,15 @@ export default function DruzinskoPage() {
       ]}
       title="Družinsko pravo"
       subtitle="Vodnik po družinskem pravu: razveza zakonske zveze, preživnina, skrbništvo nad otroki, delitev skupnega premoženja."
+      article={{
+        title: "Družinsko pravo v Sloveniji",
+        description:
+          "Razveza, preživnina, skrbništvo, delitev premoženja po Družinskem zakoniku.",
+        url: "/druzinsko-pravo/",
+        datePublished: "2026-03-10",
+        dateModified: "2026-03-10",
+      }}
     >
-      <SchemaScript
-        schema={breadcrumbSchema([
-          { name: "Družinsko pravo", url: "/druzinsko-pravo/" },
-        ])}
-      />
-      <SchemaScript
-        schema={articleSchema({
-          title: "Družinsko pravo v Sloveniji",
-          description:
-            "Razveza, preživnina, skrbništvo, delitev premoženja po Družinskem zakoniku.",
-          url: "/druzinsko-pravo/",
-          datePublished: "2026-03-10",
-          dateModified: "2026-03-10",
-        })}
-      />
-
       <ContentPlaceholder topic="družinsko pravo — glavni vsebinski hub" />
     </ContentLayout>
   );

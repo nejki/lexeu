@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "AI KRPAN za pravnike - Hitrejša pravna raziskava",
@@ -36,23 +34,15 @@ export default function ZaPravnikePage() {
       breadcrumbs={[{ label: "Za pravnike", href: "/za-pravnike/" }]}
       title="AI KRPAN za pravnike"
       subtitle="Hitrejša pravna raziskava, analiza sodne prakse in priprava vlog. AI orodje, zasnovano za odvetnike in pravne strokovnjake."
+      article={{
+        title: "AI KRPAN za pravnike",
+        description:
+          "AI orodje za odvetnike: analiza sodne prakse, priprava vlog, raziskava zakonodaje.",
+        url: "/za-pravnike/",
+        datePublished: "2026-03-10",
+        dateModified: "2026-03-10",
+      }}
     >
-      <SchemaScript
-        schema={breadcrumbSchema([
-          { name: "Za pravnike", url: "/za-pravnike/" },
-        ])}
-      />
-      <SchemaScript
-        schema={articleSchema({
-          title: "AI KRPAN za pravnike",
-          description:
-            "AI orodje za odvetnike: analiza sodne prakse, priprava vlog, raziskava zakonodaje.",
-          url: "/za-pravnike/",
-          datePublished: "2026-03-10",
-          dateModified: "2026-03-10",
-        })}
-      />
-
       <ContentPlaceholder topic="AI KRPAN za pravnike — profesionalno pozicioniranje" />
     </ContentLayout>
   );

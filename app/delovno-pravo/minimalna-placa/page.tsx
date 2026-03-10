@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "Minimalna plača 2026 - Bruto, neto, izračun",
@@ -37,24 +35,15 @@ export default function MinimalnaPlacaPage() {
       ]}
       title="Minimalna plača 2026"
       subtitle="Aktualna minimalna plača v Sloveniji: bruto in neto znesek, izračun, zgodovinski pregled."
+      article={{
+        title: "Minimalna plača v Sloveniji 2026",
+        description:
+          "Bruto in neto minimalna plača, izračun, zgodovinski pregled.",
+        url: "/delovno-pravo/minimalna-placa/",
+        datePublished: "2026-03-10",
+        dateModified: "2026-03-10",
+      }}
     >
-      <SchemaScript
-        schema={breadcrumbSchema([
-          { name: "Delovno pravo", url: "/delovno-pravo/" },
-          { name: "Minimalna plača", url: "/delovno-pravo/minimalna-placa/" },
-        ])}
-      />
-      <SchemaScript
-        schema={articleSchema({
-          title: "Minimalna plača v Sloveniji 2026",
-          description:
-            "Bruto in neto minimalna plača, izračun, zgodovinski pregled.",
-          url: "/delovno-pravo/minimalna-placa/",
-          datePublished: "2026-03-10",
-          dateModified: "2026-03-10",
-        })}
-      />
-
       <ContentPlaceholder topic="minimalna plača 2026" />
     </ContentLayout>
   );

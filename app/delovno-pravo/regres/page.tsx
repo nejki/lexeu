@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "Regres za letni dopust 2026 - Višina, rok izplačila, pravice",
@@ -38,24 +36,15 @@ export default function RegresPage() {
       ]}
       title="Regres za letni dopust 2026"
       subtitle="Koliko znaša regres, kdaj mora biti izplačan, kakšna je davčna obravnava. Posodobljeno za 2026."
+      article={{
+        title: "Regres za letni dopust 2026",
+        description:
+          "Višina regresa, rok izplačila, davčna obravnava za 2026.",
+        url: "/delovno-pravo/regres/",
+        datePublished: "2026-03-10",
+        dateModified: "2026-03-10",
+      }}
     >
-      <SchemaScript
-        schema={breadcrumbSchema([
-          { name: "Delovno pravo", url: "/delovno-pravo/" },
-          { name: "Regres", url: "/delovno-pravo/regres/" },
-        ])}
-      />
-      <SchemaScript
-        schema={articleSchema({
-          title: "Regres za letni dopust 2026",
-          description:
-            "Višina regresa, rok izplačila, davčna obravnava za 2026.",
-          url: "/delovno-pravo/regres/",
-          datePublished: "2026-03-10",
-          dateModified: "2026-03-10",
-        })}
-      />
-
       <ContentPlaceholder topic="regres za letni dopust 2026" />
     </ContentLayout>
   );

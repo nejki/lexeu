@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "Dedovanje v Sloveniji - Dediči, oporoka, zapuščina",
@@ -37,21 +35,15 @@ export default function DedovanjePage() {
       breadcrumbs={[{ label: "Dedovanje", href: "/dedovanje/" }]}
       title="Dedovanje"
       subtitle="Celovit vodnik po dednem pravu v Sloveniji. Zakonito in oporočno dedovanje, dedni redi, nujni delež, zapuščinski postopek."
+      article={{
+        title: "Dedovanje v Sloveniji",
+        description:
+          "Zakonito in oporočno dedovanje, dedni redi, nujni delež, zapuščinski postopek.",
+        url: "/dedovanje/",
+        datePublished: "2026-03-10",
+        dateModified: "2026-03-10",
+      }}
     >
-      <SchemaScript
-        schema={breadcrumbSchema([{ name: "Dedovanje", url: "/dedovanje/" }])}
-      />
-      <SchemaScript
-        schema={articleSchema({
-          title: "Dedovanje v Sloveniji",
-          description:
-            "Zakonito in oporočno dedovanje, dedni redi, nujni delež, zapuščinski postopek.",
-          url: "/dedovanje/",
-          datePublished: "2026-03-10",
-          dateModified: "2026-03-10",
-        })}
-      />
-
       <ContentPlaceholder topic="dedno pravo — glavni vsebinski hub" />
     </ContentLayout>
   );

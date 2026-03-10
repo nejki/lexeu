@@ -6,7 +6,7 @@ import {
   softwareApplicationSchema,
   websiteSchema,
   faqSchema,
-  breadcrumbSchema,
+  homeBreadcrumbSchema,
   localBusinessSchema,
 } from "./schema";
 
@@ -123,7 +123,7 @@ const schemas = [
   softwareApplicationSchema,
   websiteSchema,
   faqSchema,
-  breadcrumbSchema,
+  homeBreadcrumbSchema,
   localBusinessSchema,
 ];
 

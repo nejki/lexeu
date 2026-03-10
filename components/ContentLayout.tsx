@@ -3,6 +3,8 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
+import SchemaScript from "@/components/SchemaScript";
+import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 interface Breadcrumb {
   label: string;
@@ -14,6 +16,13 @@ interface ContentLayoutProps {
   breadcrumbs: Breadcrumb[];
   title: string;
   subtitle?: string;
+  article?: {
+    title: string;
+    description: string;
+    url: string;
+    datePublished: string;
+    dateModified: string;
+  };
 }
 
 export default function ContentLayout({
@@ -21,9 +30,16 @@ export default function ContentLayout({
   breadcrumbs,
   title,
   subtitle,
+  article,
 }: ContentLayoutProps) {
   return (
     <main>
+      <SchemaScript
+        schema={breadcrumbSchema(
+          breadcrumbs.map((b) => ({ name: b.label, url: b.href }))
+        )}
+      />
+      {article && <SchemaScript schema={articleSchema(article)} />}
       <Nav />
       {/* Spacer for fixed nav */}
       <div className="h-16" />

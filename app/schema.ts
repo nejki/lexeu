@@ -204,7 +204,7 @@ export const faqSchema = {
   ],
 };
 
-export const breadcrumbSchema = {
+export const homeBreadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [

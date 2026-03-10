@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "Odpravnina - Kdaj pripada, izračun, kalkulator",
@@ -38,24 +36,15 @@ export default function OdpravninaPage() {
       ]}
       title="Odpravnina"
       subtitle="Kdaj vam pripada odpravnina, kako se izračuna in koliko znaša. Kalkulator odpravnine za 2026."
+      article={{
+        title: "Odpravnina v Sloveniji",
+        description:
+          "Odpravnina ob odpovedi in upokojitvi: izračun, kalkulator, zakonska podlaga.",
+        url: "/delovno-pravo/odpravnina/",
+        datePublished: "2026-03-10",
+        dateModified: "2026-03-10",
+      }}
     >
-      <SchemaScript
-        schema={breadcrumbSchema([
-          { name: "Delovno pravo", url: "/delovno-pravo/" },
-          { name: "Odpravnina", url: "/delovno-pravo/odpravnina/" },
-        ])}
-      />
-      <SchemaScript
-        schema={articleSchema({
-          title: "Odpravnina v Sloveniji",
-          description:
-            "Odpravnina ob odpovedi in upokojitvi: izračun, kalkulator, zakonska podlaga.",
-          url: "/delovno-pravo/odpravnina/",
-          datePublished: "2026-03-10",
-          dateModified: "2026-03-10",
-        })}
-      />
-
       <ContentPlaceholder topic="odpravnina — razlaga in kalkulator" />
     </ContentLayout>
   );

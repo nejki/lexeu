@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "AI KRPAN za podjetja - Pravni AI za vaše poslovanje",
@@ -35,23 +33,15 @@ export default function ZaPodjetjaPage() {
       breadcrumbs={[{ label: "Za podjetja", href: "/za-podjetja/" }]}
       title="AI KRPAN za podjetja"
       subtitle="Hitri pravni odgovori za vsakodnevna poslovna vprašanja. Pogodbe, delovno pravo, GDPR skladnost — vse na enem mestu."
+      article={{
+        title: "AI KRPAN za podjetja",
+        description:
+          "Pravni AI za podjetja: pogodbe, delovno pravo, GDPR.",
+        url: "/za-podjetja/",
+        datePublished: "2026-03-10",
+        dateModified: "2026-03-10",
+      }}
     >
-      <SchemaScript
-        schema={breadcrumbSchema([
-          { name: "Za podjetja", url: "/za-podjetja/" },
-        ])}
-      />
-      <SchemaScript
-        schema={articleSchema({
-          title: "AI KRPAN za podjetja",
-          description:
-            "Pravni AI za podjetja: pogodbe, delovno pravo, GDPR.",
-          url: "/za-podjetja/",
-          datePublished: "2026-03-10",
-          dateModified: "2026-03-10",
-        })}
-      />
-
       <ContentPlaceholder topic="AI KRPAN za podjetja — B2B segment" />
     </ContentLayout>
   );

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
-import SchemaScript from "@/components/SchemaScript";
-import { breadcrumbSchema, articleSchema } from "@/app/content-schema";
 
 export const metadata: Metadata = {
   title: "Pogodbe - Pogodbeno pravo v Sloveniji",
@@ -37,21 +35,15 @@ export default function PogodbePage() {
       breadcrumbs={[{ label: "Pogodbe", href: "/pogodbe/" }]}
       title="Pogodbe"
       subtitle="Vodnik po pogodbenem pravu v Sloveniji. Vrste pogodb, obvezne sestavine, neveljavnost, praktični vzorci."
+      article={{
+        title: "Pogodbeno pravo v Sloveniji",
+        description:
+          "Vrste pogodb, obvezne sestavine, neveljavnost, vzorci pogodb.",
+        url: "/pogodbe/",
+        datePublished: "2026-03-10",
+        dateModified: "2026-03-10",
+      }}
     >
-      <SchemaScript
-        schema={breadcrumbSchema([{ name: "Pogodbe", url: "/pogodbe/" }])}
-      />
-      <SchemaScript
-        schema={articleSchema({
-          title: "Pogodbeno pravo v Sloveniji",
-          description:
-            "Vrste pogodb, obvezne sestavine, neveljavnost, vzorci pogodb.",
-          url: "/pogodbe/",
-          datePublished: "2026-03-10",
-          dateModified: "2026-03-10",
-        })}
-      />
-
       <ContentPlaceholder topic="pogodbeno pravo — glavni vsebinski hub" />
     </ContentLayout>
   );
