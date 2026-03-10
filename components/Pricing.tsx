@@ -3,7 +3,7 @@ const plans = [
     name: "Mini",
     price: "€15",
     per: "5 vprašanj · brez roka",
-    features: ["5 pravnih vprašanj", "Vsi modeli vključeni", "Brez datumske omejitve"],
+    features: ["5 pravnih vprašanj", "Vsi modeli vključeni", "Brez datumske omejitve", "Dokup vprašanj možen"],
     cta: "Naroči Mini",
     href: "https://app.aikrpan.com",
     featured: false,
@@ -13,7 +13,7 @@ const plans = [
     name: "Standard",
     price: "€35",
     per: "15 vprašanj · brez roka",
-    features: ["15 pravnih vprašanj", "Vsi modeli vključeni", "Analiza dokumentov"],
+    features: ["15 pravnih vprašanj", "Vsi modeli vključeni", "Analiza dokumentov", "Dokup vprašanj možen"],
     cta: "Naroči Standard",
     href: "https://app.aikrpan.com",
     featured: false,
@@ -27,6 +27,7 @@ const plans = [
       "100 vprašanj/mesec",
       "Vsi 6 modelov",
       "Analiza dokumentov",
+      "Dokup vprašanj možen",
       "Prioritetna podpora",
     ],
     cta: "Naroči Poslovni",
@@ -42,6 +43,7 @@ const plans = [
       "1.200 vprašanj/leto",
       "Prihranite 2 meseca",
       "Vsi modeli vključeni",
+      "Dokup vprašanj možen",
       "Prioritetna podpora",
     ],
     cta: "Naroči Letni",
@@ -97,8 +99,11 @@ export default function Pricing() {
             <p className={`font-serif text-[52px] font-semibold leading-none mb-1 ${plan.featured ? "text-white" : "text-site-text"}`}>
               {plan.price}
             </p>
-            <p className={`text-[13px] mb-8 ${plan.featured ? "text-white/60" : "text-site-muted"}`}>
+            <p className={`text-[13px] ${plan.featured ? "text-white/60" : "text-site-muted"}`}>
               {plan.per}
+            </p>
+            <p className={`text-[11px] mb-8 ${plan.featured ? "text-white/40" : "text-site-muted/70"}`}>
+              brez DDV
             </p>
 
             <div className={`h-px mb-7 ${plan.featured ? "bg-white/15" : "bg-site-border"}`} />
@@ -128,6 +133,15 @@ export default function Pricing() {
           </div>
         ))}
       </div>
+
+      {/* Footer note */}
+      <p className="mt-8 text-center text-[13px] text-site-muted">
+        Potrebujete prilagojeni paket?{" "}
+        <a href="https://www.aikrpan.com/#kontakt" className="text-sage-dark underline underline-offset-2 hover:text-sage transition-colors">
+          Pišite nam
+        </a>{" "}
+        — pripravimo vam ponudbo po meri.
+      </p>
     </section>
   );
 }
