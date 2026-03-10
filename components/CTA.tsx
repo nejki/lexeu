@@ -17,7 +17,7 @@ export default function CTA() {
           <div className="flex flex-wrap justify-center gap-5">
             <Button
               href="https://app.aikrpan.com"
-              variant="primary"
+              variant="custom"
               className="bg-white text-sage-dark hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
             >
               Začnite za €15
