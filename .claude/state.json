@@ -34,8 +34,8 @@
     {
       "id": "next16-build",
       "title": "Next.js 16 _global-error build bug",
-      "desc": "Local build fails on /_global-error prerender (InvariantError). Known Next.js 16 issue. Monitor for fix or add workaround.",
-      "priority": "low"
+      "status": "resolved",
+      "desc": "Fixed by adding app/global-error.tsx. Build passes cleanly."
     }
   ],
   "shipped": [
