@@ -18,7 +18,7 @@ export default function CTA() {
             <Button
               href="https://app.aikrpan.com"
               variant="primary"
-              className="bg-site-white text-sage-dark hover:bg-stone hover:-translate-y-0.5 hover:shadow-md"
+              className="bg-white text-sage-dark hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
             >
               Začnite za €15
             </Button>
