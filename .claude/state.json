@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Full landing page copy overhaul: meta/OG tags, heading hierarchy, pricing with ROI framing, FAQ objection-handling, CTA simplification, footer restructure",
-    "commits": ["3f70bab", "bc28072", "6562f08", "c22d817"]
+    "summary": "Replaced hero stat box with interactive AI chat demo — typing animation cycles through 6 real legal Q&A pairs",
+    "commits": ["00be3d6"]
   },
   "backlog": [
     {
@@ -39,6 +39,7 @@
     }
   ],
   "shipped": [
+    "Interactive AI chat demo in hero section — typing animation with 6 legal Q&A pairs",
     "FAQ rewrite with objection-handling copy + updated FAQPage schema",
     "CTA simplified with centered layout, €15 anchor, ghost link",
     "Footer restructured: 3 columns, <p> headers, social icons, company details",
