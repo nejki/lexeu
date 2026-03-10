@@ -51,7 +51,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
-              <Logo variant="full" size={28} />
+              <Logo variant="full" size={44} />
             </div>
             <p className="text-[14px] text-site-muted leading-[1.75]">
               Napreden pravni pomočnik za slovensko zakonodajo in sodno prakso.
