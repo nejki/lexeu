@@ -1,10 +1,10 @@
 {
   "project": "aikrpan",
-  "currentFocus": ["landing-page"],
+  "currentFocus": [],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Built full landing page (Next.js 16 + Tailwind), deployed to Vercel, SEO schema, GIF optimized to video",
-    "commits": ["663863a", "4a0b7b8", "4830c44", "8d97c85", "db811a0", "8ab8d5b"]
+    "summary": "Updated meta tags (title, description, OG), restructured heading hierarchy (H1>H2>H3), overhauled pricing section with ROI framing, comparison table, and 5-tier plans",
+    "commits": ["3f70bab"]
   },
   "backlog": [
     {
@@ -30,9 +30,16 @@
       "title": "Add analytics",
       "desc": "Vercel Analytics or Google Analytics. Skip for now.",
       "priority": "low"
+    },
+    {
+      "id": "next16-build",
+      "title": "Next.js 16 _global-error build bug",
+      "desc": "Local build fails on /_global-error prerender (InvariantError). Known Next.js 16 issue. Monitor for fix or add workaround.",
+      "priority": "low"
     }
   ],
   "shipped": [
+    "SEO meta tags, OG tags, heading hierarchy, pricing overhaul with comparison table",
     "Next.js 16 + Tailwind landing page",
     "All 10 sections: Nav, Hero, Marquee, About, VideoDemo, Models, Pricing, Testimonials, FAQ, CTA, Footer",
     "SEO: 6x JSON-LD schema, sitemap.xml, robots.txt, canonical, hreflang, OG, Twitter",
