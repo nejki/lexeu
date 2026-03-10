@@ -1,3 +1,5 @@
+import Logo from "@/components/Logo";
+
 const footerLinks = {
   Produkt: [
     { label: "Namen", href: "#namen" },
@@ -27,9 +29,9 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16 mb-14">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <p className="font-serif text-[20px] font-semibold tracking-[0.12em] uppercase mb-4 text-site-text">
-              AI <span className="text-sage-dark">KRPAN</span>
-            </p>
+            <div className="mb-4">
+              <Logo variant="full" size={28} />
+            </div>
             <p className="text-[14px] text-site-muted leading-[1.75]">
               Napreden pravni pomočnik za slovensko zakonodajo in sodno prakso.
               Committo d.o.o.

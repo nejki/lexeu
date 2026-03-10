@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { IconMenu, IconX } from "@/components/ui/Icons";
+import Logo from "@/components/Logo";
 
 const navLinks = [
   { label: "Namen", href: "#namen" },
@@ -37,8 +38,8 @@ export default function Nav() {
         }`}
       >
         {/* Logo */}
-        <a href="#" className="font-serif text-xl font-semibold tracking-[0.12em] uppercase text-site-text">
-          AI <span className="text-sage-dark">KRPAN</span>
+        <a href="#" aria-label="AI KRPAN — domov">
+          <Logo variant="full" size={32} />
         </a>
 
         {/* Links — desktop */}

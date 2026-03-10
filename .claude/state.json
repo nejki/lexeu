@@ -1,11 +1,42 @@
 {
   "project": "aikrpan",
-  "currentFocus": [],
+  "currentFocus": ["landing-page"],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Initialized tracking",
-    "commits": []
+    "summary": "Built full landing page (Next.js 16 + Tailwind), deployed to Vercel, SEO schema, GIF optimized to video",
+    "commits": ["663863a", "4a0b7b8", "4830c44", "8d97c85", "db811a0", "8ab8d5b"]
   },
-  "backlog": [],
-  "shipped": []
+  "backlog": [
+    {
+      "id": "gsc",
+      "title": "Google Search Console setup",
+      "desc": "Add verification token to layout.tsx metadata.verification.google, submit sitemap at https://www.aikrpan.com/sitemap.xml",
+      "priority": "high"
+    },
+    {
+      "id": "og-image",
+      "title": "OG / social share image",
+      "desc": "Create 1200x630 og-image.png and place in /public. Referenced in layout.tsx metadata already.",
+      "priority": "medium"
+    },
+    {
+      "id": "domain",
+      "title": "Connect custom domain aikrpan.com to Vercel",
+      "desc": "Vercel → Settings → Domains → add aikrpan.com and www.aikrpan.com. Update DNS at registrar.",
+      "priority": "high"
+    },
+    {
+      "id": "analytics",
+      "title": "Add analytics",
+      "desc": "Vercel Analytics or Google Analytics. Skip for now.",
+      "priority": "low"
+    }
+  ],
+  "shipped": [
+    "Next.js 16 + Tailwind landing page",
+    "All 10 sections: Nav, Hero, Marquee, About, VideoDemo, Models, Pricing, Testimonials, FAQ, CTA, Footer",
+    "SEO: 6x JSON-LD schema, sitemap.xml, robots.txt, canonical, hreflang, OG, Twitter",
+    "GIF optimized: 28MB → 3MB MP4 / 2.6MB WebM",
+    "Deployed to Vercel at aikrpan-git-main-futuristica.vercel.app"
+  ]
 }
