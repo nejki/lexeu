@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-10",
-    "summary": "Added tailwind-merge for safe className overrides in UI components. Fixed CTA button invisible text and removed custom variant workaround.",
-    "commits": ["1a207ef", "cded8d0"]
+    "summary": "Codebase analysis and refactoring: unified 3 FAQ accordion implementations into FAQAccordion component, simplified 11 content pages by auto-generating schema in ContentLayout, consolidated 4 inline SVG icons into Icons.tsx, moved HeroChat to correct directory.",
+    "commits": ["e12acee"]
   },
   "backlog": [
     {
@@ -42,9 +42,16 @@
       "title": "next lint fails with spaces in project path",
       "desc": "next lint parses path incorrectly when working dir contains spaces (iCloud Drive). Works fine on Vercel. Low priority — only affects local DX.",
       "priority": "low"
+    },
+    {
+      "id": "navodila-contentlayout",
+      "title": "Refactor navodila/page.tsx to use ContentLayout",
+      "desc": "navodila/page.tsx (357 lines) still manually renders breadcrumbs, nav, footer, CTA — all duplicated from ContentLayout. Needs ContentLayout to accept optional sectionLabel, ctaTitle/ctaDescription props for customization.",
+      "priority": "low"
     }
   ],
   "shipped": [
+    "Codebase refactor: unified FAQ accordion, simplified 11 content pages, consolidated icons, moved HeroChat",
     "tailwind-merge integration for safe className overrides",
     "CTA button text visibility fix (Tailwind class conflict)",
     "Hero chat: stop force-scrolling when user scrolls up",
@@ -53,7 +60,6 @@
     "12 SEO content pages: delovno-pravo hub (full copy + FAQ schema), sub-pages, pogodbe, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog",
     "Simplified shield logo: regenerated all favicon/icon sizes edge-to-edge, new SVG favicon",
     "Shield logo: tight crop, full favicon set (ico/png/apple/android/ms), OG image, web manifest",
-    "Hero chat demo as flowing feed with scroll + top fade mask",
-    "Pricing recommended badge clip fix (inline instead of absolute)"
+    "Hero chat demo as flowing feed with scroll + top fade mask"
   ]
 }
