@@ -9,7 +9,8 @@ export default function VideoDemo() {
               Demo
             </p>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] mb-6 text-site-text">
-              Oglejte si AI KRPAN <em className="italic text-sage-dark">v akciji</em>
+              Oglejte si AI KRPAN{" "}
+              <em className="italic text-sage-dark">v akciji</em>
             </h2>
             <p className="text-[15px] text-site-mid leading-[1.85] mb-8">
               Pravo odgovorjeno v sekundah. Glejte, kako AI KRPAN reši resnično
@@ -23,15 +24,21 @@ export default function VideoDemo() {
             </a>
           </div>
 
-          {/* GIF demo */}
+          {/* Optimized video (WebM → MP4 → GIF fallback) */}
           <div className="rounded-xl overflow-hidden border border-site-border shadow-lg bg-stone-dark">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/demo.gif"
-              alt="AI KRPAN v akciji — demo"
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-full h-auto block"
-              loading="lazy"
-            />
+              aria-label="AI KRPAN demo — pravno vprašanje odgovorjeno v sekundah"
+            >
+              <source src="/demo.webm" type="video/webm" />
+              <source src="/demo.mp4" type="video/mp4" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/demo.gif" alt="AI KRPAN demo" />
+            </video>
           </div>
         </div>
       </div>

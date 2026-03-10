@@ -6,6 +6,7 @@ import VideoDemo from "@/components/VideoDemo";
 import Models from "@/components/Models";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Models />
       <Pricing />
       <Testimonials />
+      <FAQ />
       <CTA />
       <Footer />
     </main>
