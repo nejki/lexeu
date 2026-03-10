@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title:
     "Navodila za uporabo AI KRPAN - Video vodnik in koraki",
   description:
-    "Naučite se uporabljati AI KRPAN v 5 minutah. Video navodila, korak za korakom vodnik, nasveti za boljše pravne odgovore in pogosta vprašanja.",
+    "Naučite se uporabljati AI KRPAN v 6 korakih. Video navodila, korak za korakom vodnik, nasveti za boljše pravne odgovore in pogosta vprašanja.",
   keywords: [
     "AI KRPAN navodila",
     "kako uporabljati AI KRPAN",
@@ -84,6 +84,12 @@ const steps = [
     title: "Poglobite se ali nadaljujte",
     description:
       "Zastavite dodatna vprašanja za poglobitev ali razjasnitev. Vsako vprašanje se obravnava neodvisno — raziskujete lahko različne vidike brez omejitev.",
+  },
+  {
+    number: "06",
+    title: "Preverite vire",
+    description:
+      "Vsak odgovor vsebuje sklice na zakonske člene in sodne odločbe. Kliknite nanje za neposreden dostop do uradnih virov — PisRS za zakonodajo in SOVS za sodno prakso.",
   },
 ];
 
@@ -260,7 +266,7 @@ export default function NavodilaPage() {
             <em className="italic text-sage-dark">AI KRPAN</em>
           </h2>
           <p className="text-[17px] text-site-mid leading-[1.7] max-w-2xl mb-14">
-            Od registracije do pravnega stališča v petih preprostih korakih.
+            Od registracije do pravnega stališča v šestih preprostih korakih.
           </p>
         </FadeIn>
 
@@ -269,11 +275,7 @@ export default function NavodilaPage() {
             <FadeIn
               key={step.number}
               delay={i * 80}
-              className={`bg-site-white p-8 ${
-                i === steps.length - 1 && steps.length % 3 !== 0
-                  ? "md:col-span-2 lg:col-span-1"
-                  : ""
-              }`}
+              className="bg-site-white p-8"
             >
               <span className="inline-block text-[48px] font-serif font-semibold text-sage-pale leading-none mb-4">
                 {step.number}
