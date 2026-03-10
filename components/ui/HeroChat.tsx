@@ -30,127 +30,191 @@ const conversations = [
   },
 ];
 
-/* ── Typing speed constants ────────────────────────────── */
-const Q_CHAR_MS = 38;       // typing speed for question
-const A_CHAR_MS = 12;       // faster "AI" typing for answer
-const PAUSE_AFTER_A = 3200; // pause to read answer
-const FADE_MS = 500;        // crossfade duration
+/* ── Speed constants ───────────────────────────────────── */
+const Q_CHAR_MS = 32;
+const A_CHAR_MS = 10;
+const PAUSE_AFTER_A = 2400;
+const THINKING_MS = 600;
+
+/* ── Types ─────────────────────────────────────────────── */
+type ChatEntry = {
+  id: number;
+  q: string;
+  a: string;
+  qVisible: string;
+  aVisible: string;
+  done: boolean;
+};
+
+/* ── AI avatar icon ────────────────────────────────────── */
+function AiIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+      <path d="M2 17l10 5 10-5" />
+      <path d="M2 12l10 5 10-5" />
+    </svg>
+  );
+}
 
 /* ── Component ─────────────────────────────────────────── */
 export function HeroChat() {
-  const [idx, setIdx] = useState(0);
-  const [qText, setQText] = useState("");
-  const [aText, setAText] = useState("");
-  const [phase, setPhase] = useState<"typing-q" | "typing-a" | "idle" | "fade">("typing-q");
+  const [entries, setEntries] = useState<ChatEntry[]>([
+    { id: 0, q: conversations[0].q, a: conversations[0].a, qVisible: "", aVisible: "", done: false },
+  ]);
+  const [phase, setPhase] = useState<"typing-q" | "thinking" | "typing-a" | "pause">("typing-q");
+  const nextIdx = useRef(1);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const mounted = useRef(true);
 
-  const clear = () => {
-    if (timer.current) clearTimeout(timer.current);
-  };
+  const clear = () => { if (timer.current) clearTimeout(timer.current); };
 
-  /* advance to next conversation */
-  const next = useCallback(() => {
-    setPhase("fade");
-    timer.current = setTimeout(() => {
-      if (!mounted.current) return;
-      setIdx((i) => (i + 1) % conversations.length);
-      setQText("");
-      setAText("");
-      setPhase("typing-q");
-    }, FADE_MS);
+  /* auto-scroll to bottom */
+  const scrollToBottom = useCallback(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({
+        top: scrollRef.current.scrollHeight,
+        behavior: "smooth",
+      });
+    }
   }, []);
+
+  /* get the current (last) entry */
+  const current = entries[entries.length - 1];
 
   /* main animation loop */
   useEffect(() => {
     mounted.current = true;
-    const conv = conversations[idx];
+    if (!current) return;
 
     if (phase === "typing-q") {
-      if (qText.length < conv.q.length) {
+      if (current.qVisible.length < current.q.length) {
         timer.current = setTimeout(() => {
           if (!mounted.current) return;
-          setQText(conv.q.slice(0, qText.length + 1));
+          setEntries((prev) => {
+            const next = [...prev];
+            const last = { ...next[next.length - 1] };
+            last.qVisible = last.q.slice(0, last.qVisible.length + 1);
+            next[next.length - 1] = last;
+            return next;
+          });
+          scrollToBottom();
         }, Q_CHAR_MS);
       } else {
-        // small pause then start answer
         timer.current = setTimeout(() => {
           if (!mounted.current) return;
-          setPhase("typing-a");
-        }, 400);
+          setPhase("thinking");
+        }, 200);
       }
     }
 
+    if (phase === "thinking") {
+      timer.current = setTimeout(() => {
+        if (!mounted.current) return;
+        setPhase("typing-a");
+        scrollToBottom();
+      }, THINKING_MS);
+    }
+
     if (phase === "typing-a") {
-      if (aText.length < conv.a.length) {
+      if (current.aVisible.length < current.a.length) {
         timer.current = setTimeout(() => {
           if (!mounted.current) return;
-          setAText(conv.a.slice(0, aText.length + 1));
+          setEntries((prev) => {
+            const next = [...prev];
+            const last = { ...next[next.length - 1] };
+            last.aVisible = last.a.slice(0, last.aVisible.length + 1);
+            next[next.length - 1] = last;
+            return next;
+          });
+          scrollToBottom();
         }, A_CHAR_MS);
       } else {
-        setPhase("idle");
+        /* mark done, pause, then add next */
+        setEntries((prev) => {
+          const next = [...prev];
+          next[next.length - 1] = { ...next[next.length - 1], done: true };
+          return next;
+        });
+        setPhase("pause");
         timer.current = setTimeout(() => {
           if (!mounted.current) return;
-          next();
+          const convIdx = nextIdx.current % conversations.length;
+          nextIdx.current++;
+          setEntries((prev) => [
+            ...prev,
+            {
+              id: nextIdx.current,
+              q: conversations[convIdx].q,
+              a: conversations[convIdx].a,
+              qVisible: "",
+              aVisible: "",
+              done: false,
+            },
+          ]);
+          setPhase("typing-q");
+          scrollToBottom();
         }, PAUSE_AFTER_A);
       }
     }
 
-    return () => {
-      clear();
-      mounted.current = false;
-    };
-  }, [phase, qText, aText, idx, next]);
+    return () => { clear(); mounted.current = false; };
+  }, [phase, current, scrollToBottom]);
 
-  const fading = phase === "fade";
+  /* trim old entries to avoid unbounded growth */
+  useEffect(() => {
+    if (entries.length > 12) {
+      setEntries((prev) => prev.slice(-8));
+    }
+  }, [entries.length]);
 
   return (
     <div className="hero-chat-wrap">
-      {/* Ambient glow */}
       <div className="hero-chat-glow" />
 
-      <div
-        className="hero-chat-container"
-        style={{
-          opacity: fading ? 0 : 1,
-          transition: `opacity ${FADE_MS}ms cubic-bezier(.4,0,.2,1)`,
-        }}
-      >
-        {/* Question bubble */}
-        <div className="hero-chat-q">
-          <div className="hero-chat-q-avatar">Vi</div>
-          <div className="hero-chat-q-bubble">
-            <span>{qText}</span>
-            {phase === "typing-q" && <span className="hero-chat-cursor" />}
-          </div>
-        </div>
+      {/* Scrollable chat feed */}
+      <div ref={scrollRef} className="hero-chat-feed">
+        {/* Top fade mask is handled by CSS */}
+        {entries.map((entry) => (
+          <div key={entry.id} className="hero-chat-entry">
+            {/* Question */}
+            {entry.qVisible.length > 0 && (
+              <div className="hero-chat-q">
+                <div className="hero-chat-q-avatar">Vi</div>
+                <div className="hero-chat-q-bubble">
+                  <span>{entry.qVisible}</span>
+                  {!entry.done && entry === current && phase === "typing-q" && entry.qVisible.length < entry.q.length && (
+                    <span className="hero-chat-cursor" />
+                  )}
+                </div>
+              </div>
+            )}
 
-        {/* Answer */}
-        {(phase === "typing-a" || phase === "idle") && (
-          <div className="hero-chat-a">
-            <div className="hero-chat-a-avatar">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                <path d="M2 17l10 5 10-5" />
-                <path d="M2 12l10 5 10-5" />
-              </svg>
-            </div>
-            <div className="hero-chat-a-content">
-              <span className="hero-chat-a-label">AI KRPAN</span>
-              <span className="hero-chat-a-text">
-                {aText}
-                {phase === "typing-a" && <span className="hero-chat-cursor hero-chat-cursor--ai" />}
-              </span>
-            </div>
-          </div>
-        )}
+            {/* Thinking dots */}
+            {!entry.done && entry === current && phase === "thinking" && (
+              <div className="hero-chat-thinking">
+                <span /><span /><span />
+              </div>
+            )}
 
-        {/* Thinking dots — show briefly before answer starts */}
-        {phase === "typing-q" && qText.length === conversations[idx].q.length && (
-          <div className="hero-chat-thinking">
-            <span /><span /><span />
+            {/* Answer */}
+            {entry.aVisible.length > 0 && (
+              <div className="hero-chat-a">
+                <div className="hero-chat-a-avatar"><AiIcon /></div>
+                <div className="hero-chat-a-content">
+                  <span className="hero-chat-a-label">AI KRPAN</span>
+                  <span className="hero-chat-a-text">
+                    {entry.aVisible}
+                    {!entry.done && entry === current && phase === "typing-a" && (
+                      <span className="hero-chat-cursor hero-chat-cursor--ai" />
+                    )}
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
-        )}
+        ))}
       </div>
 
       {/* Bottom tag */}
