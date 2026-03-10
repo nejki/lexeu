@@ -1,7 +1,11 @@
+import { Button } from "@/components/ui/Button";
+import { CountUp } from "@/components/ui/CountUp";
+import { FadeIn } from "@/components/ui/FadeIn";
+
 const stats = [
-  { num: "3s", label: "Povprečni čas odgovora" },
-  { num: "500+", label: "Zadovoljnih strank" },
-  { num: "6", label: "Specializiranih AI modelov" },
+  { target: 3, suffix: "s", label: "Povprečni čas odgovora" },
+  { target: 500, suffix: "+", label: "Zadovoljnih strank" },
+  { target: 6, suffix: "", label: "Specializiranih AI modelov" },
 ];
 
 export default function CTA() {
@@ -10,7 +14,7 @@ export default function CTA() {
       <div className="max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 rounded-xl overflow-hidden">
           {/* Left */}
-          <div className="bg-sage-dark px-10 md:px-16 py-16">
+          <FadeIn className="bg-sage-dark px-10 md:px-16 py-16">
             <h2 className="font-serif text-[clamp(40px,5vw,62px)] font-semibold leading-[1.05] text-white mb-6">
               Začnite danes.<br />
               <em className="italic text-sage-light">Pravo odgovorjeno.</em>
@@ -20,30 +24,34 @@ export default function CTA() {
               AI KRPAN.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
+              <Button
                 href="#cenik"
-                className="bg-site-white text-sage-dark px-8 py-3.5 rounded-sm text-[13px] font-bold tracking-[0.06em] uppercase hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+                variant="primary"
+                className="bg-site-white text-sage-dark hover:bg-stone hover:-translate-y-0.5 hover:shadow-md"
               >
                 Naroči se zdaj
-              </a>
-              <a
+              </Button>
+              <Button
                 href="https://www.aikrpan.com/video-navodila/"
-                className="border border-white/30 text-white/85 px-7 py-3.5 rounded-sm text-[13px] font-medium tracking-[0.04em] uppercase hover:border-white/60 transition-colors duration-200"
+                variant="outline"
+                className="border-white/30 text-white/85 hover:border-white/60 hover:text-white hover:bg-transparent"
               >
                 Oglejte si navodila →
-              </a>
+              </Button>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right stats */}
-          <div className="bg-black/[0.14] backdrop-blur-sm bg-sage-dark/80 px-10 md:px-16 py-16 flex flex-col justify-center gap-8 border-t lg:border-t-0 lg:border-l border-white/10">
+          <FadeIn delay={150} className="bg-sage-dark/80 px-10 md:px-16 py-16 flex flex-col justify-center gap-8 border-t lg:border-t-0 lg:border-l border-white/10">
             {stats.map((s) => (
               <div key={s.label} className="border-l-2 border-white/20 pl-6">
-                <p className="font-serif text-[52px] font-semibold text-white leading-none">{s.num}</p>
+                <p className="font-serif text-[52px] font-semibold text-white leading-none">
+                  <CountUp target={s.target} suffix={s.suffix} duration={1200} />
+                </p>
                 <p className="text-[14px] text-white/55 mt-1.5">{s.label}</p>
               </div>
             ))}
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>
