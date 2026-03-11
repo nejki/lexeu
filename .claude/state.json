@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-11",
-    "summary": "Added media mentions with thumbnails, founder/EEAT section + /o-meni/ page, fixed hero chat to stack conversations with auto-scroll but no user scroll.",
-    "commits": ["9037675", "2291904", "9cdeaa2", "6de6d65"]
+    "summary": "Migrated color scheme from sage green to warm accent palette (#BF7A3B) with dark primary (#2A2520). Added color preview dev page.",
+    "commits": ["1210659", "ef91f21"]
   },
   "backlog": [
     {
@@ -57,6 +57,7 @@
     }
   ],
   "shipped": [
+    "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components",
     "Hero chat: stacking conversations with auto-scroll, no user scroll (overflow:hidden + programmatic scrollTop)",
     "Media mentions section with article thumbnails + founder section with /o-meni/ E-E-A-T page",
     "Brand refresh: AK monogram logo, favicons, and OG social image",
