@@ -30,7 +30,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="mediji" className="bg-site-white border-t border-site-border py-16 md:py-24">
+    <section id="stranke" className="bg-site-white border-t border-site-border py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24">
           {/* Left label */}
