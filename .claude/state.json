@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-11",
-    "summary": "Added media mentions section with thumbnails, founder section + /o-meni/ page with E-E-A-T, pinned hero chat animation.",
-    "commits": ["9037675", "2291904", "9cdeaa2"]
+    "summary": "Added media mentions with thumbnails, founder/EEAT section + /o-meni/ page, fixed hero chat to stack conversations with auto-scroll but no user scroll.",
+    "commits": ["9037675", "2291904", "9cdeaa2", "6de6d65"]
   },
   "backlog": [
     {
@@ -57,13 +57,11 @@
     }
   ],
   "shipped": [
-    "Media mentions section with article thumbnails + founder section with /o-meni/ E-E-A-T page + pinned hero chat",
+    "Hero chat: stacking conversations with auto-scroll, no user scroll (overflow:hidden + programmatic scrollTop)",
+    "Media mentions section with article thumbnails + founder section with /o-meni/ E-E-A-T page",
     "Brand refresh: AK monogram logo, favicons, and OG social image",
-    "HeroChat auto-scroll to latest Q&A entry (stutter-free, triggers only on new entry)",
     "Mobile optimization: responsive padding, card layouts for Models/Pricing tables, touch targets, font sizing, HeroChat height",
     "Navodila: added 6th step (Preverite vire) to fill 3-col grid",
-    "Hero chat: removed auto-scroll to fix stutter",
-    "Hero chat: improved scroll behavior + scroll position indicator",
     "Codebase refactor: unified FAQ accordion, simplified 11 content pages, consolidated icons, moved HeroChat",
     "tailwind-merge integration for safe className overrides",
     "CTA button text visibility fix (Tailwind class conflict)"
