@@ -64,8 +64,15 @@ export function HeroChat() {
   ]);
   const [phase, setPhase] = useState<"typing-q" | "thinking" | "typing-a" | "pause">("typing-q");
   const nextIdx = useRef(1);
+  const feedRef = useRef<HTMLDivElement>(null);
   /* get the current (last) entry */
   const current = entries[entries.length - 1];
+
+  /* scroll feed to bottom when a new entry appears */
+  useEffect(() => {
+    const el = feedRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
+  }, [entries.length]);
 
   /* main animation loop — each phase schedules one timeout */
   useEffect(() => {
@@ -150,7 +157,7 @@ export function HeroChat() {
       <div className="hero-chat-glow" />
 
       {/* Scrollable chat feed */}
-      <div className="hero-chat-feed">
+      <div className="hero-chat-feed" ref={feedRef}>
         {entries.map((entry) => (
           <div key={entry.id} className="hero-chat-entry">
             {/* Question */}
