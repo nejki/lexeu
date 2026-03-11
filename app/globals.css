@@ -98,39 +98,14 @@
   z-index: 0;
 }
 
-/* Scrollable chat feed with top fade */
+/* Pinned chat feed — no scrolling */
 .hero-chat-feed {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 0;
-  max-height: 260px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 15%,
-    black 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 15%,
-    black 100%
-  );
-  scrollbar-width: none;
-}
-
-.hero-chat-feed::-webkit-scrollbar {
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .hero-chat-feed {
-    max-height: 340px;
-  }
+  overflow: hidden;
 }
 
 /* Each Q&A pair */

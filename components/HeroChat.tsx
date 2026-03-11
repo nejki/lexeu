@@ -36,16 +36,6 @@ const A_CHAR_MS = 10;
 const PAUSE_AFTER_A = 2400;
 const THINKING_MS = 600;
 
-/* ── Types ─────────────────────────────────────────────── */
-type ChatEntry = {
-  id: number;
-  q: string;
-  a: string;
-  qVisible: string;
-  aVisible: string;
-  done: boolean;
-};
-
 /* ── AI avatar icon ────────────────────────────────────── */
 function AiIcon() {
   return (
@@ -59,37 +49,20 @@ function AiIcon() {
 
 /* ── Component ─────────────────────────────────────────── */
 export function HeroChat() {
-  const [entries, setEntries] = useState<ChatEntry[]>([
-    { id: 0, q: conversations[0].q, a: conversations[0].a, qVisible: "", aVisible: "", done: false },
-  ]);
+  const convIdx = useRef(0);
+  const [qVisible, setQVisible] = useState("");
+  const [aVisible, setAVisible] = useState("");
   const [phase, setPhase] = useState<"typing-q" | "thinking" | "typing-a" | "pause">("typing-q");
-  const nextIdx = useRef(1);
-  const feedRef = useRef<HTMLDivElement>(null);
-  /* get the current (last) entry */
-  const current = entries[entries.length - 1];
 
-  /* scroll feed to bottom when a new entry appears */
-  useEffect(() => {
-    const el = feedRef.current;
-    if (el) el.scrollTop = el.scrollHeight;
-  }, [entries.length]);
+  const conv = conversations[convIdx.current % conversations.length];
 
-  /* main animation loop — each phase schedules one timeout */
   useEffect(() => {
-    if (!current) return;
     let id: ReturnType<typeof setTimeout>;
 
     if (phase === "typing-q") {
-      if (current.qVisible.length < current.q.length) {
+      if (qVisible.length < conv.q.length) {
         id = setTimeout(() => {
-          setEntries((prev) => {
-            const next = [...prev];
-            const last = { ...next[next.length - 1] };
-            last.qVisible = last.q.slice(0, last.qVisible.length + 1);
-            next[next.length - 1] = last;
-            return next;
-          });
-
+          setQVisible(conv.q.slice(0, qVisible.length + 1));
         }, Q_CHAR_MS);
       } else {
         id = setTimeout(() => setPhase("thinking"), 200);
@@ -97,106 +70,74 @@ export function HeroChat() {
     }
 
     if (phase === "thinking") {
-      id = setTimeout(() => {
-        setPhase("typing-a");
-      }, THINKING_MS);
+      id = setTimeout(() => setPhase("typing-a"), THINKING_MS);
     }
 
     if (phase === "typing-a") {
-      if (current.aVisible.length < current.a.length) {
+      if (aVisible.length < conv.a.length) {
         id = setTimeout(() => {
-          setEntries((prev) => {
-            const next = [...prev];
-            const last = { ...next[next.length - 1] };
-            last.aVisible = last.a.slice(0, last.aVisible.length + 1);
-            next[next.length - 1] = last;
-            return next;
-          });
-
+          setAVisible(conv.a.slice(0, aVisible.length + 1));
         }, A_CHAR_MS);
       } else {
-        // mark current as done — use timeout to avoid synchronous setState in effect
-        id = setTimeout(() => {
-          setEntries((prev) => {
-            const next = [...prev];
-            next[next.length - 1] = { ...next[next.length - 1], done: true };
-            return next;
-          });
-          setPhase("pause");
-        }, 0);
+        id = setTimeout(() => setPhase("pause"), 0);
       }
     }
 
     if (phase === "pause") {
       id = setTimeout(() => {
-        const convIdx = nextIdx.current % conversations.length;
-        nextIdx.current++;
-        setEntries((prev) => {
-          const trimmed = prev.length > 12 ? prev.slice(-8) : prev;
-          return [
-            ...trimmed,
-            {
-              id: Date.now(),
-              q: conversations[convIdx].q,
-              a: conversations[convIdx].a,
-              qVisible: "",
-              aVisible: "",
-              done: false,
-            },
-          ];
-        });
+        convIdx.current = (convIdx.current + 1) % conversations.length;
+        setQVisible("");
+        setAVisible("");
         setPhase("typing-q");
       }, PAUSE_AFTER_A);
     }
 
     return () => clearTimeout(id);
-  }, [phase, current]);
+  }, [phase, qVisible, aVisible, conv]);
 
   return (
     <div className="hero-chat-wrap">
       <div className="hero-chat-glow" />
 
-      {/* Scrollable chat feed */}
-      <div className="hero-chat-feed" ref={feedRef}>
-        {entries.map((entry) => (
-          <div key={entry.id} className="hero-chat-entry">
-            {/* Question */}
-            {entry.qVisible.length > 0 && (
-              <div className="hero-chat-q">
-                <div className="hero-chat-q-avatar">Vi</div>
-                <div className="hero-chat-q-bubble">
-                  <span>{entry.qVisible}</span>
-                  {!entry.done && entry === current && phase === "typing-q" && entry.qVisible.length < entry.q.length && (
-                    <span className="hero-chat-cursor" />
+      {/* Pinned chat — single conversation at a time */}
+      <div className="hero-chat-feed">
+        <div className="hero-chat-entry">
+          {/* Question */}
+          {qVisible.length > 0 && (
+            <div className="hero-chat-q">
+              <div className="hero-chat-q-avatar">Vi</div>
+              <div className="hero-chat-q-bubble">
+                <span>{qVisible}</span>
+                {phase === "typing-q" && qVisible.length < conv.q.length && (
+                  <span className="hero-chat-cursor" />
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Thinking dots */}
+          {phase === "thinking" && (
+            <div className="hero-chat-thinking">
+              <span /><span /><span />
+            </div>
+          )}
+
+          {/* Answer */}
+          {aVisible.length > 0 && (
+            <div className="hero-chat-a">
+              <div className="hero-chat-a-avatar"><AiIcon /></div>
+              <div className="hero-chat-a-content">
+                <span className="hero-chat-a-label">AI KRPAN</span>
+                <span className="hero-chat-a-text">
+                  {aVisible}
+                  {phase === "typing-a" && (
+                    <span className="hero-chat-cursor hero-chat-cursor--ai" />
                   )}
-                </div>
+                </span>
               </div>
-            )}
-
-            {/* Thinking dots */}
-            {!entry.done && entry === current && phase === "thinking" && (
-              <div className="hero-chat-thinking">
-                <span /><span /><span />
-              </div>
-            )}
-
-            {/* Answer */}
-            {entry.aVisible.length > 0 && (
-              <div className="hero-chat-a">
-                <div className="hero-chat-a-avatar"><AiIcon /></div>
-                <div className="hero-chat-a-content">
-                  <span className="hero-chat-a-label">AI KRPAN</span>
-                  <span className="hero-chat-a-text">
-                    {entry.aVisible}
-                    {!entry.done && entry === current && phase === "typing-a" && (
-                      <span className="hero-chat-cursor hero-chat-cursor--ai" />
-                    )}
-                  </span>
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Bottom tag */}
