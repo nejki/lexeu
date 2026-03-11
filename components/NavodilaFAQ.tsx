@@ -41,18 +41,18 @@ export default function NavodilaFAQ() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24">
         {/* Left */}
         <div className="lg:pt-2">
-          <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-5">
+          <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
             Pogosta vprašanja
           </p>
           <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-6">
             Pogosta{" "}
-            <em className="italic text-sage-dark">vprašanja</em>
+            <em className="italic text-accent">vprašanja</em>
           </h2>
           <p className="text-[14px] text-site-muted leading-relaxed">
             Ne najdete odgovora? Pišite nam na{" "}
             <a
               href="mailto:info@aikrpan.com"
-              className="text-sage-dark underline underline-offset-2 hover:text-sage transition-colors"
+              className="text-accent underline underline-offset-2 hover:text-accent-light transition-colors"
             >
               info@aikrpan.com
             </a>

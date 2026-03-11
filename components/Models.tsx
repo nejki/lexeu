@@ -7,14 +7,14 @@ const models = [
     name: "AI KRPAN",
     desc: "Celotna slovenska zakonodaja in sodna praksa. Najpopolnejši pravni pomočnik za kompleksna vprašanja.",
     tag: "Slovensko pravo",
-    tagStyle: "bg-sage-pale text-sage-dark",
+    tagStyle: "bg-sage-pale text-accent",
   },
   {
     num: "02",
     name: "SLO Zakoni",
     desc: "Specializiran iskalnik in razlagalec veljavnih besedil slovenskih zakonov.",
     tag: "Zakonodaja",
-    tagStyle: "bg-sage-pale text-sage-dark",
+    tagStyle: "bg-sage-pale text-accent",
   },
   {
     num: "03",
@@ -28,7 +28,7 @@ const models = [
     name: "Pravo EU",
     desc: "Direktive, uredbe in ostala zakonodaja Evropske unije.",
     tag: "EU pravo",
-    tagStyle: "bg-sage-pale text-sage-dark",
+    tagStyle: "bg-sage-pale text-accent",
   },
   {
     num: "05",
@@ -56,7 +56,7 @@ export default function Models() {
             <SectionLabel className="mb-4">Modeli</SectionLabel>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-10">
               Zakaj pravniki izberejo{" "}
-              <em className="italic text-sage-dark">AI KRPAN</em>
+              <em className="italic text-accent">AI KRPAN</em>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-14">
               <div>
@@ -130,7 +130,7 @@ export default function Models() {
                         {m.tag}
                       </span>
                     </td>
-                    <td className="py-6 px-4 text-site-muted group-hover:text-sage-dark transition-colors duration-150 text-lg">
+                    <td className="py-6 px-4 text-site-muted group-hover:text-accent transition-colors duration-150 text-lg">
                       →
                     </td>
                   </tr>

@@ -79,7 +79,7 @@ export default function Pricing() {
     <section id="cenik" className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24">
       {/* Intro */}
       <div className="mb-14">
-        <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-4">
+        <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-4">
           Cenik
         </p>
         <h2 className="font-serif text-[clamp(36px,4vw,52px)] font-semibold leading-[1.1] text-site-text mb-5">
@@ -141,7 +141,7 @@ export default function Pricing() {
               className={`block text-center py-3 rounded-sm text-[12px] font-semibold tracking-[0.06em] uppercase transition-all duration-200 border ${
                 plan.featured
                   ? "border-white/30 text-white hover:bg-white/15"
-                  : "border-site-border text-site-text hover:border-sage hover:text-sage-dark hover:bg-sage-pale"
+                  : "border-site-border text-site-text hover:border-accent hover:text-accent hover:bg-sage-pale"
               }`}
             >
               {plan.cta}
@@ -165,8 +165,8 @@ export default function Pricing() {
                   <p className="text-[14px] text-site-muted">{row.lawyer}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-sage-dark/60 mb-1">AI KRPAN</p>
-                  <p className="text-[14px] text-sage-dark font-medium">{row.aikrpan}</p>
+                  <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-accent/60 mb-1">AI KRPAN</p>
+                  <p className="text-[14px] text-accent font-medium">{row.aikrpan}</p>
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function Pricing() {
               <tr className="border-b border-site-border">
                 <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted"></th>
                 <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted">Odvetnik</th>
-                <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-sage-dark">AI KRPAN</th>
+                <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-accent">AI KRPAN</th>
               </tr>
             </thead>
             <tbody>
@@ -188,7 +188,7 @@ export default function Pricing() {
                 <tr key={row.label} className="border-b border-site-border last:border-b-0">
                   <td className="py-5 px-4 text-[14px] font-semibold text-site-text">{row.label}</td>
                   <td className="py-5 px-4 text-[14px] text-site-muted">{row.lawyer}</td>
-                  <td className="py-5 px-4 text-[14px] text-sage-dark font-medium">{row.aikrpan}</td>
+                  <td className="py-5 px-4 text-[14px] text-accent font-medium">{row.aikrpan}</td>
                 </tr>
               ))}
             </tbody>

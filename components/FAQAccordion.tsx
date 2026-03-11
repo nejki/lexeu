@@ -18,14 +18,14 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
             className="w-full flex items-center justify-between gap-6 py-6 text-left group"
             aria-expanded={open === i}
           >
-            <span className="text-[15px] font-semibold text-site-text group-hover:text-sage-dark transition-colors duration-200">
+            <span className="text-[15px] font-semibold text-site-text group-hover:text-accent transition-colors duration-200">
               {faq.q}
             </span>
             <span
               className={`flex-shrink-0 w-6 h-6 rounded-full border border-site-border flex items-center justify-center text-site-muted transition-all duration-300 ${
                 open === i
                   ? "bg-sage-dark border-sage-dark text-white rotate-45"
-                  : "group-hover:border-sage"
+                  : "group-hover:border-accent"
               }`}
             >
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none">

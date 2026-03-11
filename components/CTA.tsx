@@ -8,7 +8,7 @@ export default function CTA() {
         <FadeIn className="bg-sage-dark rounded-xl px-6 md:px-20 py-14 md:py-20 text-center">
           <h2 className="font-serif text-[clamp(36px,5vw,58px)] font-semibold leading-[1.1] text-white mb-6">
             Postavite svoje prvo<br />
-            <em className="italic text-sage-light">pravno vprašanje</em>
+            <em className="italic text-accent-light">pravno vprašanje</em>
           </h2>
           <p className="text-[17px] text-white/65 leading-[1.7] mb-10 max-w-xl mx-auto">
             Izberite paket in v dveh minutah dobite pravno stališče,
@@ -18,7 +18,7 @@ export default function CTA() {
             <Button
               href="https://app.aikrpan.com"
               variant="primary"
-              className="bg-white text-sage-dark hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
+              className="bg-white text-site-text hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
             >
               Začnite za €15
             </Button>

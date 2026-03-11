@@ -38,7 +38,7 @@ export default function Testimonials() {
             <SectionLabel className="mb-5">Stranke</SectionLabel>
             <h2 className="font-serif text-[clamp(36px,4vw,52px)] font-semibold leading-[1.1] text-site-text">
               Kaj pravijo{" "}
-              <em className="italic text-sage-dark">uporabniki</em>
+              <em className="italic text-accent">uporabniki</em>
             </h2>
           </FadeIn>
 

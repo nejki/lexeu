@@ -14,10 +14,14 @@ const config: Config = {
           mid: "#D4CCBF",
         },
         sage: {
-          DEFAULT: "#7A9E8E",
-          light: "#B8D4C8",
-          pale: "#E4EFE8",
-          dark: "#4A7060",
+          DEFAULT: "#2A2520",
+          light: "#9A938A",
+          pale: "#EDEAE6",
+          dark: "#1A1714",
+        },
+        accent: {
+          DEFAULT: "#BF7A3B",
+          light: "#D08E55",
         },
         warm: {
           DEFAULT: "#C8A882",

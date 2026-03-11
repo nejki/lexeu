@@ -5,12 +5,12 @@ export default function VideoDemo() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
           {/* Text */}
           <div>
-            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-5">
+            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
               Demo
             </p>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] mb-6 text-site-text">
               Oglejte si AI KRPAN{" "}
-              <em className="italic text-sage-dark">v akciji</em>
+              <em className="italic text-accent">v akciji</em>
             </h2>
             <p className="text-[15px] text-site-mid leading-[1.85] mb-8">
               Pravo odgovorjeno v sekundah. Glejte, kako AI KRPAN reši resnično

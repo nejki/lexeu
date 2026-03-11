@@ -41,7 +41,7 @@ export default function Logo({
         }`}
       >
         AI{" "}
-        <span className={light ? "text-sage-light" : "text-sage-dark"}>
+        <span className={light ? "text-accent-light" : "text-accent"}>
           KRPAN
         </span>
       </span>

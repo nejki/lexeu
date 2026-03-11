@@ -18,7 +18,7 @@ export default function Marquee() {
         {clients.map((name, i) => (
           <span key={i} className="font-serif text-lg font-medium text-site-muted flex-shrink-0">
             {name}
-            <span className="text-sage mx-4">◆</span>
+            <span className="text-accent mx-4">◆</span>
           </span>
         ))}
       </div>

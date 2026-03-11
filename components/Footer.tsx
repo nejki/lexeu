@@ -76,7 +76,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-10 h-10 rounded-full border border-site-border flex items-center justify-center text-site-muted hover:text-sage-dark hover:border-sage transition-colors duration-200"
+                  className="w-10 h-10 rounded-full border border-site-border flex items-center justify-center text-site-muted hover:text-accent hover:border-accent transition-colors duration-200"
                 >
                   {s.icon}
                 </a>
@@ -94,7 +94,7 @@ export default function Footer() {
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="py-1 text-[14px] text-site-muted hover:text-sage-dark transition-colors duration-200"
+                    className="py-1 text-[14px] text-site-muted hover:text-accent transition-colors duration-200"
                   >
                     {l.label}
                   </a>
@@ -113,7 +113,7 @@ export default function Footer() {
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="py-1 text-[14px] text-site-muted hover:text-sage-dark transition-colors duration-200"
+                    className="py-1 text-[14px] text-site-muted hover:text-accent transition-colors duration-200"
                   >
                     {l.label}
                   </a>
@@ -132,7 +132,7 @@ export default function Footer() {
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="py-1 text-[14px] text-site-muted hover:text-sage-dark transition-colors duration-200"
+                    className="py-1 text-[14px] text-site-muted hover:text-accent transition-colors duration-200"
                   >
                     {l.label}
                   </a>
@@ -151,7 +151,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+38640451562"
-                  className="hover:text-sage-dark transition-colors duration-200"
+                  className="hover:text-accent transition-colors duration-200"
                 >
                   +386 40 451 562
                 </a>
@@ -159,7 +159,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@aikrpan.com"
-                  className="hover:text-sage-dark transition-colors duration-200"
+                  className="hover:text-accent transition-colors duration-200"
                 >
                   info@aikrpan.com
                 </a>
@@ -175,7 +175,7 @@ export default function Footer() {
           </p>
           <p className="text-[13px] text-site-muted">
             Ustvaril{" "}
-            <a href="https://futuristica.si" className="hover:text-sage-dark transition-colors duration-200">
+            <a href="https://futuristica.si" className="hover:text-accent transition-colors duration-200">
               Futuristica d.o.o.
             </a>
           </p>

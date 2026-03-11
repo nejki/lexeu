@@ -29,7 +29,7 @@ export default function Founder() {
               />
             </div>
             <div className="mt-6">
-              <p className="text-[11px] font-semibold tracking-widest uppercase text-sage mb-2">
+              <p className="text-[11px] font-semibold tracking-widest uppercase text-accent mb-2">
                 Ustanovitelj
               </p>
               <h3 className="font-serif text-[24px] font-semibold leading-[1.2] text-site-text">
@@ -47,7 +47,7 @@ export default function Founder() {
               <SectionLabel className="mb-5">Za AI Krpanom</SectionLabel>
               <h2 className="font-serif text-[clamp(36px,4vw,52px)] font-semibold leading-[1.1] text-site-text mb-8">
                 Odvetnik, ki gradi{" "}
-                <em className="italic text-sage-dark">prihodnost prava</em>
+                <em className="italic text-accent">prihodnost prava</em>
               </h2>
             </FadeIn>
 
@@ -76,7 +76,7 @@ export default function Founder() {
                   delay={160 + i * 60}
                   className="bg-site-white p-6"
                 >
-                  <p className="text-[11px] font-semibold tracking-widest uppercase text-sage mb-2">
+                  <p className="text-[11px] font-semibold tracking-widest uppercase text-accent mb-2">
                     {c.label}
                   </p>
                   <p className="text-[15px] font-medium text-site-text leading-[1.5]">
@@ -89,7 +89,7 @@ export default function Founder() {
             <FadeIn delay={400}>
               <Link
                 href="/o-meni/"
-                className="inline-block mt-8 text-[14px] font-medium text-sage-dark hover:translate-x-1 transition-transform duration-300"
+                className="inline-block mt-8 text-[14px] font-medium text-accent hover:translate-x-1 transition-transform duration-300"
               >
                 Več o ustanovitelju &rarr;
               </Link>

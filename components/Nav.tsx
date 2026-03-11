@@ -56,7 +56,7 @@ export default function Nav() {
             <a
               key={link.label}
               href={resolveHref(link.href)}
-              className="text-[13px] font-medium tracking-[0.04em] uppercase text-site-mid hover:text-sage-dark transition-colors duration-200"
+              className="text-[13px] font-medium tracking-[0.04em] uppercase text-site-mid hover:text-accent transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -67,7 +67,7 @@ export default function Nav() {
         <div className="flex items-center gap-4">
           <a
             href="https://app.aikrpan.com"
-            className="hidden sm:block text-[13px] font-medium tracking-[0.04em] uppercase text-site-mid hover:text-sage-dark transition-colors duration-200"
+            className="hidden sm:block text-[13px] font-medium tracking-[0.04em] uppercase text-site-mid hover:text-accent transition-colors duration-200"
           >
             Prijava
           </a>
@@ -80,7 +80,7 @@ export default function Nav() {
           {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-1 text-site-mid hover:text-sage-dark transition-colors duration-200"
+            className="md:hidden p-1 text-site-mid hover:text-accent transition-colors duration-200"
             aria-label={open ? "Zapri meni" : "Odpri meni"}
           >
             {open ? <IconX className="w-5 h-5" /> : <IconMenu className="w-5 h-5" />}
@@ -100,7 +100,7 @@ export default function Nav() {
             href={resolveHref(link.href)}
             onClick={() => setOpen(false)}
             style={{ transitionDelay: open ? `${i * 40}ms` : "0ms" }}
-            className={`py-4 border-b border-site-border text-[15px] font-medium tracking-[0.05em] uppercase text-site-mid hover:text-sage-dark transition-all duration-200 ${
+            className={`py-4 border-b border-site-border text-[15px] font-medium tracking-[0.05em] uppercase text-site-mid hover:text-accent transition-all duration-200 ${
               open ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
             }`}
           >
@@ -111,7 +111,7 @@ export default function Nav() {
           <a
             href="https://app.aikrpan.com"
             onClick={() => setOpen(false)}
-            className="text-center border border-site-border text-site-mid py-3.5 rounded-sm text-[13px] font-medium tracking-[0.06em] uppercase hover:border-sage hover:text-sage-dark transition-colors duration-200"
+            className="text-center border border-site-border text-site-mid py-3.5 rounded-sm text-[13px] font-medium tracking-[0.06em] uppercase hover:border-accent hover:text-accent transition-colors duration-200"
           >
             Prijava
           </a>

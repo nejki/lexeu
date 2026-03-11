@@ -112,7 +112,7 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
     other: [
-      { rel: "mask-icon", url: "/favicon.svg", color: "#4A7060" },
+      { rel: "mask-icon", url: "/favicon.svg", color: "#1A1714" },
     ],
   },
   manifest: "/site.webmanifest",
@@ -135,8 +135,8 @@ export default function RootLayout({
   return (
     <html lang="sl" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
-        <meta name="theme-color" content="#4A7060" />
-        <meta name="msapplication-TileColor" content="#4A7060" />
+        <meta name="theme-color" content="#1A1714" />
+        <meta name="msapplication-TileColor" content="#1A1714" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

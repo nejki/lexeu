@@ -11,8 +11,8 @@ interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const variants: Record<Variant, string> = {
   primary: "bg-sage-dark text-white hover:bg-sage",
-  outline: "border border-site-border text-site-mid hover:border-sage hover:text-sage-dark",
-  ghost: "text-sage-dark hover:text-sage",
+  outline: "border border-site-border text-site-mid hover:border-accent hover:text-accent",
+  ghost: "text-accent hover:text-accent-light",
 };
 
 const sizes: Record<Size, string> = {

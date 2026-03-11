@@ -76,7 +76,7 @@ export default function MediaMentions() {
             <SectionLabel className="mb-5">Mediji</SectionLabel>
             <h2 className="font-serif text-[clamp(36px,4vw,52px)] font-semibold leading-[1.1] text-site-text">
               Kaj govorijo{" "}
-              <em className="italic text-sage-dark">mediji</em> o nas
+              <em className="italic text-accent">mediji</em> o nas
             </h2>
           </FadeIn>
 
@@ -104,20 +104,20 @@ export default function MediaMentions() {
                   {/* Content */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="text-[11px] font-semibold tracking-widest uppercase text-sage">
+                      <span className="text-[11px] font-semibold tracking-widest uppercase text-accent">
                         {m.outlet}
                       </span>
                       <span className="text-[11px] font-medium tracking-wide uppercase text-site-muted">
                         {m.type}
                       </span>
                     </div>
-                    <h3 className="font-serif text-[16px] md:text-[19px] font-semibold leading-[1.4] text-site-text mb-1.5 group-hover:text-sage-dark transition-colors duration-300">
+                    <h3 className="font-serif text-[16px] md:text-[19px] font-semibold leading-[1.4] text-site-text mb-1.5 group-hover:text-accent transition-colors duration-300">
                       {m.title}
                     </h3>
                     <p className="text-[14px] text-site-mid leading-[1.7]">
                       {m.description}
                     </p>
-                    <span className="inline-block mt-3 text-[13px] font-medium text-sage-dark group-hover:translate-x-1 transition-transform duration-300">
+                    <span className="inline-block mt-3 text-[13px] font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
                       Preberi več &rarr;
                     </span>
                   </div>

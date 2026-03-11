@@ -151,9 +151,9 @@ export default function DelovnoPravoPage() {
           <a
             key={page.href}
             href={page.href}
-            className="group block bg-site-white border border-site-border rounded-lg p-6 hover:border-sage hover:shadow-sm transition-all duration-200"
+            className="group block bg-site-white border border-site-border rounded-lg p-6 hover:border-accent hover:shadow-sm transition-all duration-200"
           >
-            <h2 className="font-serif text-[22px] font-semibold text-site-text group-hover:text-sage-dark transition-colors duration-200 mb-2">
+            <h2 className="font-serif text-[22px] font-semibold text-site-text group-hover:text-accent transition-colors duration-200 mb-2">
               {page.title}
             </h2>
             <p className="text-[15px] text-site-mid leading-[1.7]">
@@ -202,7 +202,7 @@ export default function DelovnoPravoPage() {
           </p>
           <a
             href="/delovno-pravo/odpoved/"
-            className="text-[15px] font-medium text-sage-dark hover:text-sage transition-colors duration-200"
+            className="text-[15px] font-medium text-accent hover:text-accent-light transition-colors duration-200"
           >
             Več o odpovedi pogodbe &rarr;
           </a>
@@ -241,7 +241,7 @@ export default function DelovnoPravoPage() {
           </p>
           <a
             href="/delovno-pravo/odpravnina/"
-            className="text-[15px] font-medium text-sage-dark hover:text-sage transition-colors duration-200"
+            className="text-[15px] font-medium text-accent hover:text-accent-light transition-colors duration-200"
           >
             Več o odpravnini &rarr;
           </a>
@@ -277,7 +277,7 @@ export default function DelovnoPravoPage() {
           </p>
           <a
             href="/delovno-pravo/regres/"
-            className="text-[15px] font-medium text-sage-dark hover:text-sage transition-colors duration-200"
+            className="text-[15px] font-medium text-accent hover:text-accent-light transition-colors duration-200"
           >
             Več o regresu &rarr;
           </a>
@@ -309,7 +309,7 @@ export default function DelovnoPravoPage() {
           </p>
           <a
             href="/delovno-pravo/minimalna-placa/"
-            className="text-[15px] font-medium text-sage-dark hover:text-sage transition-colors duration-200"
+            className="text-[15px] font-medium text-accent hover:text-accent-light transition-colors duration-200"
           >
             Več o minimalni plači &rarr;
           </a>

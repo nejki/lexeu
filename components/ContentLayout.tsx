@@ -53,7 +53,7 @@ export default function ContentLayout({
           <li>
             <Link
               href="/"
-              className="hover:text-sage-dark transition-colors duration-200"
+              className="hover:text-accent transition-colors duration-200"
             >
               Domov
             </Link>
@@ -68,7 +68,7 @@ export default function ContentLayout({
               ) : (
                 <a
                   href={crumb.href}
-                  className="hover:text-sage-dark transition-colors duration-200"
+                  className="hover:text-accent transition-colors duration-200"
                 >
                   {crumb.label}
                 </a>
@@ -111,7 +111,7 @@ export default function ContentLayout({
             <Button
               href="https://app.aikrpan.com"
               variant="primary"
-              className="bg-white text-sage-dark hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
+              className="bg-white text-site-text hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
             >
               Začnite za €15
             </Button>

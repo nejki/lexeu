@@ -205,7 +205,7 @@ export default function NavodilaPage() {
           <li>
             <Link
               href="/"
-              className="hover:text-sage-dark transition-colors duration-200"
+              className="hover:text-accent transition-colors duration-200"
             >
               Domov
             </Link>
@@ -220,12 +220,12 @@ export default function NavodilaPage() {
       {/* ── Hero ── */}
       <header className="max-w-[1200px] mx-auto px-6 md:px-12 pt-10 pb-6 md:pt-16 md:pb-10">
         <FadeIn>
-          <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-5">
+          <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
             Vodnik za uporabo
           </p>
           <h1 className="font-serif text-[clamp(36px,5vw,58px)] font-semibold leading-[1.1] text-site-text mb-4">
             Navodila za uporabo{" "}
-            <em className="italic text-sage-dark">AI KRPAN</em>
+            <em className="italic text-accent">AI KRPAN</em>
           </h1>
           <p className="text-[18px] text-site-mid leading-[1.7] max-w-2xl">
             Oglejte si kratek video vodnik ali sledite korakom spodaj.
@@ -258,12 +258,12 @@ export default function NavodilaPage() {
       {/* ── Steps ── */}
       <section className="max-w-[1200px] mx-auto px-6 md:px-12 pb-20">
         <FadeIn>
-          <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-5">
+          <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
             Korak za korakom
           </p>
           <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-4">
             Kako uporabljati{" "}
-            <em className="italic text-sage-dark">AI KRPAN</em>
+            <em className="italic text-accent">AI KRPAN</em>
           </h2>
           <p className="text-[17px] text-site-mid leading-[1.7] max-w-2xl mb-14">
             Od registracije do pravnega stališča v šestih preprostih korakih.
@@ -295,20 +295,20 @@ export default function NavodilaPage() {
       <section className="bg-sage-pale/40">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-20">
           <FadeIn>
-            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-5">
+            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
               Nasveti za boljše odgovore
             </p>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-14">
               Kako dobiti{" "}
-              <em className="italic text-sage-dark">najboljše rezultate</em>
+              <em className="italic text-accent">najboljše rezultate</em>
             </h2>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {tips.map((tip, i) => (
               <FadeIn key={tip.title} delay={i * 80}>
-                <div className="flex gap-5 bg-site-white border border-site-border rounded-lg p-6 hover:border-sage hover:shadow-sm transition-all duration-200">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-sage-pale flex items-center justify-center text-sage-dark">
+                <div className="flex gap-5 bg-site-white border border-site-border rounded-lg p-6 hover:border-accent hover:shadow-sm transition-all duration-200">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-sage-pale flex items-center justify-center text-accent">
                     {tip.icon}
                   </div>
                   <div>
@@ -345,7 +345,7 @@ export default function NavodilaPage() {
             <Button
               href="https://app.aikrpan.com"
               variant="primary"
-              className="bg-white text-sage-dark hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
+              className="bg-white text-site-text hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
             >
               Začnite za €15
             </Button>

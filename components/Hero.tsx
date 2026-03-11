@@ -38,7 +38,7 @@ export default function Hero() {
         <h1 className="font-serif text-[clamp(36px,6vw,80px)] font-semibold leading-[1.05] tracking-tight text-site-text mb-7">
           Pravni nasvet,<br />
           ne pravno{" "}
-          <em className="italic text-sage-dark" style={{ fontStyle: "italic" }}>
+          <em className="italic text-accent" style={{ fontStyle: "italic" }}>
             iskanje.
           </em>
         </h1>

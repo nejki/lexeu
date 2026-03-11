@@ -193,7 +193,7 @@ export default function OMeniPage() {
           <li>
             <Link
               href="/"
-              className="hover:text-sage-dark transition-colors duration-200"
+              className="hover:text-accent transition-colors duration-200"
             >
               Domov
             </Link>
@@ -225,12 +225,12 @@ export default function OMeniPage() {
           {/* Bio */}
           <div>
             <FadeIn>
-              <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-5">
+              <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
                 Ustanovitelj AI Krpan
               </p>
               <h1 className="font-serif text-[clamp(36px,5vw,58px)] font-semibold leading-[1.1] text-site-text mb-4">
                 mag. Aleksander{" "}
-                <em className="italic text-sage-dark">Kumer</em>
+                <em className="italic text-accent">Kumer</em>
               </h1>
               <p className="text-[15px] font-medium text-site-muted mb-8">
                 Odvetnik &middot; Pravni inovator &middot; Maribor, Slovenija
@@ -269,12 +269,12 @@ export default function OMeniPage() {
       <section className="bg-site-white border-t border-site-border py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12">
           <FadeIn>
-            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-5">
+            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
               Pravna področja
             </p>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-12">
               Področja{" "}
-              <em className="italic text-sage-dark">strokovnosti</em>
+              <em className="italic text-accent">strokovnosti</em>
             </h2>
           </FadeIn>
 
@@ -298,12 +298,12 @@ export default function OMeniPage() {
       <section className="border-t border-site-border py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12">
           <FadeIn>
-            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-5">
+            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
               Pot
             </p>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-14">
               Od prava do{" "}
-              <em className="italic text-sage-dark">inovacije</em>
+              <em className="italic text-accent">inovacije</em>
             </h2>
           </FadeIn>
 
@@ -335,12 +335,12 @@ export default function OMeniPage() {
       <section className="bg-site-white border-t border-site-border py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12">
           <FadeIn>
-            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-sage mb-5">
+            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
               Mediji in nastopi
             </p>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-14">
               V{" "}
-              <em className="italic text-sage-dark">medijih</em> in na odru
+              <em className="italic text-accent">medijih</em> in na odru
             </h2>
           </FadeIn>
 
@@ -357,16 +357,16 @@ export default function OMeniPage() {
                   rel="noopener noreferrer"
                   className="group block"
                 >
-                  <p className="text-[11px] font-semibold tracking-widest uppercase text-sage mb-2">
+                  <p className="text-[11px] font-semibold tracking-widest uppercase text-accent mb-2">
                     {m.outlet}
                   </p>
-                  <h3 className="text-[16px] font-semibold text-site-text mb-2 group-hover:text-sage-dark transition-colors duration-200">
+                  <h3 className="text-[16px] font-semibold text-site-text mb-2 group-hover:text-accent transition-colors duration-200">
                     {m.title}
                   </h3>
                   <p className="text-[14px] text-site-mid leading-[1.7] mb-3">
                     {m.description}
                   </p>
-                  <span className="text-[13px] font-medium text-sage-dark group-hover:translate-x-1 inline-block transition-transform duration-300">
+                  <span className="text-[13px] font-medium text-accent group-hover:translate-x-1 inline-block transition-transform duration-300">
                     Preberi &rarr;
                   </span>
                 </a>
@@ -391,7 +391,7 @@ export default function OMeniPage() {
               <Button
                 href="https://app.aikrpan.com"
                 variant="primary"
-                className="bg-white text-sage-dark hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
+                className="bg-white text-site-text hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
               >
                 Preizkusite AI Krpan
               </Button>
