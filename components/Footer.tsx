@@ -8,6 +8,7 @@ const col1 = [
   { label: "Za pravnike", href: "/za-pravnike/" },
   { label: "Navodila", href: "/navodila/" },
   { label: "Blog", href: "/blog/" },
+  { label: "O ustanovitelju", href: "/o-meni/" },
 ];
 
 const col2 = [

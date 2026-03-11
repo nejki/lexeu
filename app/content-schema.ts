@@ -139,3 +139,49 @@ export function videoObjectSchema({
     inLanguage: "sl",
   };
 }
+
+export function personSchema({
+  name,
+  jobTitle,
+  description,
+  url,
+  image,
+  sameAs,
+  worksFor,
+  alumniOf,
+  awards,
+  knowsAbout,
+}: {
+  name: string;
+  jobTitle: string;
+  description: string;
+  url: string;
+  image: string;
+  sameAs: string[];
+  worksFor: { name: string; url: string }[];
+  alumniOf: string;
+  awards: string[];
+  knowsAbout: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name,
+    jobTitle,
+    description,
+    url: `${BASE_URL}${url}`,
+    image: `${BASE_URL}${image}`,
+    sameAs,
+    worksFor: worksFor.map((org) => ({
+      "@type": "Organization",
+      name: org.name,
+      url: org.url,
+    })),
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: alumniOf,
+    },
+    award: awards,
+    knowsAbout,
+  };
+}
