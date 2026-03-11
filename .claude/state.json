@@ -2,9 +2,9 @@
   "project": "aikrpan",
   "currentFocus": [],
   "lastSession": {
-    "date": "2026-03-10",
-    "summary": "Comprehensive mobile viewport optimization across all landing page sections — responsive padding, card layouts, touch targets, font sizing.",
-    "commits": ["e063cae"]
+    "date": "2026-03-11",
+    "summary": "Mobile optimization + HeroChat auto-scroll to latest entry on both mobile and desktop.",
+    "commits": ["e063cae", "d928268"]
   },
   "backlog": [
     {
@@ -51,6 +51,7 @@
     }
   ],
   "shipped": [
+    "HeroChat auto-scroll to latest Q&A entry (stutter-free, triggers only on new entry)",
     "Mobile optimization: responsive padding, card layouts for Models/Pricing tables, touch targets, font sizing, HeroChat height",
     "Navodila: added 6th step (Preverite vire) to fill 3-col grid",
     "Hero chat: removed auto-scroll to fix stutter",
@@ -59,7 +60,6 @@
     "tailwind-merge integration for safe className overrides",
     "CTA button text visibility fix (Tailwind class conflict)",
     "Hero chat: stop force-scrolling when user scrolls up",
-    "ESLint setup upgraded for Next.js 16, all lint errors fixed",
-    "Pricing overflow fix for Po povpraševanju text"
+    "ESLint setup upgraded for Next.js 16, all lint errors fixed"
   ]
 }
