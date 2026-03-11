@@ -14,6 +14,14 @@ const col2 = [
   { label: "Splošni pogoji", href: "https://www.aikrpan.com/splosni-pogoji/" },
 ];
 
+const col3 = [
+  { label: "Delovno pravo", href: "/delovno-pravo/" },
+  { label: "Odpoved", href: "/delovno-pravo/odpoved/" },
+  { label: "Odpravnina", href: "/delovno-pravo/odpravnina/" },
+  { label: "Regres", href: "/delovno-pravo/regres/" },
+  { label: "Minimalna plača", href: "/delovno-pravo/minimalna-placa/" },
+];
+
 const seoKeywords = [
   "pravni nasvet",
   "AI pravnik",
@@ -66,7 +74,7 @@ export default function Footer() {
     <footer className="border-t border-site-border">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-16 pb-10">
         {/* Top */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-12 mb-14">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
@@ -128,7 +136,26 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Podjetje */}
+          {/* Column 3: Vsebina */}
+          <div>
+            <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
+              Vsebina
+            </p>
+            <ul className="flex flex-col gap-1">
+              {col3.map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    className="py-1 text-[14px] text-site-muted hover:text-accent transition-colors duration-200"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Podjetje */}
           <div>
             <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
               Podjetje
