@@ -7,10 +7,11 @@ import Logo from "@/components/Logo";
 
 const navLinks = [
   { label: "Namen", href: "#namen" },
+  { label: "Demo", href: "#demo" },
   { label: "Modeli", href: "#modeli" },
   { label: "Cenik", href: "#cenik" },
-  { label: "Navodila", href: "/navodila/" },
-  { label: "Mediji", href: "#mediji" },
+  { label: "Ustanovitelj", href: "#ustanovitelj" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Nav() {
@@ -75,7 +76,7 @@ export default function Nav() {
             href={resolveHref("#cenik")}
             className="bg-sage-dark text-white px-5 py-2.5 rounded-sm text-[12px] font-semibold tracking-[0.08em] uppercase hover:bg-sage transition-colors duration-200"
           >
-            Naroči se
+            ZAČNI ZA €15
           </a>
           {/* Hamburger */}
           <button
@@ -120,7 +121,7 @@ export default function Nav() {
             onClick={() => setOpen(false)}
             className="text-center bg-sage-dark text-white py-3.5 rounded-sm text-[13px] font-semibold tracking-[0.06em] uppercase hover:bg-sage transition-colors duration-200"
           >
-            Naroči se
+            ZAČNI ZA €15
           </a>
         </div>
       </div>

@@ -5,42 +5,42 @@ const models = [
   {
     num: "01",
     name: "AI KRPAN",
-    desc: "Celotna slovenska zakonodaja in sodna praksa. Najpopolnejši pravni pomočnik za kompleksna vprašanja.",
+    desc: "Slovensko pravo in sodna praksa. Pripravi dokumente, poda mnenja, analizira predpise. Vaš glavni pravni AI agent.",
     tag: "Slovensko pravo",
     tagStyle: "bg-sage-pale text-accent",
   },
   {
     num: "02",
     name: "SLO Zakoni",
-    desc: "Specializiran iskalnik in razlagalec veljavnih besedil slovenskih zakonov.",
+    desc: "Hitro iskanje po celotni slovenski zakonodaji. Ko potrebujete točen člen, ne interpretacije.",
     tag: "Zakonodaja",
     tagStyle: "bg-sage-pale text-accent",
   },
   {
     num: "03",
     name: "Document QA",
-    desc: "Naložite lastni dokument in postavljajte vprašanja neposredno o njem.",
+    desc: "Naložite pogodbo ali drug dokument — AI ga prebere, analizira in odgovori na vaša vprašanja o vsebini.",
     tag: "Dokumenti",
     tagStyle: "bg-warm-pale text-[#8A6040]",
   },
   {
     num: "04",
     name: "Pravo EU",
-    desc: "Direktive, uredbe in ostala zakonodaja Evropske unije.",
+    desc: "Evropska zakonodaja, direktive, uredbe in sodna praksa Sodišča EU. Za čezmejne zadeve in EU compliance.",
     tag: "EU pravo",
     tagStyle: "bg-sage-pale text-accent",
   },
   {
     num: "05",
     name: "GPT-4 Splošni",
-    desc: "Za splošne poizvedbe, pisanje dopisov in ostale naloge brez pravne specializacije.",
+    desc: "Za splošna vprašanja zunaj prava — poslovni nasveti, pisanje besedil, prevajanje.",
     tag: "Splošni",
     tagStyle: "bg-warm-pale text-[#8A6040]",
   },
   {
     num: "06",
     name: "IP Smernice",
-    desc: "Smernice Informacijskega pooblaščenca za varstvo osebnih podatkov.",
+    desc: "Smernice informacijske pooblaščenke. Varstvo osebnih podatkov, GDPR, pravice posameznikov.",
     tag: "Varstvo podatkov",
     tagStyle: "bg-rose-light text-[#805050]",
   },
@@ -55,24 +55,24 @@ export default function Models() {
           <div className="mb-14">
             <SectionLabel className="mb-4">Modeli</SectionLabel>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-10">
-              Zakaj pravniki izberejo{" "}
-              <em className="italic text-accent">AI KRPAN</em>
+              6 specializiranih modelov za{" "}
+              <em className="italic text-accent">pravo področje</em>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-14">
               <div>
                 <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] font-semibold leading-[1.2] text-site-text mb-3">
-                  Stališče, analiza vključena
+                  Ne le odgovor — stališče z argumentacijo
                 </h3>
                 <p className="text-[15px] text-site-mid leading-[1.85]">
-                  AI KRPAN ne samo išče — zavzame stališče in ga utemelji z zakonskimi členi ter sodno prakso.
+                  AI KRPAN ne kopira zakonskega besedila. Prebere vaš primer, zavzame stališče in ga utemelji s členi zakona ter sodno prakso. Kot pravno mnenje, ne kot iskalnik.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] font-semibold leading-[1.2] text-site-text mb-3">
-                  6 specializiranih modelov
+                  Vsak model pokriva svoje področje
                 </h3>
                 <p className="text-[15px] text-site-mid leading-[1.85]">
-                  Od slovenskega prava do EU zakonodaje — vsak model je specializiran za svoje pravno področje.
+                  Delovno pravo, GDPR, dedovanje, obligacije, pravo EU — izberete model, ki pozna vaše področje do potankosti.
                 </p>
               </div>
             </div>

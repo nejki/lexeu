@@ -1,28 +1,34 @@
 import Logo from "@/components/Logo";
 
 const col1 = [
-  { label: "Kako deluje", href: "#namen" },
-  { label: "Modeli", href: "#modeli" },
+  { label: "Prijava", href: "https://app.aikrpan.com" },
+  { label: "Registracija", href: "https://app.aikrpan.com" },
   { label: "Cenik", href: "#cenik" },
-  { label: "Za podjetja", href: "/za-podjetja/" },
-  { label: "Za pravnike", href: "/za-pravnike/" },
-  { label: "Navodila", href: "/navodila/" },
-  { label: "Blog", href: "/blog/" },
-  { label: "O ustanovitelju", href: "/o-meni/" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Kontakt", href: "mailto:info@aikrpan.com" },
 ];
 
 const col2 = [
-  { label: "Delovno pravo", href: "/delovno-pravo/" },
-  { label: "Pogodbe", href: "/pogodbe/" },
-  { label: "Dedovanje", href: "/dedovanje/" },
-  { label: "Družinsko pravo", href: "/druzinsko-pravo/" },
-  { label: "Brezplačna pravna pomoč", href: "/brezplacna-pravna-pomoc/" },
-];
-
-const col3 = [
   { label: "Pogoji uporabe", href: "https://www.aikrpan.com/pogoji/" },
   { label: "Politika zasebnosti", href: "https://www.aikrpan.com/zasebnost/" },
-  { label: "Kontakt", href: "mailto:info@aikrpan.com" },
+  { label: "Splošni pogoji", href: "https://www.aikrpan.com/splosni-pogoji/" },
+];
+
+const seoKeywords = [
+  "pravni nasvet",
+  "AI pravnik",
+  "odpoved pogodbe o zaposlitvi",
+  "pogodba o zaposlitvi vzorec",
+  "brezplačna pravna pomoč",
+  "sporazumna odpoved pogodbe",
+  "delovno pravo",
+  "ZDR-1",
+  "pravno mnenje",
+  "pogodba o delu",
+  "odpravnina",
+  "dedovanje",
+  "GDPR",
+  "sodna praksa",
 ];
 
 const socials = [
@@ -60,14 +66,14 @@ export default function Footer() {
     <footer className="border-t border-site-border">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-16 pb-10">
         {/* Top */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-12 mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 mb-14">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
               <Logo variant="full" size={44} />
             </div>
             <p className="text-[14px] text-site-muted leading-[1.75]">
-              Napreden pravni pomočnik za slovensko zakonodajo in sodno prakso.
+              Pravni AI agent za slovensko in EU pravo.
             </p>
             {/* Social icons */}
             <div className="flex gap-3 mt-5">
@@ -84,10 +90,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 1: AI KRPAN */}
+          {/* Column 1: Povezave */}
           <div>
             <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
-              AI KRPAN
+              Povezave
             </p>
             <ul className="flex flex-col gap-1">
               {col1.map((l) => (
@@ -103,10 +109,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 2: Pravna področja */}
+          {/* Column 2: Pravno */}
           <div>
             <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
-              Pravna področja
+              Pravno
             </p>
             <ul className="flex flex-col gap-1">
               {col2.map((l) => (
@@ -122,40 +128,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Pravno */}
-          <div>
-            <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
-              Pravno
-            </p>
-            <ul className="flex flex-col gap-1">
-              {col3.map((l) => (
-                <li key={l.label}>
-                  <a
-                    href={l.href}
-                    className="py-1 text-[14px] text-site-muted hover:text-accent transition-colors duration-200"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 4: Podjetje */}
+          {/* Column 3: Podjetje */}
           <div>
             <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
               Podjetje
             </p>
             <ul className="flex flex-col gap-3 text-[14px] text-site-muted">
               <li>Committo d.o.o.</li>
-              <li>
-                <a
-                  href="tel:+38640451562"
-                  className="hover:text-accent transition-colors duration-200"
-                >
-                  +386 40 451 562
-                </a>
-              </li>
               <li>
                 <a
                   href="mailto:info@aikrpan.com"
@@ -168,10 +147,19 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* SEO Keywords */}
+        <div className="flex flex-wrap gap-x-3 gap-y-1 justify-center pb-6">
+          {seoKeywords.map((kw, i) => (
+            <span key={kw} className="text-[12px] text-site-muted/50">
+              {kw}{i < seoKeywords.length - 1 && " ·"}
+            </span>
+          ))}
+        </div>
+
         {/* Bottom */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-site-border">
           <p className="text-[13px] text-site-muted">
-            © 2026 Committo d.o.o. Vse pravice pridržane.
+            © 2025 Committo d.o.o. Vse pravice pridržane.
           </p>
           <p className="text-[13px] text-site-muted">
             Ustvaril{" "}

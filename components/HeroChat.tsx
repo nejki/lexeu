@@ -5,28 +5,28 @@ import { useEffect, useRef, useState } from "react";
 /* ── Q&A pairs ─────────────────────────────────────────── */
 const conversations = [
   {
+    q: "Pripravi mi odpoved pogodbe o zaposlitvi po 1. odstavku 83. člena ZDR-1.",
+    a: "Pripravil sem osnutek redne odpovedi pogodbe o zaposlitvi v skladu s 1. odstavkom 83. člena ZDR-1. Vključene so vse obvezne sestavine: navedba razloga, odpovedni rok (min. 30 dni po 94. členu ZDR-1), pravni pouk o pravnem varstvu in obrazložitev. Delavcu pripada tudi odpravnina po 108. členu ZDR-1.",
+  },
+  {
+    q: "Ali moram plačati DDV, če sem s.p. pod pragom 50.000 EUR letnega prometa?",
+    a: "Po ZDDV-1 (94. člen) se morate registrirati za DDV, ko vaš obdavčljivi promet v 12 mesecih preseže 50.000 €. Dokler ste pod tem pragom, vam DDV ni treba zaračunavati. Prostovoljno se lahko registrirate kadarkoli — to je smiselno, če so vaše stranke podjetja, ki si DDV odbijajo.",
+  },
+  {
+    q: "Preglej to pogodbo o delu in mi povej, ali vsebuje vse obvezne sestavine.",
+    a: "Pregledal sem pogodbo o delu. Po 619.–648. členu OZ mora pogodba vsebovati: opredelitev dela, rok za izvedbo, plačilo in obveznosti obeh strank. Vaša pogodba vsebuje vse obvezne sestavine. Opozarjam pa na 2 tveganja: rok za dokončanje dela ni jasno opredeljen, klavzula o odgovornosti za napake pa je v korist naročnika nesorazmerno omejena.",
+  },
+  {
     q: "Stranka ne plača računa že 60 dni — kaj lahko naredim?",
     a: "Po OZ (196. člen) lahko zaračunate zamudne obresti. Pošljite pisni opomin z 8-dnevnim rokom. Če ne plača, vložite predlog za izvršbo na podlagi verodostojne listine — brez sodnega postopka.",
   },
   {
-    q: "Kakšen je postopek za odpoved pogodbe o zaposlitvi?",
-    a: "Po ZDR-1 (83.–93. člen) morate podati pisno odpoved z navedbo razloga. Delavcu pripada odpovedni rok (min. 30 dni) in odpravnina (1/5 plače na leto zaposlitve). Pred redno odpovedjo je obvezen zagovor.",
-  },
-  {
-    q: "Kdaj se moram registrirati kot zavezanec za DDV?",
-    a: "Po ZDDV-1 (94. člen) se morate registrirati, ko vaš obdavčljivi promet v 12 mesecih preseže 50.000 €. Prostovoljno se lahko registrirate kadarkoli — to je smiselno, če so vaše stranke podjetja.",
-  },
-  {
-    q: "Ali je ustna pogodba pravno veljavna?",
-    a: "Da — po OZ (51. člen) je ustna pogodba načeloma veljavna. Izjema so pogodbe, za katere zakon zahteva pisno obliko (npr. prenos nepremičnin, pogodba o zaposlitvi). Problem je le dokazovanje.",
+    q: "Kakšen je zastaralni rok za izterjavo dolgov?",
+    a: "Splošni zastaralni rok je 5 let (OZ, 346. člen). Za občasne terjatve (najemnina, obresti) velja 3 leta. Za terjatve iz gospodarskih pogodb med podjetji prav tako 5 let. Po zastaranju dolg ne preneha, le prisilna izterjava ni več mogoča.",
   },
   {
     q: "Kupil sem pokvarjen izdelek — kakšne pravice imam?",
     a: "Po ZVPot-1 (37.–42. člen) imate pravico do brezplačnega popravila ali zamenjave. Če to ni mogoče, lahko zahtevate znižanje cene ali vračilo kupnine. Rok za reklamacijo je 2 meseca od odkritja napake.",
-  },
-  {
-    q: "Kakšen je zastaralni rok za izterjavo dolgov?",
-    a: "Splošni zastaralni rok je 5 let (OZ, 346. člen). Za občasne terjatve (najemnina, obresti) velja 3 leta. Za terjatve iz gospodarskih pogodb med podjetji prav tako 5 let. Po zastaranju dolg ne preneha, le prisilna izterjava ni več mogoča.",
   },
 ];
 
