@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-11",
-    "summary": "Migrated color scheme from sage green to warm accent palette (#BF7A3B) with dark primary (#2A2520). Added color preview dev page.",
-    "commits": ["1210659", "ef91f21"]
+    "summary": "Added delovno pravo content links to footer (new Vsebina column with 5 pages).",
+    "commits": ["a920db7"]
   },
   "backlog": [
     {
@@ -65,6 +65,7 @@
     "Navodila: added 6th step (Preverite vire) to fill 3-col grid",
     "Codebase refactor: unified FAQ accordion, simplified 11 content pages, consolidated icons, moved HeroChat",
     "tailwind-merge integration for safe className overrides",
-    "CTA button text visibility fix (Tailwind class conflict)"
+    "CTA button text visibility fix (Tailwind class conflict)",
+    "Footer: added Vsebina column with delovno pravo content page links"
   ]
 }
