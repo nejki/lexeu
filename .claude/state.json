@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-11",
-    "summary": "Brand refresh: AK monogram for all logo/favicon assets + updated OG social image.",
-    "commits": ["ebe979a", "6b34467"]
+    "summary": "Added media mentions section with thumbnails, founder section + /o-meni/ page with E-E-A-T, pinned hero chat animation.",
+    "commits": ["9037675", "2291904", "9cdeaa2"]
   },
   "backlog": [
     {
@@ -49,8 +49,15 @@
       "desc": "navodila/page.tsx (357 lines) still manually renders breadcrumbs, nav, footer, CTA — all duplicated from ContentLayout. Needs ContentLayout to accept optional sectionLabel, ctaTitle/ctaDescription props for customization.",
       "priority": "low"
     },
+    {
+      "id": "founder-image-crop",
+      "title": "Get proper headshot for Aleksander Kumer",
+      "desc": "Current founder photo is a group award ceremony shot cropped via CSS object-position. A dedicated professional headshot would look better on homepage and /o-meni/ page.",
+      "priority": "medium"
+    }
   ],
   "shipped": [
+    "Media mentions section with article thumbnails + founder section with /o-meni/ E-E-A-T page + pinned hero chat",
     "Brand refresh: AK monogram logo, favicons, and OG social image",
     "HeroChat auto-scroll to latest Q&A entry (stutter-free, triggers only on new entry)",
     "Mobile optimization: responsive padding, card layouts for Models/Pricing tables, touch targets, font sizing, HeroChat height",
@@ -59,7 +66,6 @@
     "Hero chat: improved scroll behavior + scroll position indicator",
     "Codebase refactor: unified FAQ accordion, simplified 11 content pages, consolidated icons, moved HeroChat",
     "tailwind-merge integration for safe className overrides",
-    "CTA button text visibility fix (Tailwind class conflict)",
-    "Hero chat: stop force-scrolling when user scrolls up"
+    "CTA button text visibility fix (Tailwind class conflict)"
   ]
 }
