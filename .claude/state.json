@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-11",
-    "summary": "Mobile optimization + HeroChat auto-scroll to latest entry on both mobile and desktop.",
-    "commits": ["e063cae", "d928268"]
+    "summary": "Replaced all logo and favicon assets with new AK monogram (transparent background, all sizes).",
+    "commits": ["ebe979a"]
   },
   "backlog": [
     {
@@ -48,9 +48,16 @@
       "title": "Refactor navodila/page.tsx to use ContentLayout",
       "desc": "navodila/page.tsx (357 lines) still manually renders breadcrumbs, nav, footer, CTA — all duplicated from ContentLayout. Needs ContentLayout to accept optional sectionLabel, ctaTitle/ctaDescription props for customization.",
       "priority": "low"
+    },
+    {
+      "id": "og-image-update",
+      "title": "Update OG image to match new AK branding",
+      "desc": "og-image.png still uses old shield/scales branding. Should be regenerated with new AK monogram for social sharing consistency.",
+      "priority": "medium"
     }
   ],
   "shipped": [
+    "Brand refresh: AK monogram logo + favicons (10 assets, transparent background)",
     "HeroChat auto-scroll to latest Q&A entry (stutter-free, triggers only on new entry)",
     "Mobile optimization: responsive padding, card layouts for Models/Pricing tables, touch targets, font sizing, HeroChat height",
     "Navodila: added 6th step (Preverite vire) to fill 3-col grid",
@@ -59,7 +66,6 @@
     "Codebase refactor: unified FAQ accordion, simplified 11 content pages, consolidated icons, moved HeroChat",
     "tailwind-merge integration for safe className overrides",
     "CTA button text visibility fix (Tailwind class conflict)",
-    "Hero chat: stop force-scrolling when user scrolls up",
-    "ESLint setup upgraded for Next.js 16, all lint errors fixed"
+    "Hero chat: stop force-scrolling when user scrolls up"
   ]
 }
