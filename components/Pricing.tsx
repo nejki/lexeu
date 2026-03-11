@@ -143,7 +143,7 @@ export default function Pricing() {
 
             <a
               href={plan.href}
-              className={`block text-center py-3 rounded-sm text-[12px] font-semibold tracking-[0.06em] uppercase transition-all duration-200 border ${
+              className={`flex items-center justify-center min-h-[52px] text-center py-3 px-4 rounded-sm text-[12px] font-semibold tracking-[0.06em] uppercase transition-all duration-200 border ${
                 plan.featured
                   ? "border-white/30 text-white hover:bg-white/15"
                   : "border-site-border text-site-text hover:border-accent hover:text-accent hover:bg-sage-pale"
