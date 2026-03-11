@@ -65,12 +65,16 @@ export function HeroChat() {
   const [phase, setPhase] = useState<"typing-q" | "thinking" | "typing-a" | "pause">("typing-q");
   const nextIdx = useRef(1);
   const feedRef = useRef<HTMLDivElement>(null);
+  const [isOverflowing, setIsOverflowing] = useState(false);
   const current = entries[entries.length - 1];
 
-  /* auto-scroll feed to bottom — user cannot scroll manually (overflow: hidden) */
+  /* auto-scroll feed to bottom & detect overflow for top mask */
   useEffect(() => {
     const el = feedRef.current;
-    if (el) el.scrollTop = el.scrollHeight;
+    if (el) {
+      el.scrollTop = el.scrollHeight;
+      setIsOverflowing(el.scrollHeight > el.clientHeight);
+    }
   });
 
   /* main animation loop */
@@ -151,7 +155,7 @@ export function HeroChat() {
       <div className="hero-chat-glow" />
 
       {/* Chat feed — stacks up, auto-scrolls, no user scroll */}
-      <div className="hero-chat-feed" ref={feedRef}>
+      <div className={`hero-chat-feed${isOverflowing ? " hero-chat-feed--masked" : ""}`} ref={feedRef}>
         {entries.map((entry) => (
           <div key={entry.id} className="hero-chat-entry">
             {/* Question */}
