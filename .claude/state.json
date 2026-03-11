@@ -2,9 +2,9 @@
   "project": "aikrpan",
   "currentFocus": [],
   "lastSession": {
-    "date": "2026-03-11",
-    "summary": "Added delovno pravo content links to footer (new Vsebina column with 5 pages).",
-    "commits": ["a920db7"]
+    "date": "2026-03-12",
+    "summary": "Normalized pricing CTA button heights so all plan cards have consistent button size.",
+    "commits": ["5d1446d"]
   },
   "backlog": [
     {
@@ -66,6 +66,6 @@
     "Codebase refactor: unified FAQ accordion, simplified 11 content pages, consolidated icons, moved HeroChat",
     "tailwind-merge integration for safe className overrides",
     "CTA button text visibility fix (Tailwind class conflict)",
-    "Footer: added Vsebina column with delovno pravo content page links"
+    "Pricing: normalized CTA button height across all plan cards"
   ]
 }
