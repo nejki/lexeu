@@ -93,7 +93,7 @@ export default function Models() {
                   {m.name}
                 </h3>
                 <p className="text-[14px] text-site-mid leading-relaxed mb-4">{m.desc}</p>
-                <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
+                <span className={`inline-block px-3 py-1 rounded-sm text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
                   {m.tag}
                 </span>
               </div>
@@ -126,7 +126,7 @@ export default function Models() {
                     </td>
                     <td className="py-6 px-4 text-[14px] text-site-mid leading-relaxed">{m.desc}</td>
                     <td className="py-6 px-4">
-                      <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
+                      <span className={`inline-block px-3 py-1 rounded-sm text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
                         {m.tag}
                       </span>
                     </td>

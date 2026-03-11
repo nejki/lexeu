@@ -1,7 +1,7 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
 import { HeroChat } from "@/components/HeroChat";
-import { IconBolt, IconScales, IconDocument, IconGlobe } from "@/components/ui/Icons";
+import { IconBolt, IconScales, IconDocument, IconGlobe, HeroDecoration } from "@/components/ui/Icons";
 
 const features = [
   {
@@ -56,13 +56,8 @@ export default function Hero() {
 
       {/* Right — sage dark */}
       <div className="relative flex flex-col justify-center px-6 md:px-16 py-12 lg:py-20 bg-sage-dark overflow-hidden">
-        {/* Decorative § */}
-        <span
-          aria-hidden
-          className="pointer-events-none select-none absolute -bottom-16 -right-8 font-serif text-[400px] leading-none text-white/[0.04]"
-        >
-          §
-        </span>
+        {/* Decorative § -inspired flowing curves */}
+        <HeroDecoration className="pointer-events-none select-none absolute -bottom-24 -right-16 w-[500px] h-[750px] text-white" />
 
         {/* Interactive AI demo */}
         <HeroChat />

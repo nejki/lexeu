@@ -108,7 +108,7 @@ export default function Pricing() {
           >
             {plan.recommended && (
               <div className="flex justify-center mb-4">
-                <span className="bg-warm text-white text-[10px] font-bold tracking-[0.1em] uppercase px-3 py-1 rounded-full whitespace-nowrap">
+                <span className="bg-warm text-white text-[10px] font-bold tracking-[0.1em] uppercase px-3 py-1 rounded-sm whitespace-nowrap">
                   Priporočamo
                 </span>
               </div>
