@@ -25,6 +25,7 @@ export default function Logo({
       height={size}
       className="object-contain"
       priority
+      unoptimized
     />
   );
 
