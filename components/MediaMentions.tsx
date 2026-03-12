@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { FadeIn } from "@/components/ui/FadeIn";
 
@@ -12,7 +11,7 @@ const mentions = [
       "Video pogovor s Petrom Mesarcem o tem, kako umetna inteligenca spreminja pravni svet.",
     url: "https://www.youtube.com/watch?v=U30TZzfo1ZA",
     type: "Video",
-    image: "/media/ui-slovenija.webp",
+    favicon: "/media/favicons/youtube.ico",
   },
   {
     outlet: "Gospodarski Izzivi",
@@ -21,7 +20,7 @@ const mentions = [
       "Članek o pripravljenosti podjetij na umetno inteligenco in vlogi AI Krpana pri pravnih rešitvah.",
     url: "https://www.gospodarski-izzivi.si/2024/11/28/ali-je-vase-podjetje-pripravljeno-na-umetno-inteligenco/",
     type: "Članek",
-    image: "/media/gospodarski-izzivi.webp",
+    favicon: "/media/favicons/gospodarski-izzivi.svg",
   },
   {
     outlet: "Maribor24",
@@ -30,7 +29,7 @@ const mentions = [
       "Slovenski AI KRPAN, ki se širi tudi v tujino, je prihodnost reševanja vsakodnevnih pravnih izzivov.",
     url: "https://maribor24.si/tehnologija/dnevna-umetna-inteligenca-jo-izkoristiti-ali-plavati-proti-toku/",
     type: "Članek",
-    image: "/media/maribor24.webp",
+    favicon: "/media/favicons/maribor24.png",
   },
   {
     outlet: "Maribor24",
@@ -39,7 +38,7 @@ const mentions = [
       "AI Krpan prejemnik zlata za najboljšo inovacijo Podravja 2024.",
     url: "https://maribor24.si/tehnologija/",
     type: "Nagrada",
-    image: "/media/innovation-award.png",
+    favicon: "/media/favicons/maribor24.png",
   },
   {
     outlet: "Maribor24",
@@ -49,7 +48,7 @@ const mentions = [
       "AI Krpan kot inovacijski partner pri podelitvi nagrad za štajersko gospodarsko odličnost.",
     url: "https://maribor24.si/stajerska-gospodarska-odlicnost/tudi-umetna-inteligenca-podpira-stajersko-gospodarsko-odlicnost/",
     type: "Članek",
-    image: "/media/maribor24.webp",
+    favicon: "/media/favicons/maribor24.png",
   },
   {
     outlet: "Maribor24",
@@ -59,7 +58,7 @@ const mentions = [
       "Namesto tega se lahko zanesete na slovensko visokotehnološko rešitev, AI Krpan.",
     url: "https://maribor24.si/tehnologija/ce-potrebujete-pravni-nasvet-vam-odslej-ni-potrebno-iskati-pravnika/",
     type: "Članek",
-    image: "/media/maribor24.webp",
+    favicon: "/media/favicons/maribor24.png",
   },
 ];
 
@@ -90,14 +89,15 @@ export default function MediaMentions() {
                   rel="noopener noreferrer"
                   className={`group flex gap-5 py-9 border-b border-site-border hover:pl-6 transition-all duration-300${i === 0 ? " border-t" : ""}`}
                 >
-                  {/* Thumbnail */}
-                  <div className="hidden sm:block flex-shrink-0 w-[100px] h-[68px] rounded-md overflow-hidden border border-site-border bg-stone-dark">
-                    <Image
-                      src={m.image}
-                      alt={m.title}
-                      width={100}
-                      height={68}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  {/* Favicon */}
+                  <div className="hidden sm:flex flex-shrink-0 w-[100px] h-[68px] rounded-md border border-site-border bg-stone-50 items-center justify-center">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={m.favicon}
+                      alt={m.outlet}
+                      width={40}
+                      height={40}
+                      className="group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
 
