@@ -44,7 +44,7 @@ export default function Hero() {
         </p>
 
         <p className="text-[16px] text-site-mid leading-[1.8] mb-12 max-w-md">
-          Odpoved pogodbe o zaposlitvi, pogodba o delu, pravno mnenje o odpravnini — AI KRPAN pripravi dokument, preveri zakonodajo in sodno prakso ter vam poda pravno usmeritev. Pravna pomoč za vsakogar, od €3 na vprašanje.
+          Odpoved pogodbe o zaposlitvi, pogodba o delu, pravno mnenje o odpravnini. AI KRPAN pripravi dokument, preveri zakonodajo in sodno prakso ter vam poda pravno usmeritev. Pravna pomoč za vsakogar, od €3 na vprašanje.
         </p>
 
         <div className="flex flex-wrap gap-4">

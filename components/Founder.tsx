@@ -6,10 +6,10 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 const credentials = [
-  { label: "Izobrazba", value: "mag. prava — Univerza v Mariboru" },
-  { label: "Status", value: "Odvetnik — vpisan v odvetniški imenik" },
-  { label: "Izkušnje", value: "15+ let prakse — gospodarsko in pogodbeno pravo" },
-  { label: "Projekt", value: "AI KRPAN — od koncepta do produkcije" },
+  { label: "Izobrazba", value: "mag. prava, Univerza v Mariboru" },
+  { label: "Status", value: "Odvetnik, vpisan v odvetniški imenik" },
+  { label: "Izkušnje", value: "15+ let prakse, gospodarsko in pogodbeno pravo" },
+  { label: "Projekt", value: "AI KRPAN, od koncepta do produkcije" },
 ];
 
 export default function Founder() {
@@ -22,7 +22,7 @@ export default function Founder() {
             <div className="relative w-full max-w-[280px] aspect-[3/4] rounded-xl overflow-hidden border border-site-border shadow-sm">
               <Image
                 src="/media/founder-source.webp"
-                alt="mag. Aleksander Kumer — ustanovitelj AI Krpan"
+                alt="mag. Aleksander Kumer, ustanovitelj AI Krpan"
                 fill
                 className="object-cover object-[center_15%]"
                 sizes="280px"
@@ -54,7 +54,7 @@ export default function Founder() {
 
             <FadeIn delay={80}>
               <p className="text-[16px] md:text-[17px] text-site-mid leading-[1.85] mb-10">
-                mag. Aleksander Kumer je odvetnik z dolgoletno prakso na področju gospodarskega in pogodbenega prava. AI KRPAN je zgradil iz frustacije — preveč pravnih vprašanj ostane brez odgovora, ker si ljudje ne morejo privoščiti odvetnika ali pa ne vedo, kje začeti. AI KRPAN te ovire odstranjuje. Vsak model je zasnovan na podlagi odvetniške prakse in preverjen na realnih primerih.
+                mag. Aleksander Kumer je odvetnik z dolgoletno prakso na področju gospodarskega in pogodbenega prava. AI KRPAN je zgradil iz frustacije. Preveč pravnih vprašanj ostane brez odgovora, ker si ljudje ne morejo privoščiti odvetnika ali pa ne vedo, kje začeti. AI KRPAN te ovire odstranjuje. Vsak model je zasnovan na podlagi odvetniške prakse in preverjen na realnih primerih.
               </p>
             </FadeIn>
 

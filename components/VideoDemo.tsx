@@ -13,7 +13,7 @@ export default function VideoDemo() {
               <em className="italic text-accent">pripravi pogodbo</em>
             </h2>
             <p className="text-[15px] text-site-mid leading-[1.85] mb-8">
-              V 47 sekundah od vprašanja do osnutka pogodbe o zaposlitvi — z vsemi obveznimi sestavinami po ZDR-1. Brez čakanja, brez najemanja odvetnika za prvo verzijo.
+              V 47 sekundah od vprašanja do osnutka pogodbe o zaposlitvi, z vsemi obveznimi sestavinami po ZDR-1. Brez čakanja, brez najemanja odvetnika za prvo verzijo.
             </p>
             <a
               href="https://app.aikrpan.com"
@@ -31,7 +31,7 @@ export default function VideoDemo() {
               muted
               playsInline
               className="w-full h-auto block"
-              aria-label="AI KRPAN demo — pravno vprašanje odgovorjeno v sekundah"
+              aria-label="AI KRPAN demo, pravno vprašanje odgovorjeno v sekundah"
             >
               <source src="/demo.webm" type="video/webm" />
               <source src="/demo.mp4" type="video/mp4" />

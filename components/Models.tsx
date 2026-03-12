@@ -19,7 +19,7 @@ const models = [
   {
     num: "03",
     name: "Document QA",
-    desc: "Naložite pogodbo ali drug dokument — AI ga prebere, analizira in odgovori na vaša vprašanja o vsebini.",
+    desc: "Naložite pogodbo ali drug dokument. AI ga prebere, analizira in odgovori na vaša vprašanja o vsebini.",
     tag: "Dokumenti",
     tagStyle: "bg-warm-pale text-[#8A6040]",
   },
@@ -33,7 +33,7 @@ const models = [
   {
     num: "05",
     name: "GPT-4 Splošni",
-    desc: "Za splošna vprašanja zunaj prava — poslovni nasveti, pisanje besedil, prevajanje.",
+    desc: "Za splošna vprašanja zunaj prava: poslovni nasveti, pisanje besedil, prevajanje.",
     tag: "Splošni",
     tagStyle: "bg-warm-pale text-[#8A6040]",
   },
@@ -61,7 +61,7 @@ export default function Models() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-14">
               <div>
                 <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] font-semibold leading-[1.2] text-site-text mb-3">
-                  Ne le odgovor — stališče z argumentacijo
+                  Ne le odgovor, temveč stališče z argumentacijo
                 </h3>
                 <p className="text-[15px] text-site-mid leading-[1.85]">
                   AI KRPAN ne kopira zakonskega besedila. Prebere vaš primer, zavzame stališče in ga utemelji s členi zakona ter sodno prakso. Kot pravno mnenje, ne kot iskalnik.
@@ -72,7 +72,7 @@ export default function Models() {
                   Vsak model pokriva svoje področje
                 </h3>
                 <p className="text-[15px] text-site-mid leading-[1.85]">
-                  Delovno pravo, GDPR, dedovanje, obligacije, pravo EU — izberete model, ki pozna vaše področje do potankosti.
+                  Delovno pravo, GDPR, dedovanje, obligacije, pravo EU. Izberete model, ki pozna vaše področje do potankosti.
                 </p>
               </div>
             </div>

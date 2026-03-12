@@ -34,7 +34,7 @@ const mentions = [
   },
   {
     outlet: "Maribor24",
-    title: "AI KRPAN — vaš najboljši pravni pomočnik",
+    title: "AI KRPAN, vaš najboljši pravni pomočnik",
     description:
       "AI Krpan prejemnik zlata za najboljšo inovacijo Podravja 2024.",
     url: "https://maribor24.si/tehnologija/",
@@ -56,7 +56,7 @@ const mentions = [
     title:
       "Če potrebujete pravni nasvet, vam odslej ni potrebno iskati pravnika",
     description:
-      "Namesto tega se lahko zanesete na slovensko visokotehnološko rešitev — AI Krpan.",
+      "Namesto tega se lahko zanesete na slovensko visokotehnološko rešitev, AI Krpan.",
     url: "https://maribor24.si/tehnologija/ce-potrebujete-pravni-nasvet-vam-odslej-ni-potrebno-iskati-pravnika/",
     type: "Članek",
     image: "/media/maribor24.webp",

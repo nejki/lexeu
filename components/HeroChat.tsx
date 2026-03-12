@@ -10,22 +10,22 @@ const conversations = [
   },
   {
     q: "Ali moram plačati DDV, če sem s.p. pod pragom 50.000 EUR letnega prometa?",
-    a: "Po ZDDV-1 (94. člen) se morate registrirati za DDV, ko vaš obdavčljivi promet v 12 mesecih preseže 50.000 €. Dokler ste pod tem pragom, vam DDV ni treba zaračunavati. Prostovoljno se lahko registrirate kadarkoli — to je smiselno, če so vaše stranke podjetja, ki si DDV odbijajo.",
+    a: "Po ZDDV-1 (94. člen) se morate registrirati za DDV, ko vaš obdavčljivi promet v 12 mesecih preseže 50.000 €. Dokler ste pod tem pragom, vam DDV ni treba zaračunavati. Prostovoljno se lahko registrirate kadarkoli. To je smiselno, če so vaše stranke podjetja, ki si DDV odbijajo.",
   },
   {
     q: "Preglej to pogodbo o delu in mi povej, ali vsebuje vse obvezne sestavine.",
     a: "Pregledal sem pogodbo o delu. Po 619.–648. členu OZ mora pogodba vsebovati: opredelitev dela, rok za izvedbo, plačilo in obveznosti obeh strank. Vaša pogodba vsebuje vse obvezne sestavine. Opozarjam pa na 2 tveganja: rok za dokončanje dela ni jasno opredeljen, klavzula o odgovornosti za napake pa je v korist naročnika nesorazmerno omejena.",
   },
   {
-    q: "Stranka ne plača računa že 60 dni — kaj lahko naredim?",
-    a: "Po OZ (196. člen) lahko zaračunate zamudne obresti. Pošljite pisni opomin z 8-dnevnim rokom. Če ne plača, vložite predlog za izvršbo na podlagi verodostojne listine — brez sodnega postopka.",
+    q: "Stranka ne plača računa že 60 dni. Kaj lahko naredim?",
+    a: "Po OZ (196. člen) lahko zaračunate zamudne obresti. Pošljite pisni opomin z 8-dnevnim rokom. Če ne plača, vložite predlog za izvršbo na podlagi verodostojne listine, brez sodnega postopka.",
   },
   {
     q: "Kakšen je zastaralni rok za izterjavo dolgov?",
     a: "Splošni zastaralni rok je 5 let (OZ, 346. člen). Za občasne terjatve (najemnina, obresti) velja 3 leta. Za terjatve iz gospodarskih pogodb med podjetji prav tako 5 let. Po zastaranju dolg ne preneha, le prisilna izterjava ni več mogoča.",
   },
   {
-    q: "Kupil sem pokvarjen izdelek — kakšne pravice imam?",
+    q: "Kupil sem pokvarjen izdelek. Kakšne pravice imam?",
     a: "Po ZVPot-1 (37.–42. člen) imate pravico do brezplačnega popravila ali zamenjave. Če to ni mogoče, lahko zahtevate znižanje cene ali vračilo kupnine. Rok za reklamacijo je 2 meseca od odkritja napake.",
   },
 ];

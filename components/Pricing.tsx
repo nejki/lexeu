@@ -3,7 +3,7 @@ const plans = [
     name: "Mini",
     price: "€15",
     per: "Enkratni paket · 5 vprašanj",
-    desc: "Za hitro preverbo — pogodba o zaposlitvi vzorec, odpravnina, konkretno pravno vprašanje. Odgovor v minutah.",
+    desc: "Za hitro preverbo: pogodba o zaposlitvi vzorec, odpravnina, konkretno pravno vprašanje. Odgovor v minutah.",
     cta: "Začnite z MINI →",
     href: "https://app.aikrpan.com",
     featured: false,
@@ -13,7 +13,7 @@ const plans = [
     name: "Standard",
     price: "€35",
     per: "Enkratni paket · 15 vprašanj",
-    desc: "Za obsežnejše zadeve — pregled pogodbe, priprava dokumentov, iteracija z AI agentom. Dovolj za celoten primer.",
+    desc: "Za obsežnejše zadeve: pregled pogodbe, priprava dokumentov, iteracija z AI agentom. Dovolj za celoten primer.",
     cta: "Izberite STANDARD →",
     href: "https://app.aikrpan.com",
     featured: false,
@@ -23,7 +23,7 @@ const plans = [
     name: "Poslovni mesečni",
     price: "€80",
     per: "/ mesec · 100 vprašanj",
-    desc: "Za pisarne in podjetja, ki redno rešujejo pravna vprašanja. Odpovedi, pogodbe o delu, sporazumne odpovedi pogodb, GDPR pregledi — vse na enem mestu.",
+    desc: "Za pisarne in podjetja, ki redno rešujejo pravna vprašanja. Odpovedi, pogodbe o delu, sporazumne odpovedi pogodb, GDPR pregledi. Vse na enem mestu.",
     cta: "Izberite POSLOVNI →",
     href: "https://app.aikrpan.com",
     featured: true,
@@ -92,7 +92,7 @@ export default function Pricing() {
           <em className="italic text-accent">AI KRPAN-a?</em>
         </h2>
         <p className="text-[17px] text-site-mid leading-[1.7] max-w-2xl">
-          Priprava pogodbe pri odvetniku: €300-500. Priprava pogodbe z AI KRPAN: €3. Enaka zakonska podlaga, enaki členi ZDR-1. Razlika je v tem, kdo piše prvi osnutek — in koliko časa ter denarja porabite, preden pridete do končne verzije.
+          Priprava pogodbe pri odvetniku: €300-500. Priprava pogodbe z AI KRPAN: €3. Enaka zakonska podlaga, enaki členi ZDR-1. Razlika je v tem, kdo piše prvi osnutek in koliko časa ter denarja porabite, preden pridete do končne verzije.
         </p>
       </div>
 

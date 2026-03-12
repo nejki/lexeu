@@ -3,11 +3,11 @@ import FAQAccordion from "./FAQAccordion";
 const faqs = [
   {
     q: "Ali AI KRPAN nadomešča odvetnika?",
-    a: "Ne. AI KRPAN je orodje, ki pripravi prvi osnutek dokumenta, poda pravno usmeritev in preveri zakonodajo — ampak ne more zastopati pred sodiščem, prevzeti odgovornosti za pravni nasvet ali oceniti vseh posebnosti vašega primera. Za enostavne zadeve (pogodba o zaposlitvi vzorec, vprašanje o odpravnini, pregled kratke pogodbe) je dovolj sam. Za zapletene primere je odličen prvi korak pred posvetom z odvetnikom.",
+    a: "Ne. AI KRPAN je orodje, ki pripravi prvi osnutek dokumenta, poda pravno usmeritev in preveri zakonodajo, ampak ne more zastopati pred sodiščem, prevzeti odgovornosti za pravni nasvet ali oceniti vseh posebnosti vašega primera. Za enostavne zadeve (pogodba o zaposlitvi vzorec, vprašanje o odpravnini, pregled kratke pogodbe) je dovolj sam. Za zapletene primere je odličen prvi korak pred posvetom z odvetnikom.",
   },
   {
     q: "Kako zanesljivi so odgovori?",
-    a: "AI KRPAN navaja konkretne zakonske člene in sodbe. Vsak vir lahko preverite sami. Model je specializiran za slovensko zakonodajo — ne generira odgovorov iz splošnega znanja kot ChatGPT. Kljub temu nobena AI ni 100-odstotno zanesljiva. Kritične odločitve vedno preverite.",
+    a: "AI KRPAN navaja konkretne zakonske člene in sodbe. Vsak vir lahko preverite sami. Model je specializiran za slovensko zakonodajo in ne generira odgovorov iz splošnega znanja kot ChatGPT. Kljub temu nobena AI ni 100-odstotno zanesljiva. Kritične odločitve vedno preverite.",
   },
   {
     q: "Katere pravne teme pokriva?",
@@ -23,11 +23,11 @@ const faqs = [
   },
   {
     q: "Kako se AI KRPAN razlikuje od ChatGPT?",
-    a: "ChatGPT pozna pravo na splošno. AI KRPAN je specializiran za slovensko zakonodajo — pozna zakone, podzakonske akte in sodno prakso. Navaja točne vire. Pripravlja dokumente po veljavnih predpisih. ChatGPT tega ne zmore, ker nima dostopa do slovenske zakonske baze.",
+    a: "ChatGPT pozna pravo na splošno. AI KRPAN je specializiran za slovensko zakonodajo. Pozna zakone, podzakonske akte in sodno prakso. Navaja točne vire. Pripravlja dokumente po veljavnih predpisih. ChatGPT tega ne zmore, ker nima dostopa do slovenske zakonske baze.",
   },
   {
     q: "Ali potrebujem pravno predznanje?",
-    a: "Ne. Vprašajte tako, kot bi vprašali kolega — v navadnem jeziku. AI KRPAN razume kontekst in vam odgovori jasno. Če potrebujete pogodbo, jo pripravi. Če potrebujete razlago zakona, jo poda v razumljivem jeziku.",
+    a: "Ne. Vprašajte tako, kot bi vprašali kolega, v navadnem jeziku. AI KRPAN razume kontekst in vam odgovori jasno. Če potrebujete pogodbo, jo pripravi. Če potrebujete razlago zakona, jo poda v razumljivem jeziku.",
   },
   {
     q: "Kako pripravim odpoved pogodbe o zaposlitvi?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "Ali AI KRPAN nadomesti brezplačno pravno pomoč?",
-    a: "AI KRPAN ni nadomestek za brezplačno pravno pomoč po Zakonu o brezplačni pravni pomoči — ta vam dodeli odvetnika za zastopanje pred sodiščem. AI KRPAN pa vam pomaga pri vsakdanjih pravnih vprašanjih, ki jih brezplačna pravna pomoč ne pokriva: hitri odgovori, pregled pogodb, priprava dokumentov. Za €3 na vprašanje dobite takojšnjo pravno usmeritev brez čakanja.",
+    a: "AI KRPAN ni nadomestek za brezplačno pravno pomoč po Zakonu o brezplačni pravni pomoči. Ta vam dodeli odvetnika za zastopanje pred sodiščem. AI KRPAN pa vam pomaga pri vsakdanjih pravnih vprašanjih, ki jih brezplačna pravna pomoč ne pokriva: hitri odgovori, pregled pogodb, priprava dokumentov. Za €3 na vprašanje dobite takojšnjo pravno usmeritev brez čakanja.",
   },
   {
     q: "Ali AI KRPAN pozna ZDR-1 in zakon o delovnih razmerjih?",
@@ -57,7 +57,7 @@ export default function FAQ() {
             <em className="italic text-accent">vprašanja</em>
           </h2>
           <p className="text-[14px] text-site-muted leading-relaxed mb-8">
-            Odgovori na najpogostejša vprašanja o AI KRPAN-u. Če ne najdete svojega — vprašajte kar AI KRPAN.
+            Odgovori na najpogostejša vprašanja o AI KRPAN-u. Če ne najdete svojega, vprašajte kar AI KRPAN.
           </p>
         </div>
 

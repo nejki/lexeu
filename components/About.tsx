@@ -7,7 +7,7 @@ const cards = [
   {
     icon: <IconBolt className="w-5 h-5" />,
     title: "Pripravlja dokumente",
-    desc: "Pogodba o zaposlitvi, odpoved, sporazum, mnenje — AI KRPAN sestavi osnutek na podlagi veljavne zakonodaje. Vi ga pregledate, popravite, uporabite.",
+    desc: "Pogodba o zaposlitvi, odpoved, sporazum, mnenje. AI KRPAN sestavi osnutek na podlagi veljavne zakonodaje. Vi ga pregledate, popravite, uporabite.",
   },
   {
     icon: <IconScales className="w-5 h-5" />,
@@ -32,7 +32,7 @@ export default function About() {
           <em className="italic text-accent">Google rezultat</em>
         </h2>
         <p className="text-[15px] text-site-mid leading-[1.85]">
-          Odvetnik stane €150-300 na uro. Google vrne 10 zakonov brez razlage. ChatGPT ne pozna slovenskih predpisov. AI KRPAN dejansko prebere zakon, preveri sodno prakso in vam pove, kaj to pomeni za vaš primer. Pripravi pogodbo, pregleda dokument ali sestavi pravno mnenje — tako kot bi to naredil pravnik. Razlika: čaka vas 2 minuti, ne 2 tedna.
+          Odvetnik stane €150-300 na uro. Google vrne 10 zakonov brez razlage. ChatGPT ne pozna slovenskih predpisov. AI KRPAN dejansko prebere zakon, preveri sodno prakso in vam pove, kaj to pomeni za vaš primer. Pripravi pogodbo, pregleda dokument ali sestavi pravno mnenje, tako kot bi to naredil pravnik. Razlika: čaka vas 2 minuti, ne 2 tedna.
         </p>
       </FadeIn>
 
