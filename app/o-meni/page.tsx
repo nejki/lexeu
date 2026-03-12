@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "https://www.aikrpan.com/media/founder-source.webp",
+        url: "https://www.aikrpan.com/media/aleksander-kumer.webp",
         width: 1024,
         height: 576,
         alt: "mag. Aleksander Kumer — ustanovitelj AI Krpan",
@@ -153,7 +153,7 @@ export default function OMeniPage() {
           description:
             "Aleksander Kumer je magister prava z Univerze v Mariboru, aktivni odvetnik v Mariboru in ustanovitelj nagrajenega pravnega AI asistenta AI Krpan.",
           url: "/o-meni/",
-          image: "/media/founder-source.webp",
+          image: "/media/aleksander-kumer.webp",
           sameAs: [
             "https://www.odvetnik-kumer.si/",
             "https://www.facebook.com/aikrpan",
@@ -210,14 +210,14 @@ export default function OMeniPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20">
           {/* Photo */}
           <FadeIn>
-            <div className="relative w-full max-w-[320px] mx-auto lg:mx-0 aspect-[3/4] rounded-xl overflow-hidden border border-site-border shadow-sm">
+            <div className="relative w-full max-w-[400px] mx-auto lg:mx-0 aspect-video rounded-xl overflow-hidden border border-site-border shadow-sm">
               <Image
-                src="/media/founder-source.webp"
+                src="/media/aleksander-kumer.webp"
                 alt="mag. Aleksander Kumer prejema nagrado za inovacijo AI Krpan"
                 fill
                 priority
-                className="object-cover object-[center_15%]"
-                sizes="(max-width: 1024px) 320px, 280px"
+                className="object-cover"
+                sizes="(max-width: 1024px) 400px, 400px"
               />
             </div>
           </FadeIn>

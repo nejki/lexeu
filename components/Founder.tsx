@@ -19,13 +19,13 @@ export default function Founder() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24">
           {/* Left — Photo + name */}
           <FadeIn>
-            <div className="relative w-full max-w-[280px] aspect-[3/4] rounded-xl overflow-hidden border border-site-border shadow-sm">
+            <div className="relative w-full max-w-[360px] aspect-video rounded-xl overflow-hidden border border-site-border shadow-sm">
               <Image
-                src="/media/founder-source.webp"
+                src="/media/aleksander-kumer.webp"
                 alt="mag. Aleksander Kumer, ustanovitelj AI Krpan"
                 fill
-                className="object-cover object-[center_15%]"
-                sizes="280px"
+                className="object-cover"
+                sizes="360px"
               />
             </div>
             <div className="mt-6">

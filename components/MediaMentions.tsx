@@ -98,7 +98,7 @@ export default function MediaMentions() {
                         alt={m.outlet}
                         width={32}
                         height={32}
-                        className="flex-shrink-0"
+                        className="flex-shrink-0 rounded-full"
                       />
                       <span className="text-[11px] font-semibold tracking-widest uppercase text-accent">
                         {m.outlet}
