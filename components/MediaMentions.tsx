@@ -87,23 +87,19 @@ export default function MediaMentions() {
                   href={m.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group flex gap-5 py-9 border-b border-site-border hover:pl-6 transition-all duration-300${i === 0 ? " border-t" : ""}`}
+                  className={`group flex py-9 border-b border-site-border hover:pl-6 transition-all duration-300${i === 0 ? " border-t" : ""}`}
                 >
-                  {/* Favicon */}
-                  <div className="hidden sm:flex flex-shrink-0 w-[100px] h-[68px] rounded-md border border-site-border bg-stone-50 items-center justify-center">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={m.favicon}
-                      alt={m.outlet}
-                      width={40}
-                      height={40}
-                      className="group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-
                   {/* Content */}
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-2 mb-2">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={m.favicon}
+                        alt={m.outlet}
+                        width={32}
+                        height={32}
+                        className="flex-shrink-0"
+                      />
                       <span className="text-[11px] font-semibold tracking-widest uppercase text-accent">
                         {m.outlet}
                       </span>
