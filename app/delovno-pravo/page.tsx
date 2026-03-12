@@ -148,18 +148,17 @@ export default function DelovnoPravoPage() {
       {/* Sub-page cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
         {subPages.map((page) => (
-          <a
+          <div
             key={page.href}
-            href={page.href}
-            className="group block bg-site-white border border-site-border rounded-lg p-6 hover:border-accent hover:shadow-sm transition-all duration-200"
+            className="block bg-site-white border border-site-border rounded-lg p-6"
           >
-            <h2 className="font-serif text-[22px] font-semibold text-site-text group-hover:text-accent transition-colors duration-200 mb-2">
+            <h2 className="font-serif text-[22px] font-semibold text-site-text mb-2">
               {page.title}
             </h2>
             <p className="text-[15px] text-site-mid leading-[1.7]">
               {page.description}
             </p>
-          </a>
+          </div>
         ))}
       </div>
 
@@ -200,12 +199,6 @@ export default function DelovnoPravoPage() {
             odpovedujete določenim pravicam, vključno z nadomestilom za
             brezposelnost pri Zavodu za zaposlovanje.
           </p>
-          <a
-            href="/delovno-pravo/odpoved/"
-            className="text-[15px] font-medium text-accent hover:text-accent-light transition-colors duration-200"
-          >
-            Več o odpovedi pogodbe &rarr;
-          </a>
         </section>
 
         {/* Odpravnina */}
@@ -239,12 +232,6 @@ export default function DelovnoPravoPage() {
             ima podobno formulo, a ne zamenjujte obeh. Gre za dva različna
             pravna temelja.
           </p>
-          <a
-            href="/delovno-pravo/odpravnina/"
-            className="text-[15px] font-medium text-accent hover:text-accent-light transition-colors duration-200"
-          >
-            Več o odpravnini &rarr;
-          </a>
         </section>
 
         {/* Regres */}
@@ -275,12 +262,6 @@ export default function DelovnoPravoPage() {
             leto, brez izjeme. Če vam regres ni bil izplačan, imate podlago za
             zahtevek.
           </p>
-          <a
-            href="/delovno-pravo/regres/"
-            className="text-[15px] font-medium text-accent hover:text-accent-light transition-colors duration-200"
-          >
-            Več o regresu &rarr;
-          </a>
         </section>
 
         {/* Minimalna plača */}
@@ -307,12 +288,6 @@ export default function DelovnoPravoPage() {
             dodatka. Kršitev te določbe je pogosta, a to ne pomeni, da je
             zakonita. Preverite svojo plačilno listo.
           </p>
-          <a
-            href="/delovno-pravo/minimalna-placa/"
-            className="text-[15px] font-medium text-accent hover:text-accent-light transition-colors duration-200"
-          >
-            Več o minimalni plači &rarr;
-          </a>
         </section>
 
         {/* Letni dopust */}
