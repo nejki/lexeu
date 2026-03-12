@@ -68,11 +68,10 @@ export function HeroChat() {
   const [isOverflowing, setIsOverflowing] = useState(false);
   const current = entries[entries.length - 1];
 
-  /* auto-scroll feed to bottom & detect overflow for top mask */
+  /* detect overflow for top fade mask */
   useEffect(() => {
     const el = feedRef.current;
     if (el) {
-      el.scrollTop = el.scrollHeight;
       setIsOverflowing(el.scrollHeight > el.clientHeight);
     }
   });
