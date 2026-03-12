@@ -16,12 +16,6 @@ const testimonials = [
   },
   {
     quote:
-      "Analiza kompleksnih primerov z obsežnimi informacijami je zdaj precej hitrejša. Priporočam.",
-    company: "Odvetniška pisarna Kumer",
-    type: "Odvetniška pisarna",
-  },
-  {
-    quote:
       "Za malo podjetje je prihranek časa ogromen. Konkretni odgovori s primeri in ugodna cena.",
     company: "Kreativna Bajta d.o.o.",
     type: "Kreativna agencija",
