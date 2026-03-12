@@ -4,3 +4,4 @@ node_modules
 out
 *.backup
 tsconfig.tsbuildinfo
+content/
