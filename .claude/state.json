@@ -34,8 +34,14 @@
     {
       "id": "content-sub-pages",
       "title": "Add content to remaining placeholder pages",
-      "desc": "9 pages still have ContentPlaceholder: odpoved, odpravnina, regres, minimalna-placa, pogodbe, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog. Regres and minimalna-placa need yearly updates each January.",
+      "desc": "Pages still with ContentPlaceholder: odpoved, odpravnina, regres, minimalna-placa, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog. Regres and minimalna-placa need yearly updates each January.",
       "priority": "high"
+    },
+    {
+      "id": "pogodbe-sub-page-links",
+      "title": "Restore sub-page links on /pogodbe/ hub",
+      "desc": "4 section links removed until pages exist: podjemna-pogodba, najemna-pogodba, darilna-pogodba, pogodba-o-dosmrtnem-prezivljanju. Also make sub-page cards clickable. Re-add once each page has real content. kupoprodajna-pogodba done.",
+      "priority": "medium"
     },
     {
       "id": "lint-spaces-bug",
