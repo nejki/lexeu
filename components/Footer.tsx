@@ -189,9 +189,8 @@ export default function Footer() {
             © 2025 Committo d.o.o. Vse pravice pridržane.
           </p>
           <p className="text-[13px] text-site-muted">
-            Izdelala{" "}
             <a href="https://futuristica.si" className="hover:text-accent transition-colors duration-200">
-              Futuristica
+              Futuristica ↗
             </a>
           </p>
         </div>
