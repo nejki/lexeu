@@ -55,12 +55,6 @@
       "desc": "Current founder photo is a group award ceremony shot cropped via CSS object-position. A dedicated professional headshot would look better on homepage and /o-meni/ page.",
       "priority": "medium"
     },
-    {
-      "id": "pricing-cta-text",
-      "title": "Unify pricing CTA button text",
-      "desc": "Buttons currently say Začnite z MINI, Izberite STANDARD, etc. Agreed to unify to 'Izberi →' for all plans except Po meri which stays 'Kontaktirajte nas →'.",
-      "priority": "low"
-    }
   ],
   "shipped": [
     "Footer: fixed attribution to 'Izdelala Futuristica' (correct Slovenian grammar, removed d.o.o.)",
@@ -72,6 +66,7 @@
     "Media mentions section with article thumbnails + founder section with /o-meni/ E-E-A-T page",
     "Brand refresh: AK monogram logo, favicons, and OG social image",
     "Mobile optimization: responsive padding, card layouts for Models/Pricing tables, touch targets, font sizing, HeroChat height",
-    "Navodila: added 6th step (Preverite vire) to fill 3-col grid"
+    "Navodila: added 6th step (Preverite vire) to fill 3-col grid",
+    "Pricing: unified CTA buttons to 'Izberi →' across all plans, Po meri stays 'Kontaktirajte nas →'"
   ]
 }
