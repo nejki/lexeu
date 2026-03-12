@@ -111,7 +111,7 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
     other: [
-      { rel: "mask-icon", url: "/favicon.svg", color: "#1A1714" },
+      { rel: "mask-icon", url: "/favicon.svg", color: "#2A2520" },
     ],
   },
   manifest: "/site.webmanifest",
