@@ -7,14 +7,14 @@ const models = [
     name: "AI KRPAN",
     desc: "Slovensko pravo in sodna praksa. Pripravi dokumente, poda mnenja, analizira predpise. Vaš glavni pravni AI agent.",
     tag: "Slovensko pravo",
-    tagStyle: "bg-sage-pale text-accent",
+    tagStyle: "bg-warm-pale text-[#8A6040]",
   },
   {
     num: "02",
     name: "SLO Zakoni",
     desc: "Hitro iskanje po celotni slovenski zakonodaji. Ko potrebujete točen člen, ne interpretacije.",
     tag: "Zakonodaja",
-    tagStyle: "bg-sage-pale text-accent",
+    tagStyle: "bg-warm-pale text-[#8A6040]",
   },
   {
     num: "03",
@@ -28,7 +28,7 @@ const models = [
     name: "Pravo EU",
     desc: "Evropska zakonodaja, direktive, uredbe in sodna praksa Sodišča EU. Za čezmejne zadeve in EU compliance.",
     tag: "EU pravo",
-    tagStyle: "bg-sage-pale text-accent",
+    tagStyle: "bg-warm-pale text-[#8A6040]",
   },
   {
     num: "05",
@@ -42,7 +42,7 @@ const models = [
     name: "IP Smernice",
     desc: "Smernice informacijske pooblaščenke. Varstvo osebnih podatkov, GDPR, pravice posameznikov.",
     tag: "Varstvo podatkov",
-    tagStyle: "bg-rose-light text-[#805050]",
+    tagStyle: "bg-warm-pale text-[#8A6040]",
   },
 ];
 
