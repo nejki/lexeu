@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-12",
-    "summary": "Replaced MediaMentions article thumbnails with self-hosted, optimized site favicons (youtube, maribor24, gospodarski-izzivi).",
-    "commits": ["3c7f87e", "4e02d6e"]
+    "summary": "Unified Models category badge colors to warm accent palette.",
+    "commits": ["6eb8e24"]
   },
   "backlog": [
     {
@@ -54,9 +54,16 @@
       "title": "Get proper headshot for Aleksander Kumer",
       "desc": "Current founder photo is a group award ceremony shot cropped via CSS object-position. A dedicated professional headshot would look better on homepage and /o-meni/ page.",
       "priority": "medium"
+    },
+    {
+      "id": "pricing-cta-text",
+      "title": "Unify pricing CTA button text",
+      "desc": "Buttons currently say Začnite z MINI, Izberite STANDARD, etc. Agreed to unify to 'Izberi →' for all plans except Po meri which stays 'Kontaktirajte nas →'.",
+      "priority": "low"
     }
   ],
   "shipped": [
+    "Models: unified category badge colors to warm accent (bg-warm-pale text-[#8A6040])",
     "MediaMentions: self-hosted site favicons replacing article thumbnails (optimized, zero external requests)",
     "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components",
     "Hero chat: stacking conversations with auto-scroll, no user scroll (overflow:hidden + programmatic scrollTop)",
@@ -65,7 +72,6 @@
     "Mobile optimization: responsive padding, card layouts for Models/Pricing tables, touch targets, font sizing, HeroChat height",
     "Navodila: added 6th step (Preverite vire) to fill 3-col grid",
     "Codebase refactor: unified FAQ accordion, simplified 11 content pages, consolidated icons, moved HeroChat",
-    "tailwind-merge integration for safe className overrides",
-    "Pricing: normalized CTA button height across all plan cards"
+    "tailwind-merge integration for safe className overrides"
   ]
 }
