@@ -11,7 +11,7 @@ const mentions = [
       "Video pogovor s Petrom Mesarcem o tem, kako umetna inteligenca spreminja pravni svet.",
     url: "https://www.youtube.com/watch?v=U30TZzfo1ZA",
     type: "Video",
-    favicon: "/media/favicons/youtube.ico",
+    favicon: "/media/favicons/youtube.png",
   },
   {
     outlet: "Gospodarski Izzivi",
@@ -20,7 +20,7 @@ const mentions = [
       "Članek o pripravljenosti podjetij na umetno inteligenco in vlogi AI Krpana pri pravnih rešitvah.",
     url: "https://www.gospodarski-izzivi.si/2024/11/28/ali-je-vase-podjetje-pripravljeno-na-umetno-inteligenco/",
     type: "Članek",
-    favicon: "/media/favicons/gospodarski-izzivi.svg",
+    favicon: "/media/favicons/gospodarski-izzivi.png",
   },
   {
     outlet: "Maribor24",
