@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-12",
-    "summary": "Fixed footer attribution: corrected grammar to 'Izdelala Futuristica', removed d.o.o. suffix.",
-    "commits": ["82578fb", "4705cc5"]
+    "summary": "Populated /pogodbe/ hub page and kupoprodajna-pogodba sub-page. Shortened Po meri CTA to 'Pišite nam →'. Added source MDs to local content/ folder (gitignored).",
+    "commits": ["e015265", "d7fbd6a", "d34dcee"]
   },
   "backlog": [
     {
@@ -34,7 +34,7 @@
     {
       "id": "content-sub-pages",
       "title": "Add content to remaining placeholder pages",
-      "desc": "Pages still with ContentPlaceholder: odpoved, odpravnina, regres, minimalna-placa, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog. Regres and minimalna-placa need yearly updates each January.",
+      "desc": "Pages still with ContentPlaceholder: odpoved, odpravnina, regres, minimalna-placa, dedovanje, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog. Regres and minimalna-placa need yearly updates each January. delovno-pravo hub MD ready in content/.",
       "priority": "high"
     },
     {
@@ -60,19 +60,18 @@
       "title": "Get proper headshot for Aleksander Kumer",
       "desc": "Current founder photo is a group award ceremony shot cropped via CSS object-position. A dedicated professional headshot would look better on homepage and /o-meni/ page.",
       "priority": "medium"
-    },
+    }
   ],
   "shipped": [
+    "Pricing: Po meri CTA shortened to 'Pišite nam →' (single line, consistent button height)",
+    "/pogodbe/ hub page: full content (7 contract types, neveljavnost, FAQ, AI KRPAN CTAs, schema markup)",
+    "/pogodbe/kupoprodajna-pogodba/: full sub-page (OZ 435-527, avto VIN checklist, notar, davki, FAQ)",
     "Footer: fixed attribution to 'Izdelala Futuristica' (correct Slovenian grammar, removed d.o.o.)",
     "MediaMentions: inline 32x32 favicons next to outlet name, removed bordered thumbnail boxes",
     "Models: unified category badge colors to warm accent (bg-warm-pale text-[#8A6040])",
     "MediaMentions: self-hosted site favicons replacing article thumbnails (optimized, zero external requests)",
     "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components",
     "Hero chat: stacking conversations with auto-scroll, no user scroll (overflow:hidden + programmatic scrollTop)",
-    "Media mentions section with article thumbnails + founder section with /o-meni/ E-E-A-T page",
-    "Brand refresh: AK monogram logo, favicons, and OG social image",
-    "Mobile optimization: responsive padding, card layouts for Models/Pricing tables, touch targets, font sizing, HeroChat height",
-    "Navodila: added 6th step (Preverite vire) to fill 3-col grid",
-    "Pricing: unified CTA buttons to 'Izberi →' across all plans, Po meri stays 'Kontaktirajte nas →'"
+    "Media mentions section with article thumbnails + founder section with /o-meni/ E-E-A-T page"
   ]
 }
