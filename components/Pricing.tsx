@@ -44,7 +44,7 @@ const plans = [
     price: "Po povpraševanju",
     per: "Za ekipe z več uporabniki",
     desc: "Prilagojena količina, fakturiranje, SLA. Pišite nam na info@aikrpan.com.",
-    cta: "Kontaktirajte nas →",
+    cta: "Pišite nam →",
     href: "mailto:info@aikrpan.com",
     featured: false,
     recommended: false,
