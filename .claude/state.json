@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-12",
-    "summary": "Normalized pricing CTA button heights so all plan cards have consistent button size.",
-    "commits": ["5d1446d"]
+    "summary": "Replaced MediaMentions article thumbnails with self-hosted, optimized site favicons (youtube, maribor24, gospodarski-izzivi).",
+    "commits": ["3c7f87e", "4e02d6e"]
   },
   "backlog": [
     {
@@ -57,6 +57,7 @@
     }
   ],
   "shipped": [
+    "MediaMentions: self-hosted site favicons replacing article thumbnails (optimized, zero external requests)",
     "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components",
     "Hero chat: stacking conversations with auto-scroll, no user scroll (overflow:hidden + programmatic scrollTop)",
     "Media mentions section with article thumbnails + founder section with /o-meni/ E-E-A-T page",
@@ -65,7 +66,6 @@
     "Navodila: added 6th step (Preverite vire) to fill 3-col grid",
     "Codebase refactor: unified FAQ accordion, simplified 11 content pages, consolidated icons, moved HeroChat",
     "tailwind-merge integration for safe className overrides",
-    "CTA button text visibility fix (Tailwind class conflict)",
     "Pricing: normalized CTA button height across all plan cards"
   ]
 }
