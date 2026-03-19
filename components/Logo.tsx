@@ -20,7 +20,7 @@ export default function Logo({
   const icon = (
     <Image
       src={src}
-      alt="AI KRPAN"
+      alt="LexEU"
       width={size}
       height={size}
       className="object-contain"
@@ -41,9 +41,9 @@ export default function Logo({
           light ? "text-white" : "text-site-text"
         }`}
       >
-        AI{" "}
+        Lex
         <span className={light ? "text-accent-light" : "text-accent"}>
-          KRPAN
+          EU
         </span>
       </span>
     </span>

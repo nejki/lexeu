@@ -25,67 +25,62 @@ const inter = Inter({
   display: "swap",
 });
 
-const BASE_URL = "https://www.aikrpan.com";
+const BASE_URL = "https://www.lexeu.ai";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Pravni nasvet z AI | pogodbe, sodna praksa in slovensko pravo - AI KRPAN",
-    template: "%s | AI KRPAN",
+    default: "LexEU — AI Legal Assistant for European Law",
+    template: "%s | LexEU",
   },
   description:
-    "AI KRPAN analizira slovensko zakonodajo in sodno prakso. Pravno mnenje, pregled pogodbe ali odgovor na delovno pravo vprašanje - v 2 minutah, od €15.",
+    "LexEU analyses EU legislation and case law. Get legal guidance, contract review, or answers on European law — in minutes.",
   keywords: [
-    "pravni nasvet",
-    "AI pravnik",
-    "odpoved pogodbe o zaposlitvi",
-    "pogodba o zaposlitvi vzorec",
-    "brezplačna pravna pomoč",
-    "sporazumna odpoved pogodbe",
-    "delovno pravo",
-    "ZDR-1",
-    "pravno mnenje",
-    "pogodba o delu",
-    "odpravnina",
-    "dedovanje",
+    "EU law",
+    "European law",
+    "AI legal assistant",
+    "contract analysis",
     "GDPR",
-    "sodna praksa",
-    "AI KRPAN",
+    "employment law EU",
+    "legal AI",
+    "EU legal advice",
+    "European legal research",
+    "LexEU",
   ],
-  authors: [{ name: "Committo d.o.o.", url: BASE_URL }],
-  creator: "Committo d.o.o.",
-  publisher: "Committo d.o.o.",
+  authors: [{ name: "LexEU", url: BASE_URL }],
+  creator: "LexEU",
+  publisher: "LexEU",
   category: "Legal Technology",
   alternates: {
     canonical: BASE_URL,
     languages: {
-      "sl-SI": BASE_URL,
+      "en": BASE_URL,
     },
   },
   openGraph: {
     type: "website",
-    locale: "sl_SI",
+    locale: "en_EU",
     url: BASE_URL,
-    siteName: "AI KRPAN",
-    title: "AI KRPAN - Pravni nasvet, ne pravno iskanje",
+    siteName: "LexEU",
+    title: "LexEU — AI Legal Assistant for European Law",
     description:
-      "Postavite pravno vprašanje. Dobite stališče, utemeljeno z zakonskimi členi in sodno prakso. 6 AI modelov za slovensko in EU pravo. Od €15.",
+      "Ask a legal question. Get a position backed by EU legislation and case law. AI models specialised in European law.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AI KRPAN — Pravni AI za slovensko zakonodajo",
+        alt: "LexEU — AI Legal Assistant for European Law",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@aikrpan",
-    creator: "@aikrpan",
-    title: "AI KRPAN - Pravni nasvet, ne pravno iskanje",
+    site: "@lexeu_ai",
+    creator: "@lexeu_ai",
+    title: "LexEU — AI Legal Assistant for European Law",
     description:
-      "Postavite pravno vprašanje. Dobite stališče, utemeljeno z zakonskimi členi in sodno prakso. 6 AI modelov za slovensko in EU pravo. Od €15.",
+      "Ask a legal question. Get a position backed by EU legislation and case law. AI models specialised in European law.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -101,7 +96,6 @@ export const metadata: Metadata = {
   },
   verification: {
     // google: "YOUR_GOOGLE_SEARCH_CONSOLE_TOKEN",
-    // yandex: "YOUR_YANDEX_TOKEN",
   },
   icons: {
     icon: [
@@ -132,7 +126,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sl" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
         <meta name="theme-color" content="#1A1714" />
         <meta name="msapplication-TileColor" content="#1A1714" />

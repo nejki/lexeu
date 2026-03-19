@@ -6,11 +6,11 @@ import { IconMenu, IconX } from "@/components/ui/Icons";
 import Logo from "@/components/Logo";
 
 const navLinks = [
-  { label: "Namen", href: "#namen" },
+  { label: "Purpose", href: "#purpose" },
   { label: "Demo", href: "#demo" },
-  { label: "Modeli", href: "#modeli" },
-  { label: "Cenik", href: "#cenik" },
-  { label: "Ustanovitelj", href: "#ustanovitelj" },
+  { label: "Models", href: "#models" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Founder", href: "#founder" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -47,7 +47,7 @@ export default function Nav() {
         }`}
       >
         {/* Logo */}
-        <a href="/" aria-label="AI KRPAN — domov">
+        <a href="/" aria-label="LexEU — home">
           <Logo variant="full" size={44} />
         </a>
 
@@ -67,22 +67,22 @@ export default function Nav() {
         {/* Actions */}
         <div className="flex items-center gap-4">
           <a
-            href="https://app.aikrpan.com"
+            href="https://app.lexeu.ai"
             className="hidden sm:block text-[13px] font-medium tracking-[0.04em] uppercase text-site-mid hover:text-accent transition-colors duration-200"
           >
-            Prijava
+            Sign in
           </a>
           <a
-            href={resolveHref("#cenik")}
+            href={resolveHref("#pricing")}
             className="bg-sage-dark text-white px-5 py-2.5 rounded-sm text-[12px] font-semibold tracking-[0.08em] uppercase hover:bg-sage transition-colors duration-200"
           >
-            ZAČNI ZA €15
+            START FROM €15
           </a>
           {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden p-1 text-site-mid hover:text-accent transition-colors duration-200"
-            aria-label={open ? "Zapri meni" : "Odpri meni"}
+            aria-label={open ? "Close menu" : "Open menu"}
           >
             {open ? <IconX className="w-5 h-5" /> : <IconMenu className="w-5 h-5" />}
           </button>
@@ -110,18 +110,18 @@ export default function Nav() {
         ))}
         <div className="mt-8 flex flex-col gap-3">
           <a
-            href="https://app.aikrpan.com"
+            href="https://app.lexeu.ai"
             onClick={() => setOpen(false)}
             className="text-center border border-site-border text-site-mid py-3.5 rounded-sm text-[13px] font-medium tracking-[0.06em] uppercase hover:border-accent hover:text-accent transition-colors duration-200"
           >
-            Prijava
+            Sign in
           </a>
           <a
-            href={resolveHref("#cenik")}
+            href={resolveHref("#pricing")}
             onClick={() => setOpen(false)}
             className="text-center bg-sage-dark text-white py-3.5 rounded-sm text-[13px] font-semibold tracking-[0.06em] uppercase hover:bg-sage transition-colors duration-200"
           >
-            ZAČNI ZA €15
+            START FROM €15
           </a>
         </div>
       </div>

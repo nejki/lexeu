@@ -53,6 +53,9 @@ When user runs `/handoff --continue` or says "continue" and there's an active ha
 
 ---
 
-# aikrpan
+# lexeu
 
-[Add project-specific instructions below this line]
+English version of aikrpan — AI legal assistant for EU law. Target: lexeu.ai, EU jurisdiction, English content.
+Content pages will be added as user provides SEO-optimised English content.
+Working directory: C:\lexeu\lexeu
+GitHub: https://github.com/nejki/lexeu

@@ -1,141 +1,83 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://www.aikrpan.com/#organization",
-  name: "AI KRPAN",
-  legalName: "Committo d.o.o.",
-  url: "https://www.aikrpan.com",
+  "@id": "https://www.lexeu.ai/#organization",
+  name: "LexEU",
+  url: "https://www.lexeu.ai",
   logo: {
     "@type": "ImageObject",
-    url: "https://www.aikrpan.com/logo-256.png",
+    url: "https://www.lexeu.ai/logo-256.png",
     width: 256,
     height: 256,
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+386-40-451-562",
-    email: "info@aikrpan.com",
+    email: "info@lexeu.ai",
     contactType: "customer service",
-    availableLanguage: ["Slovenian"],
+    availableLanguage: ["English"],
   },
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "SI",
-  },
-  sameAs: [
-    "https://www.facebook.com/aikrpan",
-    "https://twitter.com/aikrpan",
-    "https://www.youtube.com/@aikrpan",
-  ],
+  sameAs: [],
 };
 
 export const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "@id": "https://www.aikrpan.com/#software",
-  name: "AI KRPAN",
+  "@id": "https://www.lexeu.ai/#software",
+  name: "LexEU",
   applicationCategory: "LegalService",
   applicationSubCategory: "Legal Research Software",
   operatingSystem: "Web",
-  url: "https://app.aikrpan.com",
+  url: "https://app.lexeu.ai",
   description:
-    "Napreden pravni pomočnik, ki temelji na umetni inteligenci. Analizira celotno slovensko zakonodajo in sodno prakso ter odgovori na pravna vprašanja v sekundah.",
+    "Advanced AI legal assistant specialised in EU law. Analyses EU legislation and case law, answers legal questions in seconds.",
   offers: [
     {
       "@type": "Offer",
-      name: "Mini",
+      name: "Starter",
       price: "15",
       priceCurrency: "EUR",
-      description: "5 pravnih vprašanj brez datumske omejitve",
+      description: "5 legal questions, no expiry",
     },
     {
       "@type": "Offer",
       name: "Standard",
       price: "35",
       priceCurrency: "EUR",
-      description: "15 pravnih vprašanj z analizo dokumentov",
+      description: "15 legal questions with document analysis",
     },
     {
       "@type": "Offer",
-      name: "Poslovni",
+      name: "Business",
       price: "80",
       priceCurrency: "EUR",
       priceSpecification: {
         "@type": "RecurringCharge",
         billingDuration: "P1M",
       },
-      description: "100 vprašanj mesečno, vsi modeli, prioritetna podpora",
-    },
-    {
-      "@type": "Offer",
-      name: "Letni Poslovni",
-      price: "960",
-      priceCurrency: "EUR",
-      priceSpecification: {
-        "@type": "RecurringCharge",
-        billingDuration: "P1Y",
-      },
-      description: "1200 vprašanj letno, vsi modeli, prioritetna podpora",
-    },
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "4",
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: [
-    {
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Organization", name: "Odvetniška pisarna Ketiš, Janžekovič in partnerji" },
-      reviewBody:
-        "AiKrpan je enostaven za uporabo, odgovori so natančni in izčrpni ter podkrepljeni z relevantno sodno prakso.",
-    },
-    {
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Organization", name: "Nova Reha d.o.o." },
-      reviewBody:
-        "Orodje je bistveno vplivalo na našo učinkovitost pri vsakodnevnih pravnih nalogah. Hitro in zanesljivo.",
-    },
-    {
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Organization", name: "Odvetniška pisarna Kumer" },
-      reviewBody:
-        "Analiza kompleksnih primerov z obsežnimi informacijami je zdaj precej hitrejša.",
-    },
-    {
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Organization", name: "Kreativna Bajta d.o.o." },
-      reviewBody:
-        "Za malo podjetje je prihranek časa ogromen. Konkretni odgovori s primeri in ugodna cena.",
+      description: "100 questions/month, all models, priority support",
     },
   ],
   provider: {
-    "@id": "https://www.aikrpan.com/#organization",
+    "@id": "https://www.lexeu.ai/#organization",
   },
 };
 
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://www.aikrpan.com/#website",
-  url: "https://www.aikrpan.com",
-  name: "AI KRPAN",
-  description: "Najnaprednejši pravni AI v Sloveniji",
-  inLanguage: "sl",
+  "@id": "https://www.lexeu.ai/#website",
+  url: "https://www.lexeu.ai",
+  name: "LexEU",
+  description: "AI Legal Assistant for European Law",
+  inLanguage: "en",
   publisher: {
-    "@id": "https://www.aikrpan.com/#organization",
+    "@id": "https://www.lexeu.ai/#organization",
   },
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://app.aikrpan.com/?q={search_term_string}",
+      urlTemplate: "https://app.lexeu.ai/?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },
@@ -147,82 +89,50 @@ export const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Ali AI KRPAN nadomešča odvetnika?",
+      name: "Does LexEU replace a lawyer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ne. AI KRPAN je orodje, ki pripravi prvi osnutek dokumenta, poda pravno usmeritev in preveri zakonodajo — ampak ne more zastopati pred sodiščem, prevzeti odgovornosti za pravni nasvet ali oceniti vseh posebnosti vašega primera. Za enostavne zadeve (pogodba o zaposlitvi vzorec, vprašanje o odpravnini, pregled kratke pogodbe) je dovolj sam. Za zapletene primere je odličen prvi korak pred posvetom z odvetnikom.",
+        text: "No. LexEU prepares first drafts, provides legal direction, and checks EU legislation — but cannot represent you in court, assume responsibility for legal advice, or assess every nuance of your case. For straightforward matters it is sufficient on its own. For complex cases it is an excellent first step before consulting a lawyer.",
       },
     },
     {
       "@type": "Question",
-      name: "Kako zanesljivi so odgovori?",
+      name: "How reliable are the answers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "AI KRPAN navaja konkretne zakonske člene in sodbe. Vsak vir lahko preverite sami. Model je specializiran za slovensko zakonodajo — ne generira odgovorov iz splošnega znanja kot ChatGPT. Kljub temu nobena AI ni 100-odstotno zanesljiva. Kritične odločitve vedno preverite.",
+        text: "LexEU cites specific EU legislative articles and court decisions. You can verify every source yourself. The model is specialised in EU law — it does not generate answers from general knowledge like ChatGPT. No AI is 100% reliable; always verify critical decisions.",
       },
     },
     {
       "@type": "Question",
-      name: "Katere pravne teme pokriva AI KRPAN?",
+      name: "Which legal topics does LexEU cover?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Delovno pravo (ZDR-1, odpovedi, pogodbe o zaposlitvi, odpravnine), gospodarsko pravo, obligacijsko pravo, pravo EU, dedovanje, GDPR in varstvo osebnih podatkov, davčno pravo. Celotna slovenska zakonodaja in sodna praksa sta vključeni v bazo. Za EU pravo uporabite poseben model Pravo EU.",
+        text: "EU employment law, contract law, GDPR and data protection, competition law, consumer protection, corporate law, and general EU legislation and case law from the Court of Justice of the European Union.",
       },
     },
     {
       "@type": "Question",
-      name: "Koliko časa potrebujem za odgovor?",
+      name: "How quickly do I get an answer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Večina odgovorov je pripravljena v manj kot minuti. Priprava daljšega dokumenta (pogodba, pravno mnenje) traja do 2 minuti. Čakalna vrsta ne obstaja.",
+        text: "Most answers are ready in under a minute. Preparing a longer document (contract, legal opinion) takes up to 2 minutes. There is no queue.",
       },
     },
     {
       "@type": "Question",
-      name: "Ali so moja vprašanja zaupna?",
+      name: "Is my data confidential?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Da. Vaši podatki se ne uporabljajo za učenje modelov. Dokumenti, ki jih naložite, se obdelajo in ne hranijo trajno. Podrobnosti o varovanju podatkov najdete v naši politiki zasebnosti.",
+        text: "Yes. Your data is not used to train models. Documents you upload are processed and not stored permanently. See our privacy policy for full details.",
       },
     },
     {
       "@type": "Question",
-      name: "Kako se AI KRPAN razlikuje od ChatGPT?",
+      name: "How is LexEU different from ChatGPT?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ChatGPT pozna pravo na splošno. AI KRPAN je specializiran za slovensko zakonodajo — pozna zakone, podzakonske akte in sodno prakso. Navaja točne vire. Pripravlja dokumente po veljavnih predpisih. ChatGPT tega ne zmore, ker nima dostopa do slovenske zakonske baze.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Ali potrebujem pravno predznanje?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Ne. Vprašajte tako, kot bi vprašali kolega — v navadnem jeziku. AI KRPAN razume kontekst in vam odgovori jasno. Če potrebujete pogodbo, jo pripravi. Če potrebujete razlago zakona, jo poda v razumljivem jeziku.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Kako pripravim odpoved pogodbe o zaposlitvi?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Izberite model AI KRPAN, opišite situacijo (razlog za odpoved, trajanje zaposlitve, ali gre za redno ali izredno odpoved) in AI KRPAN pripravi osnutek odpovedi pogodbe o zaposlitvi v skladu z ZDR-1. Vključi obvezne sestavine: odpovedni rok, pravni pouk, obrazložitev. Vi osnutek pregledate in prilagodite.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Ali AI KRPAN nadomesti brezplačno pravno pomoč?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "AI KRPAN ni nadomestek za brezplačno pravno pomoč po Zakonu o brezplačni pravni pomoči — ta vam dodeli odvetnika za zastopanje pred sodiščem. AI KRPAN pa vam pomaga pri vsakdanjih pravnih vprašanjih, ki jih brezplačna pravna pomoč ne pokriva: hitri odgovori, pregled pogodb, priprava dokumentov. Za €3 na vprašanje dobite takojšnjo pravno usmeritev brez čakanja.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Ali AI KRPAN pozna ZDR-1 in zakon o delovnih razmerjih?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Da. Zakon o delovnih razmerjih (ZDR-1) je eden od najpogosteje uporabljanih zakonov v AI KRPAN-u. Model pozna vse člene, vključno z najnovejšimi spremembami. Pokriva odpovedi, pogodbe o zaposlitvi, pogodbe o delu, odpravnine, letni dopust, regres, nadurno delo in vse ostale institute delovnega prava.",
+        text: "ChatGPT knows law in general. LexEU is specialised in EU law — it knows the regulations, directives, and CJEU case law. It cites exact sources and prepares documents in line with current EU rules. ChatGPT cannot do this because it has no access to an EU legal database.",
       },
     },
   ],
@@ -235,8 +145,8 @@ export const homeBreadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 1,
-      name: "Domov",
-      item: "https://www.aikrpan.com",
+      name: "Home",
+      item: "https://www.lexeu.ai",
     },
   ],
 };
@@ -244,30 +154,19 @@ export const homeBreadcrumbSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "@id": "https://www.aikrpan.com/#legal-service",
-  name: "AI KRPAN",
+  "@id": "https://www.lexeu.ai/#legal-service",
+  name: "LexEU",
   description:
-    "Najnaprednejši AI pravni pomočnik v Sloveniji. Natančni pravni odgovori, utemeljeni z zakonom in sodno prakso.",
-  url: "https://www.aikrpan.com",
-  telephone: "+386-40-451-562",
-  email: "info@aikrpan.com",
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "SI",
-  },
+    "Advanced AI legal assistant for European law. Accurate legal answers backed by EU legislation and case law.",
+  url: "https://www.lexeu.ai",
+  email: "info@lexeu.ai",
   areaServed: {
-    "@type": "Country",
-    name: "Slovenia",
+    "@type": "Continent",
+    name: "Europe",
   },
   availableLanguage: {
     "@type": "Language",
-    name: "Slovenian",
+    name: "English",
   },
   priceRange: "€€",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "4",
-    bestRating: "5",
-  },
 };
