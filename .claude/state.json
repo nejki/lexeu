@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-20",
-    "summary": "Logo mark size increased in nav from 44→56px. Logo/favicon set also replaced with LE serif monogram mark this session.",
-    "commits": ["5ea152e", "1638e16"]
+    "summary": "Fixed all broken nav anchor links (section IDs were still in Slovenian: namen→purpose, modeli→models, cenik→pricing). Removed dead Founder nav item. Fixed ContentLayout CTA (Slovenian copy + aikrpan.com URL). Also shipped LE monogram logo + bigger nav mark this session.",
+    "commits": ["5ea152e", "1638e16", "36a0d01"]
   },
   "backlog": [
     {
@@ -63,6 +63,7 @@
     }
   ],
   "shipped": [
+    "Nav anchor links fixed: section IDs renamed from Slovenian (namen/modeli/cenik) to English (purpose/models/pricing). Founder nav item removed. ContentLayout CTA updated to English + lexeu.ai.",
     "Logo/favicon set: LE serif monogram mark across all sizes (favicon.ico, apple-touch-icon, android-chrome 192/512, logo-96/256, mstile). 40–50% smaller files.",
     "Full English EU law content: all homepage sections translated and adapted from AI Krpan (Slovenian) to LexEU (EU-wide). Founder + MediaMentions removed. Pricing simplified to 2 plans.",
     "/dedovanje/ hub page: full content (dedni redi, oporoka, nujni delež, zapuščinski postopek, FAQ, schema)",
