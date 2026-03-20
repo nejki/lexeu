@@ -1,22 +1,22 @@
 {
-  "project": "aikrpan",
+  "project": "lexeu",
   "currentFocus": [],
   "lastSession": {
-    "date": "2026-03-18",
-    "summary": "Populated /dedovanje/ hub page with full content: dedni redi, oporoka (5 vrst), nujni delež, zapuščinski postopek, odpoved dediščini, dedovanje dolgov, FAQ, sub-page cards.",
-    "commits": ["591743d"]
+    "date": "2026-03-20",
+    "summary": "Implemented full English EU law content across all homepage sections. Replaced all Slovenian AI Krpan copy. Removed Founder and MediaMentions sections. Pricing reduced to 2 plans (Pay As You Go €9.90 + Enterprise/Custom). All CTAs point to app.lexeu.ai. HeroChat updated with 6 EU law Q&A conversations citing real directives.",
+    "commits": ["4d4bc36"]
   },
   "backlog": [
     {
       "id": "gsc",
-      "title": "Google Search Console setup",
-      "desc": "Add verification token to layout.tsx metadata.verification.google, submit sitemap at https://www.aikrpan.com/sitemap.xml",
+      "title": "Google Search Console setup for lexeu.ai",
+      "desc": "Add verification token to layout.tsx metadata.verification.google, submit sitemap at https://www.lexeu.ai/sitemap.xml",
       "priority": "high"
     },
     {
       "id": "domain",
-      "title": "Connect custom domain aikrpan.com to Vercel",
-      "desc": "Vercel → Settings → Domains → add aikrpan.com and www.aikrpan.com. Update DNS at registrar.",
+      "title": "Connect custom domain lexeu.ai to Vercel",
+      "desc": "Vercel → Settings → Domains → add lexeu.ai and www.lexeu.ai. Update DNS at registrar.",
       "priority": "high"
     },
     {
@@ -26,21 +26,33 @@
       "priority": "low"
     },
     {
-      "id": "zasebnost-page",
+      "id": "privacy-page",
       "title": "Create privacy policy page",
-      "desc": "Footer links to /zasebnost/ but page doesn't exist yet. Needs content for Politika zasebnosti.",
+      "desc": "Footer links to /privacy/ but page doesn't exist yet. Needs English content for Privacy Policy (GDPR-compliant, EU audience).",
       "priority": "medium"
     },
     {
-      "id": "content-sub-pages",
-      "title": "Add content to remaining placeholder pages",
-      "desc": "Pages still with ContentPlaceholder: odpoved, odpravnina, regres, minimalna-placa, druzinsko-pravo, za-podjetja, za-pravnike, brezplacna-pravna-pomoc, blog. Also need dedovanje sub-pages: oporoka, nujni-delez, zapuscinski-postopek. Regres and minimalna-placa need yearly updates each January.",
-      "priority": "high"
+      "id": "terms-cookies-pages",
+      "title": "Create Terms of Use and Cookie Policy pages",
+      "desc": "Footer links to /terms/ and /cookies/ but pages don't exist yet. Needs English content.",
+      "priority": "medium"
     },
     {
-      "id": "pogodbe-sub-page-links",
-      "title": "Restore sub-page links on /pogodbe/ hub",
-      "desc": "4 section links removed until pages exist: podjemna-pogodba, najemna-pogodba, darilna-pogodba, pogodba-o-dosmrtnem-prezivljanju. Also make sub-page cards clickable. Re-add once each page has real content. kupoprodajna-pogodba done.",
+      "id": "media-mentions",
+      "title": "Populate MediaMentions section when EU press coverage exists",
+      "desc": "MediaMentions component removed from homepage — no EU press yet. Re-add to page.tsx once real English-language press articles are available. Each entry needs: outlet name, article title, short description, URL, favicon.",
+      "priority": "low"
+    },
+    {
+      "id": "hero-demo-video",
+      "title": "Replace demo video with EU law example",
+      "desc": "Current demo.webm/mp4 shows an AI Krpan Slovenian law session. Needs a new recording showing LexEU answering an EU law question (e.g. GDPR or employment directive).",
+      "priority": "medium"
+    },
+    {
+      "id": "real-testimonials",
+      "title": "Replace placeholder testimonials with real ones",
+      "desc": "Current testimonials (Koller & Wirth, NovaTech, Studio Ferretti) are representative placeholders per the content brief. Replace with real user quotes as they come in.",
       "priority": "medium"
     },
     {
@@ -48,21 +60,10 @@
       "title": "next lint fails with spaces in project path",
       "desc": "next lint parses path incorrectly when working dir contains spaces (iCloud Drive). Works fine on Vercel. Low priority — only affects local DX.",
       "priority": "low"
-    },
-    {
-      "id": "navodila-contentlayout",
-      "title": "Refactor navodila/page.tsx to use ContentLayout",
-      "desc": "navodila/page.tsx (357 lines) still manually renders breadcrumbs, nav, footer, CTA — all duplicated from ContentLayout. Needs ContentLayout to accept optional sectionLabel, ctaTitle/ctaDescription props for customization.",
-      "priority": "low"
-    },
-    {
-      "id": "founder-image-crop",
-      "title": "Get proper headshot for Aleksander Kumer",
-      "desc": "Current founder photo is a group award ceremony shot cropped via CSS object-position. A dedicated professional headshot would look better on homepage and /o-meni/ page.",
-      "priority": "medium"
     }
   ],
   "shipped": [
+    "Full English EU law content: all homepage sections translated and adapted from AI Krpan (Slovenian) to LexEU (EU-wide). Founder + MediaMentions removed. Pricing simplified to 2 plans.",
     "/dedovanje/ hub page: full content (dedni redi, oporoka, nujni delež, zapuščinski postopek, FAQ, schema)",
     "Pricing: Po meri CTA shortened to 'Pišite nam →' (single line, consistent button height)",
     "/pogodbe/ hub page: full content (7 contract types, neveljavnost, FAQ, AI KRPAN CTAs, schema markup)",
@@ -71,7 +72,6 @@
     "MediaMentions: inline 32x32 favicons next to outlet name, removed bordered thumbnail boxes",
     "Models: unified category badge colors to warm accent (bg-warm-pale text-[#8A6040])",
     "MediaMentions: self-hosted site favicons replacing article thumbnails (optimized, zero external requests)",
-    "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components",
-    "Hero chat: stacking conversations with auto-scroll, no user scroll (overflow:hidden + programmatic scrollTop)"
+    "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components"
   ]
 }
