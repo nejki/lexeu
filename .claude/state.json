@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-20",
-    "summary": "Replaced all logo/favicon assets with new LE serif monogram mark. Generated all required sizes (favicon.ico 16/32/48px, favicon-16/32, logo-96/256, apple-touch-icon, android-chrome 192/512, mstile-150) from 1024x1024 source PNG. File sizes reduced 40–50%.",
-    "commits": ["5ea152e"]
+    "summary": "Logo mark size increased in nav from 44→56px. Logo/favicon set also replaced with LE serif monogram mark this session.",
+    "commits": ["5ea152e", "1638e16"]
   },
   "backlog": [
     {
