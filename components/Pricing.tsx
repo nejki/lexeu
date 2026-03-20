@@ -51,7 +51,7 @@ const comparison = [
 
 export default function Pricing() {
   return (
-    <section id="cenik" className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24">
+    <section id="pricing" className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24">
       {/* Intro */}
       <div className="mb-14">
         <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-4">

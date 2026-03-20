@@ -55,7 +55,7 @@ export default function ContentLayout({
               href="/"
               className="hover:text-accent transition-colors duration-200"
             >
-              Domov
+              Home
             </Link>
           </li>
           {breadcrumbs.map((crumb, i) => (
@@ -102,18 +102,17 @@ export default function ContentLayout({
         <div className="max-w-[1200px] mx-auto">
           <FadeIn className="bg-sage-dark rounded-xl px-6 md:px-20 py-12 md:py-16 text-center">
             <h2 className="font-serif text-[clamp(28px,4vw,44px)] font-semibold leading-[1.1] text-white mb-4">
-              Imate pravno vprašanje?
+              Have a legal question?
             </h2>
             <p className="text-[17px] text-white/65 leading-[1.7] mb-8 max-w-xl mx-auto">
-              AI KRPAN analizira vaše vprašanje in vam v minutah poda stališče,
-              utemeljeno z zakonskimi členi in sodno prakso.
+              LexEU analyses your question and delivers a cited legal answer grounded in EU legislation and case law — in minutes.
             </p>
             <Button
-              href="https://app.aikrpan.com"
+              href="https://app.lexeu.ai"
               variant="primary"
               className="bg-white text-site-text hover:bg-warm-light hover:text-site-text hover:-translate-y-0.5 hover:shadow-lg shadow-md"
             >
-              Začnite za €15
+              Start Now — from €9.90
             </Button>
           </FadeIn>
         </div>

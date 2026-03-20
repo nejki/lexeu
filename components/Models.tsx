@@ -48,7 +48,7 @@ const models = [
 
 export default function Models() {
   return (
-    <section id="modeli" className="bg-site-white border-t border-site-border py-16 md:py-24">
+    <section id="models" className="bg-site-white border-t border-site-border py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         {/* Header */}
         <FadeIn>
