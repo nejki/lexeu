@@ -30,11 +30,11 @@ const BASE_URL = "https://www.lexeu.ai";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "LexEU — AI Legal Assistant for European Law",
+    default: "LexEU — AI Legal Chatbot for EU Law | From €9.90",
     template: "%s | LexEU",
   },
   description:
-    "LexEU analyses EU legislation and case law. Get legal guidance, contract review, or answers on European law — in minutes.",
+    "Get AI legal advice grounded in EU directives, CJEU case law, and national law. Contracts, opinions, GDPR answers in under a minute. Try from €9.90.",
   keywords: [
     "EU law",
     "European law",
@@ -62,15 +62,15 @@ export const metadata: Metadata = {
     locale: "en_EU",
     url: BASE_URL,
     siteName: "LexEU",
-    title: "LexEU — AI Legal Assistant for European Law",
+    title: "LexEU — AI Legal Chatbot for EU Law | From €9.90",
     description:
-      "Ask a legal question. Get a position backed by EU legislation and case law. AI models specialised in European law.",
+      "Get AI legal advice grounded in EU directives, CJEU case law, and national law. Contracts, opinions, GDPR answers in under a minute. Try from €9.90.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "LexEU — AI Legal Assistant for European Law",
+        alt: "LexEU — AI Legal Chatbot for EU Law",
       },
     ],
   },
@@ -78,9 +78,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@lexeu_ai",
     creator: "@lexeu_ai",
-    title: "LexEU — AI Legal Assistant for European Law",
+    title: "LexEU — AI Legal Chatbot for EU Law | From €9.90",
     description:
-      "Ask a legal question. Get a position backed by EU legislation and case law. AI models specialised in European law.",
+      "Get AI legal advice grounded in EU directives, CJEU case law, and national law. Contracts, opinions, GDPR answers in under a minute. Try from €9.90.",
     images: ["/og-image.png"],
   },
   robots: {

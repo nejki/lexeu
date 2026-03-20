@@ -2,44 +2,44 @@ import FAQAccordion from "./FAQAccordion";
 
 const faqs = [
   {
-    q: "Ali AI KRPAN nadomešča odvetnika?",
-    a: "Ne. AI KRPAN je orodje, ki pripravi prvi osnutek dokumenta, poda pravno usmeritev in preveri zakonodajo, ampak ne more zastopati pred sodiščem, prevzeti odgovornosti za pravni nasvet ali oceniti vseh posebnosti vašega primera. Za enostavne zadeve (pogodba o zaposlitvi vzorec, vprašanje o odpravnini, pregled kratke pogodbe) je dovolj sam. Za zapletene primere je odličen prvi korak pred posvetom z odvetnikom.",
+    q: "Does LexEU replace a lawyer?",
+    a: "No. LexEU is an AI legal chatbot that provides information and document drafts grounded in EU legislation and case law. It's built to help you understand your legal position quickly — but it's not a law firm and doesn't provide formal legal advice. For court representation, binding opinions, or high-stakes disputes, you should always work with a licensed attorney. Think of LexEU as the research step before (or instead of) that first expensive consultation.",
   },
   {
-    q: "Kako zanesljivi so odgovori?",
-    a: "AI KRPAN navaja konkretne zakonske člene in sodbe. Vsak vir lahko preverite sami. Model je specializiran za slovensko zakonodajo in ne generira odgovorov iz splošnega znanja kot ChatGPT. Kljub temu nobena AI ni 100-odstotno zanesljiva. Kritične odločitve vedno preverite.",
+    q: "How reliable are the answers?",
+    a: "LexEU cites specific articles from EU directives, regulations, and CJEU rulings. Every citation is verifiable. The system is built by an EU-licensed attorney and grounded in active legislation — it doesn't generate answers from general knowledge the way ChatGPT does. That said, no AI is perfect. We recommend verifying answers for critical decisions and always consulting a professional for matters involving court proceedings or significant financial exposure.",
   },
   {
-    q: "Katere pravne teme pokriva?",
-    a: "Delovno pravo (ZDR-1, odpovedi, pogodbe o zaposlitvi, odpravnine), gospodarsko pravo, obligacijsko pravo, pravo EU, dedovanje, GDPR in varstvo osebnih podatkov, davčno pravo. Celotna slovenska zakonodaja in sodna praksa sta vključeni v bazo. Za EU pravo uporabite poseben model Pravo EU.",
+    q: "What areas of EU law are covered?",
+    a: "LexEU covers employment law, consumer protection, contract law, GDPR and data protection, VAT and cross-border trade, unfair commercial practices, late payment rules, and product liability — all based on active EU directives and regulations. National transpositions are available for Austria, Germany, Italy, Poland, and Serbia. The system also searches CJEU case law for relevant precedents.",
   },
   {
-    q: "Koliko časa potrebujem za odgovor?",
-    a: "Večina odgovorov je pripravljena v manj kot minuti. Priprava daljšega dokumenta (pogodba, pravno mnenje) traja do 2 minuti. Čakalna vrsta ne obstaja.",
+    q: "How long does it take to get an answer?",
+    a: "Most answers arrive in under 60 seconds. Complex questions involving multiple directives or document analysis may take slightly longer, but you'll rarely wait more than two minutes. Compare that to the 3–14 business days a typical law firm quotes for a written opinion.",
   },
   {
-    q: "Ali so moja vprašanja zaupna?",
-    a: "Da. Vaši podatki se ne uporabljajo za učenje modelov. Dokumenti, ki jih naložite, se obdelajo in ne hranijo trajno. Podrobnosti o varovanju podatkov najdete v naši politiki zasebnosti.",
+    q: "Is my data confidential?",
+    a: "Yes. LexEU is fully GDPR-compliant under Regulation 2016/679. Your questions and uploaded documents are never used to train AI models. All data is stored within the EU. You have full data subject rights at any time — including the right to access, erasure, and data portability. If you want to file a data subject rights request, contact info@lexeu.ai.",
   },
   {
-    q: "Kako se AI KRPAN razlikuje od ChatGPT?",
-    a: "ChatGPT pozna pravo na splošno. AI KRPAN je specializiran za slovensko zakonodajo. Pozna zakone, podzakonske akte in sodno prakso. Navaja točne vire. Pripravlja dokumente po veljavnih predpisih. ChatGPT tega ne zmore, ker nima dostopa do slovenske zakonske baze.",
+    q: "How is LexEU different from ChatGPT?",
+    a: "ChatGPT is a general-purpose AI. It doesn't know which EU directive applies to your situation, doesn't track legislative amendments, and often generates plausible-sounding answers that cite articles that don't exist. LexEU is purpose-built for EU law. It searches actual legislation databases, cites real articles, and includes CJEU case law. When it answers a question about probationary periods, it points you to Art. 8(2) of Directive 2019/1152 — not a hallucinated statute.",
   },
   {
-    q: "Ali potrebujem pravno predznanje?",
-    a: "Ne. Vprašajte tako, kot bi vprašali kolega, v navadnem jeziku. AI KRPAN razume kontekst in vam odgovori jasno. Če potrebujete pogodbo, jo pripravi. Če potrebujete razlago zakona, jo poda v razumljivem jeziku.",
+    q: "Do I need legal knowledge to use it?",
+    a: "Not at all. Ask your question the way you'd explain the problem to a friend. LexEU is designed for people without legal training — employees, freelancers, small business owners, tenants, consumers. It responds in plain language and explains what each cited article means in practice.",
   },
   {
-    q: "Kako pripravim odpoved pogodbe o zaposlitvi?",
-    a: "Izberite model AI KRPAN, opišite situacijo (razlog za odpoved, trajanje zaposlitve, ali gre za redno ali izredno odpoved) in AI KRPAN pripravi osnutek odpovedi pogodbe o zaposlitvi v skladu z ZDR-1. Vključi obvezne sestavine: odpovedni rok, pravni pouk, obrazložitev. Vi osnutek pregledate in prilagodite.",
+    q: "How do I get a contract drafted?",
+    a: "Choose the LexEU Main Agent or Document QA model and describe what you need — for example, \"Draft an employment contract for a part-time role in Germany\" or \"Write an NDA for a B2B partnership in Austria.\" LexEU generates a draft based on the relevant legislation. You review, adjust, and use it. For document review, upload an existing contract and ask specific questions about its clauses.",
   },
   {
-    q: "Ali AI KRPAN nadomesti brezplačno pravno pomoč?",
-    a: "AI KRPAN ni nadomestek za brezplačno pravno pomoč po Zakonu o brezplačni pravni pomoči. Ta vam dodeli odvetnika za zastopanje pred sodiščem. AI KRPAN pa vam pomaga pri vsakdanjih pravnih vprašanjih, ki jih brezplačna pravna pomoč ne pokriva: hitri odgovori, pregled pogodb, priprava dokumentov. Za €3 na vprašanje dobite takojšnjo pravno usmeritev brez čakanja.",
+    q: "Does LexEU cover CJEU case law?",
+    a: "Yes. The CJEU Case Law model searches rulings from the Court of Justice of the European Union and identifies precedents relevant to your question. It explains the key legal principles from each judgment and how they apply to your situation. This is particularly useful for questions where EU directives have been interpreted differently across member states.",
   },
   {
-    q: "Ali AI KRPAN pozna ZDR-1 in zakon o delovnih razmerjih?",
-    a: "Da. Zakon o delovnih razmerjih (ZDR-1) je eden od najpogosteje uporabljanih zakonov v AI KRPAN-u. Model pozna vse člene, vključno z najnovejšimi spremembami. Pokriva odpovedi, pogodbe o zaposlitvi, pogodbe o delu, odpravnine, letni dopust, regres, nadurno delo in vse ostale institute delovnega prava.",
+    q: "Can businesses use LexEU for compliance work?",
+    a: "Absolutely. Common use cases include GDPR compliance checks, employment law reviews when hiring across EU countries, VAT threshold monitoring for cross-border sales, and supplier contract reviews against the Late Payment Directive. Enterprise clients can also request API access and custom deployments.",
   },
 ];
 
@@ -50,14 +50,14 @@ export default function FAQ() {
         {/* Left */}
         <div className="lg:pt-2">
           <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
-            Pogosta vprašanja
+            FAQ
           </p>
           <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-6">
-            Pogosta{" "}
-            <em className="italic text-accent">vprašanja</em>
+            Common{" "}
+            <em className="italic text-accent">questions</em>
           </h2>
           <p className="text-[14px] text-site-muted leading-relaxed mb-8">
-            Odgovori na najpogostejša vprašanja o AI KRPAN-u. Če ne najdete svojega, vprašajte kar AI KRPAN.
+            Everything you need to know before your first question.
           </p>
         </div>
 

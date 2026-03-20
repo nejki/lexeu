@@ -9,17 +9,17 @@ export default function VideoDemo() {
               Demo
             </p>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] mb-6 text-site-text">
-              Poglejte, kako AI KRPAN{" "}
-              <em className="italic text-accent">pripravi pogodbo</em>
+              See how LexEU{" "}
+              <em className="italic text-accent">drafts a contract</em>
             </h2>
             <p className="text-[15px] text-site-mid leading-[1.85] mb-8">
-              V 47 sekundah od vprašanja do osnutka pogodbe o zaposlitvi, z vsemi obveznimi sestavinami po ZDR-1. Brez čakanja, brez najemanja odvetnika za prvo verzijo.
+              From question to a full employment contract draft in 47 seconds — with every required clause grounded in EU and national law. No waiting. No lawyer needed for the first version.
             </p>
             <a
-              href="https://app.aikrpan.com"
+              href="https://app.lexeu.ai"
               className="inline-block bg-sage-dark text-white px-8 py-3.5 rounded-sm text-[13px] font-semibold tracking-[0.06em] uppercase hover:bg-sage transition-colors duration-200"
             >
-              PREIZKUSITE SAMI →
+              TRY IT YOURSELF →
             </a>
           </div>
 
@@ -31,12 +31,12 @@ export default function VideoDemo() {
               muted
               playsInline
               className="w-full h-auto block"
-              aria-label="AI KRPAN demo, pravno vprašanje odgovorjeno v sekundah"
+              aria-label="LexEU demo — legal question answered in seconds"
             >
               <source src="/demo.webm" type="video/webm" />
               <source src="/demo.mp4" type="video/mp4" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/demo.gif" alt="AI KRPAN demo" />
+              <img src="/demo.gif" alt="LexEU demo" />
             </video>
           </div>
         </div>

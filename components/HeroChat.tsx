@@ -5,28 +5,28 @@ import { useEffect, useRef, useState } from "react";
 /* ── Q&A pairs ─────────────────────────────────────────── */
 const conversations = [
   {
-    q: "Pripravi mi odpoved pogodbe o zaposlitvi po 1. odstavku 83. člena ZDR-1.",
-    a: "Pripravil sem osnutek redne odpovedi pogodbe o zaposlitvi v skladu s 1. odstavkom 83. člena ZDR-1. Vključene so vse obvezne sestavine: navedba razloga, odpovedni rok (min. 30 dni po 94. členu ZDR-1), pravni pouk o pravnem varstvu in obrazložitev. Delavcu pripada tudi odpravnina po 108. členu ZDR-1.",
+    q: "My employer said my probationary period is 12 months. Is that legal in the EU?",
+    a: "Under Article 8(2) of Directive 2019/1152, EU law caps probation at 6 months for most employment contracts. A 12-month probation is not permitted unless national law allows exceptional extensions, which must be proportionate and justified. You may be able to challenge this clause under the transposing law in your country.",
   },
   {
-    q: "Ali moram plačati DDV, če sem s.p. pod pragom 50.000 EUR letnega prometa?",
-    a: "Po ZDDV-1 (94. člen) se morate registrirati za DDV, ko vaš obdavčljivi promet v 12 mesecih preseže 50.000 €. Dokler ste pod tem pragom, vam DDV ni treba zaračunavati. Prostovoljno se lahko registrirate kadarkoli. To je smiselno, če so vaše stranke podjetja, ki si DDV odbijajo.",
+    q: "I run an online shop in Austria selling to customers in Germany and Poland. Do I need to register for VAT in those countries?",
+    a: "Under Directive 2006/112/EC as amended by Directive 2017/2455, if your B2C sales to other EU countries exceed €10,000 per year, you must charge VAT at each customer's country rate. You can use the One Stop Shop (OSS) scheme under Art. 369b to file a single return in Austria instead of registering separately in each country.",
   },
   {
-    q: "Preglej to pogodbo o delu in mi povej, ali vsebuje vse obvezne sestavine.",
-    a: "Pregledal sem pogodbo o delu. Po 619.–648. členu OZ mora pogodba vsebovati: opredelitev dela, rok za izvedbo, plačilo in obveznosti obeh strank. Vaša pogodba vsebuje vse obvezne sestavine. Opozarjam pa na 2 tveganja: rok za dokončanje dela ni jasno opredeljen, klavzula o odgovornosti za napake pa je v korist naročnika nesorazmerno omejena.",
+    q: "My gym contract says they can increase fees at any time and I cannot cancel - is this enforceable?",
+    a: "Under Art. 3(1) of Directive 93/13/EEC, a unilateral price increase without an exit right is listed in the Annex as potentially unfair. Per Art. 6(1), if found unfair, the clause is not binding on you. The rest of your contract continues without the unfair term.",
   },
   {
-    q: "Stranka ne plača računa že 60 dni. Kaj lahko naredim?",
-    a: "Po OZ (196. člen) lahko zaračunate zamudne obresti. Pošljite pisni opomin z 8-dnevnim rokom. Če ne plača, vložite predlog za izvršbo na podlagi verodostojne listine, brez sodnega postopka.",
+    q: "A client hasn't paid my invoice for 45 days. What are my rights under EU law?",
+    a: "Under Art. 3 of Directive 2011/7/EU, the standard B2B payment deadline is 30 days. After that, you're automatically entitled to statutory interest plus a fixed €40 compensation for recovery costs under Art. 6 — no formal reminder needed.",
   },
   {
-    q: "Kakšen je zastaralni rok za izterjavo dolgov?",
-    a: "Splošni zastaralni rok je 5 let (OZ, 346. člen). Za občasne terjatve (najemnina, obresti) velja 3 leta. Za terjatve iz gospodarskih pogodb med podjetji prav tako 5 let. Po zastaranju dolg ne preneha, le prisilna izterjava ni več mogoča.",
+    q: "I asked a company to delete my personal data and they haven't responded in 6 weeks. What can I do?",
+    a: "Under Art. 17 of Regulation 2016/679 (GDPR), you have the right to erasure. The company must respond within 1 month per Art. 12(3). Since they've exceeded this deadline, you can file a complaint with your national Data Protection Authority under Art. 77.",
   },
   {
-    q: "Kupil sem pokvarjen izdelek. Kakšne pravice imam?",
-    a: "Po ZVPot-1 (37.–42. člen) imate pravico do brezplačnega popravila ali zamenjave. Če to ni mogoče, lahko zahtevate znižanje cene ali vračilo kupnine. Rok za reklamacijo je 2 meseca od odkritja napake.",
+    q: "I bought a laptop online that stopped working after 14 months. The seller says the warranty expired. What are my rights?",
+    a: "Under Art. 10 of Directive 2019/771, sellers are liable for defects that appear within 2 years of delivery. At 14 months, you're well within that period. The seller must repair, replace, or refund per Art. 13 — a 1-year warranty doesn't override your statutory EU rights.",
   },
 ];
 
@@ -160,7 +160,7 @@ export function HeroChat() {
             {/* Question */}
             {entry.qVisible.length > 0 && (
               <div className="hero-chat-q">
-                <div className="hero-chat-q-avatar">Vi</div>
+                <div className="hero-chat-q-avatar">You</div>
                 <div className="hero-chat-q-bubble">
                   <span>{entry.qVisible}</span>
                   {!entry.done && entry === current && phase === "typing-q" && entry.qVisible.length < entry.q.length && (
@@ -182,7 +182,7 @@ export function HeroChat() {
               <div className="hero-chat-a">
                 <div className="hero-chat-a-avatar"><AiIcon /></div>
                 <div className="hero-chat-a-content">
-                  <span className="hero-chat-a-label">AI KRPAN</span>
+                  <span className="hero-chat-a-label">LexEU</span>
                   <span className="hero-chat-a-text">
                     {entry.aVisible}
                     {!entry.done && entry === current && phase === "typing-a" && (
@@ -199,7 +199,7 @@ export function HeroChat() {
       {/* Bottom tag */}
       <div className="hero-chat-tag">
         <span className="hero-chat-tag-dot" />
-        Odgovor v realnem času
+        Real-time answer
       </div>
     </div>
   );

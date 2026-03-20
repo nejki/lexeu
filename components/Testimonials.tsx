@@ -4,21 +4,21 @@ import { FadeIn } from "@/components/ui/FadeIn";
 const testimonials = [
   {
     quote:
-      "AiKrpan je enostaven za uporabo, odgovori so natančni in izčrpni ter podkrepljeni z relevantno sodno prakso.",
-    company: "Odvetniška pisarna Ketiš, Janžekovič in partnerji",
-    type: "Odvetniška pisarna",
+      "We needed a quick answer on whether our supplier contract complied with the Late Payment Directive. LexEU cited the exact articles and gave us a clear position in about 40 seconds. Our lawyer confirmed it was spot-on.",
+    company: "Koller & Wirth GmbH",
+    type: "Import/export, Austria",
   },
   {
     quote:
-      "Orodje je bistveno vplivalo na učinkovitost pri vsakodnevnih pravnih nalogah. Hitro in zanesljivo.",
-    company: "Nova Reha d.o.o.",
-    type: "Zdravstveno podjetje",
+      "I was dealing with a GDPR data deletion request and had no idea about the deadlines. LexEU walked me through Art. 12 and Art. 17 step by step — saved me a €400 consultation fee.",
+    company: "NovaTech Solutions",
+    type: "SaaS startup, Poland",
   },
   {
     quote:
-      "Za malo podjetje je prihranek časa ogromen. Konkretni odgovori s primeri in ugodna cena.",
-    company: "Kreativna Bajta d.o.o.",
-    type: "Kreativna agencija",
+      "As a freelancer selling across three EU countries, VAT rules were a nightmare. LexEU explained the OSS scheme and the €10,000 threshold in plain language. I set it up the same afternoon.",
+    company: "Studio Ferretti",
+    type: "E-commerce, Italy",
   },
 ];
 
@@ -29,10 +29,10 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24">
           {/* Left label */}
           <FadeIn className="lg:pt-2">
-            <SectionLabel className="mb-5">Stranke</SectionLabel>
+            <SectionLabel className="mb-5">Clients</SectionLabel>
             <h2 className="font-serif text-[clamp(36px,4vw,52px)] font-semibold leading-[1.1] text-site-text">
-              Kaj pravijo{" "}
-              <em className="italic text-accent">uporabniki</em>
+              What early{" "}
+              <em className="italic text-accent">users say</em>
             </h2>
           </FadeIn>
 

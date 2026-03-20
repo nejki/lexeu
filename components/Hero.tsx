@@ -6,19 +6,19 @@ import { IconBolt, IconScales, IconDocument, IconGlobe, HeroDecoration } from "@
 const features = [
   {
     icon: <IconBolt className="w-4 h-4" />,
-    title: "Odgovor v manj kot minuti",
+    title: "Answer in under a minute",
   },
   {
     icon: <IconScales className="w-4 h-4" />,
-    title: "Sodna praksa vključena",
+    title: "CJEU case law included",
   },
   {
     icon: <IconDocument className="w-4 h-4" />,
-    title: "Pripravi in pregleda dokumente",
+    title: "Drafts and reviews documents",
   },
   {
     icon: <IconGlobe className="w-4 h-4" />,
-    title: "Slovensko + EU pravo",
+    title: "EU + national law (6 countries)",
   },
 ];
 
@@ -28,28 +28,28 @@ export default function Hero() {
       {/* Left — stone */}
       <div className="flex flex-col justify-center px-6 md:px-16 lg:px-20 py-12 lg:py-20 bg-site-bg border-r border-site-border">
         <SectionLabel className="mb-6">
-          PRAVNI AI AGENT ZA SLOVENSKO IN EU PRAVO
+          AI LEGAL ASSISTANT FOR EU LAW
         </SectionLabel>
 
         <h1 className="font-serif text-[clamp(36px,6vw,80px)] font-semibold leading-[1.05] tracking-tight text-site-text mb-4">
-          Pogodbe. Mnenja.<br />
-          Dokumenti.{" "}
+          Contracts. Opinions.<br />
+          Answers.{" "}
           <em className="italic text-accent" style={{ fontStyle: "italic" }}>
-            V minutah.
+            In minutes.
           </em>
         </h1>
 
         <p className="text-[20px] font-serif font-semibold text-site-text mb-4">
-          AI, ki dela kot pravnik.
+          The legal AI chatbot built for EU law.
         </p>
 
         <p className="text-[16px] text-site-mid leading-[1.8] mb-12 max-w-md">
-          Odpoved pogodbe o zaposlitvi, pogodba o delu, pravno mnenje o odpravnini. AI KRPAN pripravi dokument, preveri zakonodajo in sodno prakso ter vam poda pravno usmeritev. Pravna pomoč za vsakogar, od €3 na vprašanje.
+          A lawyer charges €150–400/hour and needs two weeks. Google returns ten statutes without explanation. ChatGPT doesn&apos;t know which directive applies. LexEU reads active legislation and court rulings across six EU jurisdictions, gives you a cited answer, and drafts the document you need. From €9.90.
         </p>
 
         <div className="flex flex-wrap gap-4">
-          <Button href="https://app.aikrpan.com" variant="primary">ZAČNI ZDAJ - od €3 na vprašanje</Button>
-          <Button href="#demo" variant="outline">OGLEJ SI DEMO ↓</Button>
+          <Button href="https://app.lexeu.ai" variant="primary">START NOW — from €9.90</Button>
+          <Button href="#demo" variant="outline">SEE THE DEMO ↓</Button>
         </div>
       </div>
 

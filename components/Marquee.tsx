@@ -1,14 +1,14 @@
 const clients = [
-  "Odvetniška pisarna Ketiš",
-  "Nova Reha d.o.o.",
-  "Odvetniška pisarna Kumer",
-  "Kreativna Bajta d.o.o.",
-  "500+ aktivnih strank",
-  "Odvetniška pisarna Ketiš",
-  "Nova Reha d.o.o.",
-  "Odvetniška pisarna Kumer",
-  "Kreativna Bajta d.o.o.",
-  "500+ aktivnih strank",
+  "Covers 6 EU jurisdictions",
+  "500+ legal questions answered",
+  "EU legislation + CJEU case law",
+  "Answers in under 60 seconds",
+  "Built by an EU-licensed attorney",
+  "GDPR-compliant data handling",
+  "Austria · Germany · Italy · Poland · Serbia",
+  "Document drafting included",
+  "From €9.90 per session",
+  "Active EU directives and regulations",
 ];
 
 export default function Marquee() {

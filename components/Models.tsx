@@ -4,44 +4,44 @@ import { FadeIn } from "@/components/ui/FadeIn";
 const models = [
   {
     num: "01",
-    name: "AI KRPAN",
-    desc: "Slovensko pravo in sodna praksa. Pripravi dokumente, poda mnenja, analizira predpise. Vaš glavni pravni AI agent.",
-    tag: "Slovensko pravo",
+    name: "LexEU Main Agent",
+    desc: "Your primary legal AI chatbot for EU and national law questions. Covers employment, consumer rights, contracts, business obligations, and cross-border issues across all supported jurisdictions.",
+    tag: "General EU Law",
     tagStyle: "bg-warm-pale text-[#8A6040]",
   },
   {
     num: "02",
-    name: "SLO Zakoni",
-    desc: "Hitro iskanje po celotni slovenski zakonodaji. Ko potrebujete točen člen, ne interpretacije.",
-    tag: "Zakonodaja",
+    name: "EU Legislation Search",
+    desc: "Searches active EU directives, regulations, and their national transpositions. Ask it to find the specific article that governs your situation — it returns the citation, not a summary.",
+    tag: "Legislation",
     tagStyle: "bg-warm-pale text-[#8A6040]",
   },
   {
     num: "03",
     name: "Document QA",
-    desc: "Naložite pogodbo ali drug dokument. AI ga prebere, analizira in odgovori na vaša vprašanja o vsebini.",
-    tag: "Dokumenti",
+    desc: "Upload a contract, terms of service, or legal notice. Ask questions about specific clauses, and it flags risks, unfair terms, or missing provisions based on applicable EU law.",
+    tag: "Document Review",
     tagStyle: "bg-warm-pale text-[#8A6040]",
   },
   {
     num: "04",
-    name: "Pravo EU",
-    desc: "Evropska zakonodaja, direktive, uredbe in sodna praksa Sodišča EU. Za čezmejne zadeve in EU compliance.",
-    tag: "EU pravo",
+    name: "CJEU Case Law",
+    desc: "Searches rulings from the Court of Justice of the European Union. Finds relevant precedents, explains how they apply, and identifies the key legal principles from each judgment.",
+    tag: "Case Law",
     tagStyle: "bg-warm-pale text-[#8A6040]",
   },
   {
     num: "05",
-    name: "GPT-4 Splošni",
-    desc: "Za splošna vprašanja zunaj prava: poslovni nasveti, pisanje besedil, prevajanje.",
-    tag: "Splošni",
+    name: "GDPR & Data Protection",
+    desc: "Covers data subject rights, breach notification rules, DPA complaint procedures, and data processing obligations. Built on Regulation 2016/679 and related national data protection laws.",
+    tag: "GDPR",
     tagStyle: "bg-warm-pale text-[#8A6040]",
   },
   {
     num: "06",
-    name: "IP Smernice",
-    desc: "Smernice informacijske pooblaščenke. Varstvo osebnih podatkov, GDPR, pravice posameznikov.",
-    tag: "Varstvo podatkov",
+    name: "General Assistant",
+    desc: "For non-legal tasks — summarising text, translating documents, drafting emails, or any general question that doesn't require legal expertise.",
+    tag: "General",
     tagStyle: "bg-warm-pale text-[#8A6040]",
   },
 ];
@@ -53,17 +53,17 @@ export default function Models() {
         {/* Header */}
         <FadeIn>
           <div className="mb-14">
-            <SectionLabel className="mb-4">Modeli</SectionLabel>
+            <SectionLabel className="mb-4">Models</SectionLabel>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-10">
-              6 specializiranih modelov za{" "}
-              <em className="italic text-accent">pravo področje</em>
+              Six specialised agents.{" "}
+              <em className="italic text-accent">One for each area of law.</em>
             </h2>
             <div className="max-w-2xl mb-14">
               <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] font-semibold leading-[1.2] text-site-text mb-3">
-                Ne le odgovor, temveč stališče z argumentacijo za vsako pravno področje
+                Not just an answer — a legal position with reasoning and citations.
               </h3>
               <p className="text-[15px] text-site-mid leading-[1.85]">
-                AI KRPAN ne kopira zakonskega besedila. Prebere vaš primer, zavzame stališče in ga utemelji s členi zakona ter sodno prakso. Kot pravno mnenje, ne kot iskalnik. Vsak model pokriva svoje področje, od delovnega prava, GDPR in dedovanja do obligacij in prava EU, tako da izberete tistega, ki pozna vaše področje do potankosti.
+                Each model is trained on a specific domain of EU law. Pick the one that matches your question, and you&apos;ll get an answer that cites the relevant directive, regulation, or court ruling. Think of them as six different desks at a law firm — each one staffed by a specialist.
               </p>
             </div>
           </div>
@@ -97,8 +97,8 @@ export default function Models() {
                 <tr className="border-b border-site-border">
                   <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-14">#</th>
                   <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-44">Model</th>
-                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted">Opis</th>
-                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-36">Kategorija</th>
+                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted">Description</th>
+                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-36">Category</th>
                   <th className="w-8"></th>
                 </tr>
               </thead>

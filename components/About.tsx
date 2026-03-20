@@ -6,18 +6,18 @@ import { IconBolt, IconScales, IconLock } from "@/components/ui/Icons";
 const cards = [
   {
     icon: <IconBolt className="w-5 h-5" />,
-    title: "Pripravlja dokumente",
-    desc: "Pogodba o zaposlitvi, odpoved, sporazum, mnenje. AI KRPAN sestavi osnutek na podlagi veljavne zakonodaje. Vi ga pregledate, popravite, uporabite.",
+    title: "Drafts Legal Documents",
+    desc: "Employment contracts, NDAs, termination notices, legal opinions. LexEU generates a draft grounded in the legislation that applies to your jurisdiction. You review it, adjust the details, and use it — the same workflow a lawyer follows, at a fraction of the cost.",
   },
   {
     icon: <IconScales className="w-5 h-5" />,
-    title: "Utemeljeno z zakonom in sodno prakso",
-    desc: "Vsak odgovor navaja konkretne člene zakona in relevantne sodbe. Brez splošnih nasvetov, brez ugibanja. Preverite lahko vsak vir.",
+    title: "Grounded in EU Law and Case Law",
+    desc: "Every answer cites specific articles from EU directives, regulations, and CJEU rulings. No general-knowledge guessing. You can verify every source yourself. That said, no AI is 100% reliable — always confirm critical decisions with a qualified professional.",
   },
   {
     icon: <IconLock className="w-5 h-5" />,
-    title: "Zasebno in varno",
-    desc: "Vaša vprašanja in dokumenti se ne uporabljajo za učenje modelov. Podatki ostanejo vaši.",
+    title: "Private and GDPR-Compliant",
+    desc: "Your questions and uploaded documents are never used to train AI models. All data is processed in compliance with Regulation 2016/679 (GDPR) and stored within the EU. You have full data subject rights — access, erasure, portability — at any time.",
   },
 ];
 
@@ -26,13 +26,13 @@ export default function About() {
     <section id="namen" className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
       {/* Left text */}
       <FadeIn>
-        <SectionLabel className="mb-5">Namen</SectionLabel>
+        <SectionLabel className="mb-5">Purpose</SectionLabel>
         <h2 className="font-serif text-[clamp(36px,4vw,54px)] font-semibold leading-[1.1] mb-7 text-site-text">
-          Pravna vprašanja zaslužijo več kot{" "}
-          <em className="italic text-accent">Google rezultat</em>
+          Legal questions deserve better than{" "}
+          <em className="italic text-accent">a Google result</em>
         </h2>
         <p className="text-[15px] text-site-mid leading-[1.85]">
-          Odvetnik stane €150-300 na uro. Google vrne 10 zakonov brez razlage. ChatGPT ne pozna slovenskih predpisov. AI KRPAN dejansko prebere zakon, preveri sodno prakso in vam pove, kaj to pomeni za vaš primer. Pripravi pogodbo, pregleda dokument ali sestavi pravno mnenje, tako kot bi to naredil pravnik. Razlika: čaka vas 2 minuti, ne 2 tedna.
+          Across the EU, fewer than half of citizens believe they can afford a legal dispute. A first consultation in Germany can cost €226. A court dispute over €11,000 risks €5,434 in fees before a judge even looks at your case. Google returns ten statutes and no explanation. ChatGPT generates confident answers without knowing which directive applies in your country. LexEU works differently: it reads the actual regulation, checks CJEU case law, and tells you what the law means for your specific situation — in under a minute, from €9.90.
         </p>
       </FadeIn>
 

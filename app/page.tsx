@@ -5,8 +5,6 @@ import About from "@/components/About";
 import VideoDemo from "@/components/VideoDemo";
 import Models from "@/components/Models";
 import Pricing from "@/components/Pricing";
-import Founder from "@/components/Founder";
-import MediaMentions from "@/components/MediaMentions";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -22,8 +20,6 @@ export default function Home() {
       <VideoDemo />
       <Models />
       <Pricing />
-      <Founder />
-      <MediaMentions />
       <Testimonials />
       <FAQ />
       <CTA />
