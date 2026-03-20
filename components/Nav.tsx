@@ -48,7 +48,7 @@ export default function Nav() {
       >
         {/* Logo */}
         <a href="/" aria-label="LexEU — home">
-          <Logo variant="full" size={44} />
+          <Logo variant="full" size={56} />
         </a>
 
         {/* Links — desktop */}
