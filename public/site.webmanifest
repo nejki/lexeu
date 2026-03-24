@@ -1,7 +1,7 @@
 {
-  "name": "AI KRPAN",
-  "short_name": "AI KRPAN",
-  "description": "Pravni nasvet z AI | zakonodaja in sodna praksa",
+  "name": "LexEU",
+  "short_name": "LexEU",
+  "description": "AI Legal Assistant for EU Law",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FAF9F6",
