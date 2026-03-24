@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-24",
-    "summary": "Full aikrpan remnant audit and cleanup: replaced OG image, fixed robots.txt sitemap URL, translated blog page to English, deleted unused Slovenian components (Founder, NavodilaFAQ, MediaMentions, color-preview, template HTML), updated package name.",
-    "commits": ["5e3ab06", "a9365fc", "be9f750"]
+    "summary": "Full aikrpan remnant audit and cleanup: replaced OG image, fixed robots.txt sitemap URL, translated blog page to English, deleted unused Slovenian components, updated package name. Fixed nav CTA price from €15 to €9.90.",
+    "commits": ["5e3ab06", "a9365fc", "be9f750", "19e6c5e"]
   },
   "backlog": [
     {
@@ -51,6 +51,7 @@
     }
   ],
   "shipped": [
+    "Nav CTA price fix: €15 → €9.90 to match hero and page title",
     "Full aikrpan remnant cleanup: new OG image, robots.txt fix, blog page translated, 5 legacy Slovenian files deleted, package name fixed",
     "Cookie consent banner + Google Analytics: GA4 tag, consent banner with accept/reject, localStorage persistence",
     "Nav anchor links fixed: section IDs renamed from Slovenian to English. Founder nav item removed.",
