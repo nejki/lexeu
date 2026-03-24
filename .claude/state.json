@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-24",
-    "summary": "Fixed site.webmanifest — was still branded AI KRPAN with Slovenian description. Updated to LexEU. Removed hero-demo-video from backlog (done). Discussed multilingual strategy: finish English first, then migrate to app/[locale]/ with next-intl.",
-    "commits": ["ecef613"]
+    "summary": "Updated all favicons — white background, zoomed-in LE monogram to match AI KRPAN tab appearance.",
+    "commits": ["cb94c70"]
   },
   "backlog": [
     {
@@ -67,7 +67,7 @@
     "Demo video: replaced with EU law example (LexEU answering GDPR/employment directive question)",
     "Cookie consent banner + Google Analytics: GA4 tag, consent banner with accept/reject, localStorage persistence",
     "Nav anchor links fixed: section IDs renamed from Slovenian (namen/modeli/cenik) to English (purpose/models/pricing). Founder nav item removed.",
-    "Logo/favicon set: LE serif monogram mark across all sizes (favicon.ico, apple-touch-icon, android-chrome 192/512, logo-96/256, mstile). 40–50% smaller files.",
+    "Favicon refresh: white background + zoomed-in LE monogram across all sizes for better tab visibility",
     "Full English EU law content: all homepage sections translated and adapted from AI Krpan (Slovenian) to LexEU (EU-wide). Founder + MediaMentions removed. Pricing simplified to 2 plans.",
     "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components",
     "Models: unified category badge colors to warm accent (bg-warm-pale text-[#8A6040])",
