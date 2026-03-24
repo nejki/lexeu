@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import CookieBanner from "@/components/CookieBanner";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import {
   organizationSchema,
   softwareApplicationSchema,
@@ -143,7 +145,11 @@ export default function RootLayout({
           />
         ))}
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <CookieBanner />
+        <GoogleAnalytics />
+      </body>
     </html>
   );
 }
