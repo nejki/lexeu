@@ -57,5 +57,5 @@ When user runs `/handoff --continue` or says "continue" and there's an active ha
 
 English version of aikrpan — AI legal assistant for EU law. Target: lexeu.ai, EU jurisdiction, English content.
 Content pages will be added as user provides SEO-optimised English content.
-Working directory: C:\lexeu\lexeu
+Working directory: /Users/nejcgergic/iCloud Drive (Archive)/Documents/Work/Cursor apps/lexeu
 GitHub: https://github.com/nejki/lexeu
