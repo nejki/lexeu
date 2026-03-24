@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-24",
-    "summary": "Updated all favicons — white background, zoomed-in LE monogram to match AI KRPAN tab appearance.",
-    "commits": ["cb94c70"]
+    "summary": "Added /terms/, /privacy/, /cookies/ legal pages with full Slovak entity content. Fixed content-schema.ts (aikrpan→lexeu.ai, sl→en). Added legal-prose CSS.",
+    "commits": ["f45a870", "729f4ea"]
   },
   "backlog": [
     {
@@ -28,7 +28,7 @@
     {
       "id": "i18n",
       "title": "Multilingual support: English, German, Polish",
-      "desc": "Migrate to app/[locale]/ route segment + next-intl. Extract all strings to messages/en.json, then translate to de.json and pl.json. Do this after English content is complete (privacy, terms, cookies pages done).",
+      "desc": "Migrate to app/[locale]/ route segment + next-intl. Extract all strings to messages/en.json, then translate to de.json and pl.json. English content is now complete (privacy, terms, cookies pages done).",
       "priority": "medium"
     },
     {
@@ -51,15 +51,12 @@
     }
   ],
   "shipped": [
-    "site.webmanifest: fixed branding from AI KRPAN (Slovenian) to LexEU (English)",
-    "Demo video: replaced with EU law example (LexEU answering GDPR/employment directive question)",
     "Cookie consent banner + Google Analytics: GA4 tag, consent banner with accept/reject, localStorage persistence",
-    "Nav anchor links fixed: section IDs renamed from Slovenian (namen/modeli/cenik) to English (purpose/models/pricing). Founder nav item removed.",
-    "Favicon refresh: white background + zoomed-in LE monogram across all sizes for better tab visibility",
-    "Full English EU law content: all homepage sections translated and adapted from AI Krpan (Slovenian) to LexEU (EU-wide). Founder + MediaMentions removed. Pricing simplified to 2 plans.",
-    "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components",
-    "Models: unified category badge colors to warm accent (bg-warm-pale text-[#8A6040])",
-    "MediaMentions: inline 32x32 favicons next to outlet name, removed bordered thumbnail boxes",
+    "Nav anchor links fixed: section IDs renamed from Slovenian to English. Founder nav item removed.",
+    "Favicon refresh: white background + zoomed-in LE monogram across all sizes",
+    "Full English EU law content: all homepage sections translated from AI Krpan to LexEU",
+    "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520)",
+    "Models: unified category badge colors to warm accent",
     "Footer: fixed attribution to 'Izdelala Futuristica'",
     "Legal pages: /terms/, /privacy/, /cookies/ with full Slovak entity content, legal-prose CSS, content-schema fix (aikrpan→lexeu.ai)"
   ]
