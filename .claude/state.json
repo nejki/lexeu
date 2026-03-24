@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-24",
-    "summary": "Committed accumulated changes: updated CLAUDE.md working directory path to macOS, re-exported logo PNGs with minor size optimization.",
-    "commits": ["5e3ab06", "a9365fc"]
+    "summary": "Full aikrpan remnant audit and cleanup: replaced OG image, fixed robots.txt sitemap URL, translated blog page to English, deleted unused Slovenian components (Founder, NavodilaFAQ, MediaMentions, color-preview, template HTML), updated package name.",
+    "commits": ["5e3ab06", "a9365fc", "be9f750"]
   },
   "backlog": [
     {
@@ -34,7 +34,7 @@
     {
       "id": "media-mentions",
       "title": "Populate MediaMentions section when EU press coverage exists",
-      "desc": "MediaMentions component removed from homepage — no EU press yet. Re-add to page.tsx once real English-language press articles are available. Each entry needs: outlet name, article title, short description, URL, favicon.",
+      "desc": "Old Slovenian MediaMentions component deleted. Build new English one from scratch when real EU press articles are available. Each entry needs: outlet name, article title, short description, URL, favicon.",
       "priority": "low"
     },
     {
@@ -51,6 +51,7 @@
     }
   ],
   "shipped": [
+    "Full aikrpan remnant cleanup: new OG image, robots.txt fix, blog page translated, 5 legacy Slovenian files deleted, package name fixed",
     "Cookie consent banner + Google Analytics: GA4 tag, consent banner with accept/reject, localStorage persistence",
     "Nav anchor links fixed: section IDs renamed from Slovenian to English. Founder nav item removed.",
     "Favicon refresh: white background + zoomed-in LE monogram across all sizes",
