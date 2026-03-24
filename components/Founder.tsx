@@ -14,7 +14,7 @@ const credentials = [
 
 export default function Founder() {
   return (
-    <section id="ustanovitelj" className="border-t border-site-border py-16 md:py-24">
+    <section id="founder" className="border-t border-site-border py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24">
           {/* Left — Photo + name */}
@@ -78,10 +78,10 @@ export default function Founder() {
 
             <FadeIn delay={400}>
               <a
-                href="mailto:info@aikrpan.com"
+                href="mailto:info@lexeu.ai"
                 className="inline-block mt-8 text-[14px] font-medium text-accent hover:translate-x-1 transition-transform duration-300"
               >
-                Imate vprašanje za ustanovitelja? Pišite na info@aikrpan.com &rarr;
+                Imate vprašanje za ustanovitelja? Pišite na info@lexeu.ai &rarr;
               </a>
             </FadeIn>
           </div>

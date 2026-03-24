@@ -65,7 +65,7 @@ const mentions = [
 export default function MediaMentions() {
   return (
     <section
-      id="mediji"
+      id="media"
       className="bg-site-white border-t border-site-border py-16 md:py-24"
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">

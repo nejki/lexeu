@@ -51,10 +51,10 @@ export default function NavodilaFAQ() {
           <p className="text-[14px] text-site-muted leading-relaxed">
             Ne najdete odgovora? Pišite nam na{" "}
             <a
-              href="mailto:info@aikrpan.com"
+              href="mailto:info@lexeu.ai"
               className="text-accent underline underline-offset-2 hover:text-accent-light transition-colors"
             >
-              info@aikrpan.com
+              info@lexeu.ai
             </a>
           </p>
         </div>

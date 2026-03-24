@@ -9,9 +9,9 @@ const col1 = [
 ];
 
 const col2 = [
-  { label: "Terms of Use", href: "https://www.lexeu.ai/terms/" },
-  { label: "Privacy Policy", href: "https://www.lexeu.ai/privacy/" },
-  { label: "Cookie Policy", href: "https://www.lexeu.ai/cookies/" },
+  { label: "Terms of Use", href: "/terms/" },
+  { label: "Privacy Policy", href: "/privacy/" },
+  { label: "Cookie Policy", href: "/cookies/" },
 ];
 
 const seoKeywords = [
