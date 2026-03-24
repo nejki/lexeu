@@ -75,7 +75,7 @@ export default function Nav() {
             href={resolveHref("#pricing")}
             className="bg-sage-dark text-white px-5 py-2.5 rounded-sm text-[12px] font-semibold tracking-[0.08em] uppercase hover:bg-sage transition-colors duration-200"
           >
-            START FROM €15
+            START FROM €9.90
           </a>
           {/* Hamburger */}
           <button
@@ -120,7 +120,7 @@ export default function Nav() {
             onClick={() => setOpen(false)}
             className="text-center bg-sage-dark text-white py-3.5 rounded-sm text-[13px] font-semibold tracking-[0.06em] uppercase hover:bg-sage transition-colors duration-200"
           >
-            START FROM €15
+            START FROM €9.90
           </a>
         </div>
       </div>
