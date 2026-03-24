@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-24",
-    "summary": "Added /terms/, /privacy/, /cookies/ legal pages with full Slovak entity content. Fixed content-schema.ts (aikrpan→lexeu.ai, sl→en). Added legal-prose CSS.",
-    "commits": ["f45a870", "729f4ea"]
+    "summary": "Committed accumulated changes: updated CLAUDE.md working directory path to macOS, re-exported logo PNGs with minor size optimization.",
+    "commits": ["5e3ab06", "a9365fc"]
   },
   "backlog": [
     {
@@ -45,8 +45,8 @@
     },
     {
       "id": "lint-spaces-bug",
-      "title": "next lint fails with spaces in project path",
-      "desc": "next lint parses path incorrectly when working dir contains spaces (iCloud Drive). Works fine on Vercel. Low priority — only affects local DX.",
+      "title": "next lint and next build fail with spaces in project path",
+      "desc": "next lint and Turbopack build parse path incorrectly when working dir contains spaces (iCloud Drive). Works fine on Vercel. Low priority — only affects local DX.",
       "priority": "low"
     }
   ],
