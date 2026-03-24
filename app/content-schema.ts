@@ -1,4 +1,4 @@
-const BASE_URL = "https://www.aikrpan.com";
+const BASE_URL = "https://www.lexeu.ai";
 
 interface BreadcrumbItem {
   name: string;
@@ -13,7 +13,7 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Domov",
+        name: "Home",
         item: BASE_URL,
       },
       ...items.map((item, i) => ({
@@ -57,7 +57,7 @@ export function articleSchema({
       "@type": "WebPage",
       "@id": `${BASE_URL}${url}`,
     },
-    inLanguage: "sl",
+    inLanguage: "en",
   };
 }
 
@@ -136,7 +136,7 @@ export function videoObjectSchema({
     publisher: {
       "@id": `${BASE_URL}/#organization`,
     },
-    inLanguage: "sl",
+    inLanguage: "en",
   };
 }
 
