@@ -2,9 +2,9 @@
   "project": "lexeu",
   "currentFocus": [],
   "lastSession": {
-    "date": "2026-03-20",
-    "summary": "Fixed all broken nav anchor links (section IDs were still in Slovenian: namen→purpose, modeli→models, cenik→pricing). Removed dead Founder nav item. Fixed ContentLayout CTA (Slovenian copy + aikrpan.com URL). Also shipped LE monogram logo + bigger nav mark this session.",
-    "commits": ["5ea152e", "1638e16", "36a0d01"]
+    "date": "2026-03-24",
+    "summary": "Fixed site.webmanifest — was still branded AI KRPAN with Slovenian description. Updated to LexEU. Removed hero-demo-video from backlog (done). Discussed multilingual strategy: finish English first, then migrate to app/[locale]/ with next-intl.",
+    "commits": ["ecef613"]
   },
   "backlog": [
     {
@@ -20,12 +20,6 @@
       "priority": "high"
     },
     {
-      "id": "analytics",
-      "title": "Add analytics",
-      "desc": "Vercel Analytics or Google Analytics. Skip for now.",
-      "priority": "low"
-    },
-    {
       "id": "privacy-page",
       "title": "Create privacy policy page",
       "desc": "Footer links to /privacy/ but page doesn't exist yet. Needs English content for Privacy Policy (GDPR-compliant, EU audience).",
@@ -38,22 +32,28 @@
       "priority": "medium"
     },
     {
+      "id": "real-testimonials",
+      "title": "Replace placeholder testimonials with real ones",
+      "desc": "Current testimonials (Koller & Wirth, NovaTech, Studio Ferretti) are representative placeholders per the content brief. Replace with real user quotes as they come in.",
+      "priority": "medium"
+    },
+    {
+      "id": "i18n",
+      "title": "Multilingual support: English, German, Polish",
+      "desc": "Migrate to app/[locale]/ route segment + next-intl. Extract all strings to messages/en.json, then translate to de.json and pl.json. Do this after English content is complete (privacy, terms, cookies pages done).",
+      "priority": "medium"
+    },
+    {
       "id": "media-mentions",
       "title": "Populate MediaMentions section when EU press coverage exists",
       "desc": "MediaMentions component removed from homepage — no EU press yet. Re-add to page.tsx once real English-language press articles are available. Each entry needs: outlet name, article title, short description, URL, favicon.",
       "priority": "low"
     },
     {
-      "id": "hero-demo-video",
-      "title": "Replace demo video with EU law example",
-      "desc": "Current demo.webm/mp4 shows an AI Krpan Slovenian law session. Needs a new recording showing LexEU answering an EU law question (e.g. GDPR or employment directive).",
-      "priority": "medium"
-    },
-    {
-      "id": "real-testimonials",
-      "title": "Replace placeholder testimonials with real ones",
-      "desc": "Current testimonials (Koller & Wirth, NovaTech, Studio Ferretti) are representative placeholders per the content brief. Replace with real user quotes as they come in.",
-      "priority": "medium"
+      "id": "analytics",
+      "title": "Add analytics",
+      "desc": "Vercel Analytics or Google Analytics. Skip for now.",
+      "priority": "low"
     },
     {
       "id": "lint-spaces-bug",
@@ -63,16 +63,15 @@
     }
   ],
   "shipped": [
-    "Nav anchor links fixed: section IDs renamed from Slovenian (namen/modeli/cenik) to English (purpose/models/pricing). Founder nav item removed. ContentLayout CTA updated to English + lexeu.ai.",
+    "site.webmanifest: fixed branding from AI KRPAN (Slovenian) to LexEU (English)",
+    "Demo video: replaced with EU law example (LexEU answering GDPR/employment directive question)",
+    "Cookie consent banner + Google Analytics: GA4 tag, consent banner with accept/reject, localStorage persistence",
+    "Nav anchor links fixed: section IDs renamed from Slovenian (namen/modeli/cenik) to English (purpose/models/pricing). Founder nav item removed.",
     "Logo/favicon set: LE serif monogram mark across all sizes (favicon.ico, apple-touch-icon, android-chrome 192/512, logo-96/256, mstile). 40–50% smaller files.",
     "Full English EU law content: all homepage sections translated and adapted from AI Krpan (Slovenian) to LexEU (EU-wide). Founder + MediaMentions removed. Pricing simplified to 2 plans.",
-    "/dedovanje/ hub page: full content (dedni redi, oporoka, nujni delež, zapuščinski postopek, FAQ, schema)",
-    "Pricing: Po meri CTA shortened to 'Pišite nam →' (single line, consistent button height)",
-    "/pogodbe/ hub page: full content (7 contract types, neveljavnost, FAQ, AI KRPAN CTAs, schema markup)",
-    "/pogodbe/kupoprodajna-pogodba/: full sub-page (OZ 435-527, avto VIN checklist, notar, davki, FAQ)",
-    "Footer: fixed attribution to 'Izdelala Futuristica' (correct Slovenian grammar, removed d.o.o.)",
-    "MediaMentions: inline 32x32 favicons next to outlet name, removed bordered thumbnail boxes",
+    "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components",
     "Models: unified category badge colors to warm accent (bg-warm-pale text-[#8A6040])",
-    "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components"
+    "MediaMentions: inline 32x32 favicons next to outlet name, removed bordered thumbnail boxes",
+    "Footer: fixed attribution to 'Izdelala Futuristica'"
   ]
 }
