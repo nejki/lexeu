@@ -3,24 +3,24 @@ import ContentLayout from "@/components/ContentLayout";
 import ContentPlaceholder from "@/components/ContentPlaceholder";
 
 export const metadata: Metadata = {
-  title: "Blog - Pravni nasveti in novosti",
+  title: "Blog - Legal Insights & News",
   description:
-    "Blog AI KRPAN: sezonski pravni nasveti, odgovori na pogosta pravna vprašanja, novosti v zakonodaji, praktični vodniki.",
+    "LexEU Blog: practical EU legal tips, answers to common legal questions, legislative updates, and how-to guides.",
   keywords: [
-    "pravni blog",
-    "pravni nasveti",
-    "zakonodaja novosti",
-    "pravna vprašanja",
-    "AI pravo blog",
+    "EU law blog",
+    "legal insights",
+    "legislative updates",
+    "legal questions",
+    "AI law blog",
   ],
   alternates: {
-    canonical: "https://www.aikrpan.com/blog/",
+    canonical: "https://www.lexeu.ai/blog/",
   },
   openGraph: {
-    title: "Blog - Pravni nasveti in novosti | AI KRPAN",
+    title: "Blog - Legal Insights & News | LexEU",
     description:
-      "Sezonski pravni nasveti, odgovori na pogosta vprašanja, novosti v zakonodaji.",
-    url: "https://www.aikrpan.com/blog/",
+      "Practical EU legal tips, answers to common questions, and legislative updates.",
+    url: "https://www.lexeu.ai/blog/",
     type: "website",
   },
 };
@@ -30,9 +30,9 @@ export default function BlogPage() {
     <ContentLayout
       breadcrumbs={[{ label: "Blog", href: "/blog/" }]}
       title="Blog"
-      subtitle="Pravni nasveti, odgovori na pogosta vprašanja in novosti v zakonodaji."
+      subtitle="Legal insights, answers to common questions, and EU legislative updates."
     >
-      <ContentPlaceholder topic="blog — sezonski in Q&A vsebinski hub" />
+      <ContentPlaceholder topic="blog — seasonal and Q&A content hub" />
     </ContentLayout>
   );
 }
