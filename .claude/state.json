@@ -20,18 +20,6 @@
       "priority": "high"
     },
     {
-      "id": "privacy-page",
-      "title": "Create privacy policy page",
-      "desc": "Footer links to /privacy/ but page doesn't exist yet. Needs English content for Privacy Policy (GDPR-compliant, EU audience).",
-      "priority": "medium"
-    },
-    {
-      "id": "terms-cookies-pages",
-      "title": "Create Terms of Use and Cookie Policy pages",
-      "desc": "Footer links to /terms/ and /cookies/ but pages don't exist yet. Needs English content.",
-      "priority": "medium"
-    },
-    {
       "id": "real-testimonials",
       "title": "Replace placeholder testimonials with real ones",
       "desc": "Current testimonials (Koller & Wirth, NovaTech, Studio Ferretti) are representative placeholders per the content brief. Replace with real user quotes as they come in.",
@@ -72,6 +60,7 @@
     "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520) across all components",
     "Models: unified category badge colors to warm accent (bg-warm-pale text-[#8A6040])",
     "MediaMentions: inline 32x32 favicons next to outlet name, removed bordered thumbnail boxes",
-    "Footer: fixed attribution to 'Izdelala Futuristica'"
+    "Footer: fixed attribution to 'Izdelala Futuristica'",
+    "Legal pages: /terms/, /privacy/, /cookies/ with full Slovak entity content, legal-prose CSS, content-schema fix (aikrpan→lexeu.ai)"
   ]
 }
