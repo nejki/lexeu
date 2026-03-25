@@ -3,8 +3,8 @@
   "currentFocus": [],
   "lastSession": {
     "date": "2026-03-25",
-    "summary": "Codebase analysis and refactoring: extracted SectionHeading and ResponsiveTable components, added Button variants, consolidated schema files, removed 4 unused icons, deleted 9 orphan aikrpan media files, translated last Slovenian placeholder.",
-    "commits": ["505ad02"]
+    "summary": "Architecture analysis + 8-task refactor: Container component (13 sites), CompanyContactBlock (5 blocks), legal page metadata unification, FAQ dedup, SectionHeading standardization, Tailwind utilities (label-xs, hover-accent), heading font scale, legal prose theme tokens.",
+    "commits": ["63961d5"]
   },
   "backlog": [
     {
@@ -28,7 +28,7 @@
     {
       "id": "i18n",
       "title": "Multilingual support: English, German, Polish",
-      "desc": "Migrate to app/[locale]/ route segment + next-intl. Extract all strings to messages/en.json, then translate to de.json and pl.json. English content is now complete (privacy, terms, cookies pages done). New SectionHeading component centralizes section header text — good extraction point for i18n.",
+      "desc": "Migrate to app/[locale]/ route segment + next-intl. Extract all strings to messages/en.json, then translate to de.json and pl.json. English content is now complete (privacy, terms, cookies pages done). New SectionHeading component centralizes section header text — good extraction point for i18n. Container, CompanyContactBlock, and legal-pages.config.ts are additional extraction points.",
       "priority": "medium"
     },
     {
@@ -51,6 +51,7 @@
     }
   ],
   "shipped": [
+    "Refactor: Container, CompanyContactBlock, legal metadata config, FAQ dedup, SectionHeading consistency, Tailwind utilities, heading scale, theme tokens",
     "Codebase refactor: SectionHeading, ResponsiveTable, Button variants, schema consolidation, dead code cleanup",
     "Nav CTA price fix: €15 → €9.90 to match hero and page title",
     "Full aikrpan remnant cleanup: new OG image, robots.txt fix, blog page translated, 5 legacy Slovenian files deleted, package name fixed",
@@ -59,7 +60,6 @@
     "Favicon refresh: white background + zoomed-in LE monogram across all sizes",
     "Full English EU law content: all homepage sections translated from AI Krpan to LexEU",
     "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520)",
-    "Models: unified category badge colors to warm accent",
-    "Footer: fixed attribution to 'Izdelala Futuristica'"
+    "Models: unified category badge colors to warm accent"
   ]
 }
