@@ -2,9 +2,9 @@
   "project": "lexeu",
   "currentFocus": [],
   "lastSession": {
-    "date": "2026-03-24",
-    "summary": "Full aikrpan remnant audit and cleanup: replaced OG image, fixed robots.txt sitemap URL, translated blog page to English, deleted unused Slovenian components, updated package name. Fixed nav CTA price from €15 to €9.90.",
-    "commits": ["5e3ab06", "a9365fc", "be9f750", "19e6c5e"]
+    "date": "2026-03-25",
+    "summary": "Codebase analysis and refactoring: extracted SectionHeading and ResponsiveTable components, added Button variants, consolidated schema files, removed 4 unused icons, deleted 9 orphan aikrpan media files, translated last Slovenian placeholder.",
+    "commits": ["505ad02"]
   },
   "backlog": [
     {
@@ -28,7 +28,7 @@
     {
       "id": "i18n",
       "title": "Multilingual support: English, German, Polish",
-      "desc": "Migrate to app/[locale]/ route segment + next-intl. Extract all strings to messages/en.json, then translate to de.json and pl.json. English content is now complete (privacy, terms, cookies pages done).",
+      "desc": "Migrate to app/[locale]/ route segment + next-intl. Extract all strings to messages/en.json, then translate to de.json and pl.json. English content is now complete (privacy, terms, cookies pages done). New SectionHeading component centralizes section header text — good extraction point for i18n.",
       "priority": "medium"
     },
     {
@@ -51,6 +51,7 @@
     }
   ],
   "shipped": [
+    "Codebase refactor: SectionHeading, ResponsiveTable, Button variants, schema consolidation, dead code cleanup",
     "Nav CTA price fix: €15 → €9.90 to match hero and page title",
     "Full aikrpan remnant cleanup: new OG image, robots.txt fix, blog page translated, 5 legacy Slovenian files deleted, package name fixed",
     "Cookie consent banner + Google Analytics: GA4 tag, consent banner with accept/reject, localStorage persistence",
@@ -59,7 +60,6 @@
     "Full English EU law content: all homepage sections translated from AI Krpan to LexEU",
     "Color scheme migration: sage green → warm accent (#BF7A3B) with dark primary (#2A2520)",
     "Models: unified category badge colors to warm accent",
-    "Footer: fixed attribution to 'Izdelala Futuristica'",
-    "Legal pages: /terms/, /privacy/, /cookies/ with full Slovak entity content, legal-prose CSS, content-schema fix (aikrpan→lexeu.ai)"
+    "Footer: fixed attribution to 'Izdelala Futuristica'"
   ]
 }
