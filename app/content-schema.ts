@@ -1,4 +1,4 @@
-const BASE_URL = "https://www.lexeu.ai";
+export const BASE_URL = "https://www.lexeu.ai";
 
 interface BreadcrumbItem {
   name: string;
@@ -185,3 +185,37 @@ export function personSchema({
     knowsAbout,
   };
 }
+
+// Homepage FAQ data — single source of truth used by both schema.ts and UI
+export const HOME_FAQS: FAQItem[] = [
+  {
+    question: "Does LexEU replace a lawyer?",
+    answer:
+      "No. LexEU prepares first drafts, provides legal direction, and checks EU legislation — but cannot represent you in court, assume responsibility for legal advice, or assess every nuance of your case. For straightforward matters it is sufficient on its own. For complex cases it is an excellent first step before consulting a lawyer.",
+  },
+  {
+    question: "How reliable are the answers?",
+    answer:
+      "LexEU cites specific EU legislative articles and court decisions. You can verify every source yourself. The model is specialised in EU law — it does not generate answers from general knowledge like ChatGPT. No AI is 100% reliable; always verify critical decisions.",
+  },
+  {
+    question: "Which legal topics does LexEU cover?",
+    answer:
+      "EU employment law, contract law, GDPR and data protection, competition law, consumer protection, corporate law, and general EU legislation and case law from the Court of Justice of the European Union.",
+  },
+  {
+    question: "How quickly do I get an answer?",
+    answer:
+      "Most answers are ready in under a minute. Preparing a longer document (contract, legal opinion) takes up to 2 minutes. There is no queue.",
+  },
+  {
+    question: "Is my data confidential?",
+    answer:
+      "Yes. Your data is not used to train models. Documents you upload are processed and not stored permanently. See our privacy policy for full details.",
+  },
+  {
+    question: "How is LexEU different from ChatGPT?",
+    answer:
+      "ChatGPT knows law in general. LexEU is specialised in EU law — it knows the regulations, directives, and CJEU case law. It cites exact sources and prepares documents in line with current EU rules. ChatGPT cannot do this because it has no access to an EU legal database.",
+  },
+];

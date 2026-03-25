@@ -1,4 +1,4 @@
-import { SectionLabel } from "@/components/ui/SectionLabel";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 const testimonials = [
@@ -29,11 +29,12 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24">
           {/* Left label */}
           <FadeIn className="lg:pt-2">
-            <SectionLabel className="mb-5">Clients</SectionLabel>
-            <h2 className="font-serif text-[clamp(36px,4vw,52px)] font-semibold leading-[1.1] text-site-text">
-              What early{" "}
-              <em className="italic text-accent">users say</em>
-            </h2>
+            <SectionHeading
+              label="Clients"
+              title="What early"
+              highlight="users say"
+              headingClassName="text-[clamp(36px,4vw,52px)]"
+            />
           </FadeIn>
 
           {/* Right testimonials */}

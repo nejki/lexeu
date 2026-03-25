@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/Button";
+
 export default function VideoDemo() {
   return (
     <section id="demo" className="bg-site-white border-t border-b border-site-border py-16 md:py-24">
@@ -15,12 +17,9 @@ export default function VideoDemo() {
             <p className="text-[15px] text-site-mid leading-[1.85] mb-8">
               From question to a full employment contract draft in 47 seconds — with every required clause grounded in EU and national law. No waiting. No lawyer needed for the first version.
             </p>
-            <a
-              href="https://app.lexeu.ai"
-              className="inline-block bg-sage-dark text-white px-8 py-3.5 rounded-sm text-[13px] font-semibold tracking-[0.06em] uppercase hover:bg-sage transition-colors duration-200"
-            >
+            <Button href="https://app.lexeu.ai">
               TRY IT YOURSELF →
-            </a>
+            </Button>
           </div>
 
           {/* Optimized video (WebM → MP4 → GIF fallback) */}

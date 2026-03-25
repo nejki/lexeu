@@ -11,6 +11,7 @@ import {
   homeBreadcrumbSchema,
   localBusinessSchema,
 } from "./schema";
+import { BASE_URL } from "./content-schema";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -26,8 +27,6 @@ const inter = Inter({
   weight: ["300", "400", "500", "600"],
   display: "swap",
 });
-
-const BASE_URL = "https://www.lexeu.ai";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

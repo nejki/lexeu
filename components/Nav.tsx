@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { IconMenu, IconX } from "@/components/ui/Icons";
+import { Button } from "@/components/ui/Button";
 import Logo from "@/components/Logo";
 
 const navLinks = [
@@ -53,30 +54,33 @@ export default function Nav() {
         {/* Links — desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Button
               key={link.label}
               href={resolveHref(link.href)}
-              className="text-[13px] font-medium tracking-[0.04em] uppercase text-site-mid hover:text-accent transition-colors duration-200"
+              variant="nav-link"
             >
               {link.label}
-            </a>
+            </Button>
           ))}
         </div>
 
         {/* Actions */}
         <div className="flex items-center gap-4">
-          <a
+          <Button
             href="https://app.lexeu.ai"
-            className="hidden sm:block text-[13px] font-medium tracking-[0.04em] uppercase text-site-mid hover:text-accent transition-colors duration-200"
+            variant="nav-link"
+            className="hidden sm:block"
           >
             Sign in
-          </a>
-          <a
+          </Button>
+          <Button
             href={resolveHref("#pricing")}
-            className="bg-sage-dark text-white px-5 py-2.5 rounded-sm text-[12px] font-semibold tracking-[0.08em] uppercase hover:bg-sage transition-colors duration-200"
+            variant="primary"
+            size="sm"
+            className="py-2.5 tracking-[0.08em]"
           >
             START FROM €9.90
-          </a>
+          </Button>
           {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
@@ -108,20 +112,22 @@ export default function Nav() {
           </a>
         ))}
         <div className="mt-8 flex flex-col gap-3">
-          <a
+          <Button
             href="https://app.lexeu.ai"
             onClick={() => setOpen(false)}
-            className="text-center border border-site-border text-site-mid py-3.5 rounded-sm text-[13px] font-medium tracking-[0.06em] uppercase hover:border-accent hover:text-accent transition-colors duration-200"
+            variant="outline"
+            className="text-center font-medium px-4"
           >
             Sign in
-          </a>
-          <a
+          </Button>
+          <Button
             href={resolveHref("#pricing")}
             onClick={() => setOpen(false)}
-            className="text-center bg-sage-dark text-white py-3.5 rounded-sm text-[13px] font-semibold tracking-[0.06em] uppercase hover:bg-sage transition-colors duration-200"
+            variant="primary"
+            className="text-center px-4"
           >
             START FROM €9.90
-          </a>
+          </Button>
         </div>
       </div>
     </>

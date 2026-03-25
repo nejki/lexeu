@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import FAQAccordion from "./FAQAccordion";
 
 const faqs = [
@@ -49,16 +50,14 @@ export default function FAQ() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24">
         {/* Left */}
         <div className="lg:pt-2">
-          <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
-            FAQ
-          </p>
-          <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-6">
-            Common{" "}
-            <em className="italic text-accent">questions</em>
-          </h2>
-          <p className="text-[14px] text-site-muted leading-relaxed mb-8">
-            Everything you need to know before your first question.
-          </p>
+          <SectionHeading
+            label="FAQ"
+            title="Common"
+            highlight="questions"
+            headingClassName="text-[clamp(32px,4vw,48px)] mb-6"
+            description="Everything you need to know before your first question."
+            descriptionClassName="text-[14px] text-site-muted leading-relaxed mb-8"
+          />
         </div>
 
         {/* Right — accordion */}

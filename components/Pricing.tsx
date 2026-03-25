@@ -1,3 +1,6 @@
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
+
 const plans = [
   {
     name: "Pay As You Go",
@@ -49,21 +52,22 @@ const comparison = [
   },
 ];
 
+type ComparisonRow = (typeof comparison)[number];
+
 export default function Pricing() {
   return (
     <section id="pricing" className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24">
       {/* Intro */}
       <div className="mb-14">
-        <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-4">
-          Pricing
-        </p>
-        <h2 className="font-serif text-[clamp(36px,4vw,52px)] font-semibold leading-[1.1] text-site-text mb-5">
-          One lawyer&apos;s hour — or a{" "}
-          <em className="italic text-accent">full month of LexEU?</em>
-        </h2>
-        <p className="text-[17px] text-site-mid leading-[1.7] max-w-2xl">
-          Lawyers across the EU charge €150–400 per hour. A simple contract review runs €300–500. A legal opinion on an employment dispute can cost over €1,000 before you&apos;ve even entered a courtroom. LexEU gives you cited, legislation-grounded answers and document drafts — starting at €1.98 per question.
-        </p>
+        <SectionHeading
+          label="Pricing"
+          labelClassName="mb-4"
+          title={<>One lawyer&apos;s hour — or a</>}
+          highlight="full month of LexEU?"
+          headingClassName="text-[clamp(36px,4vw,52px)] mb-5"
+          description={<>Lawyers across the EU charge €150–400 per hour. A simple contract review runs €300–500. A legal opinion on an employment dispute can cost over €1,000 before you&apos;ve even entered a courtroom. LexEU gives you cited, legislation-grounded answers and document drafts — starting at €1.98 per question.</>}
+          descriptionClassName="text-[17px] text-site-mid leading-[1.7] max-w-2xl"
+        />
       </div>
 
       {/* Cards grid — 2 plans */}
@@ -117,48 +121,52 @@ export default function Pricing() {
 
       {/* Comparison table */}
       <div className="mt-16">
-        {/* Mobile: stacked cards */}
-        <div className="md:hidden space-y-4">
-          {comparison.map((row) => (
-            <div key={row.label} className="border border-site-border rounded-lg p-5">
-              <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted mb-3">
-                {row.label}
-              </p>
-              <div className="flex justify-between items-baseline gap-4">
-                <div>
-                  <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-site-muted/60 mb-1">Lawyer</p>
-                  <p className="text-[14px] text-site-muted">{row.lawyer}</p>
+        <ResponsiveTable<ComparisonRow>
+          data={comparison}
+          keyExtractor={(row) => row.label}
+          breakpoint="md"
+          renderCards={(data) => (
+            <div className="space-y-4">
+              {data.map((row) => (
+                <div key={row.label} className="border border-site-border rounded-lg p-5">
+                  <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted mb-3">
+                    {row.label}
+                  </p>
+                  <div className="flex justify-between items-baseline gap-4">
+                    <div>
+                      <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-site-muted/60 mb-1">Lawyer</p>
+                      <p className="text-[14px] text-site-muted">{row.lawyer}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-accent/60 mb-1">LexEU</p>
+                      <p className="text-[14px] text-accent font-medium">{row.lexeu}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-accent/60 mb-1">LexEU</p>
-                  <p className="text-[14px] text-accent font-medium">{row.lexeu}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Desktop: table */}
-        <div className="hidden md:block overflow-x-auto">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="border-b border-site-border">
-                <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted"></th>
-                <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted">Lawyer</th>
-                <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-accent">LexEU</th>
-              </tr>
-            </thead>
-            <tbody>
-              {comparison.map((row) => (
-                <tr key={row.label} className="border-b border-site-border last:border-b-0">
-                  <td className="py-5 px-4 text-[14px] font-semibold text-site-text">{row.label}</td>
-                  <td className="py-5 px-4 text-[14px] text-site-muted">{row.lawyer}</td>
-                  <td className="py-5 px-4 text-[14px] text-accent font-medium">{row.lexeu}</td>
-                </tr>
               ))}
-            </tbody>
-          </table>
-        </div>
+            </div>
+          )}
+          renderTable={(data) => (
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="border-b border-site-border">
+                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted"></th>
+                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted">Lawyer</th>
+                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-accent">LexEU</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.map((row) => (
+                  <tr key={row.label} className="border-b border-site-border last:border-b-0">
+                    <td className="py-5 px-4 text-[14px] font-semibold text-site-text">{row.label}</td>
+                    <td className="py-5 px-4 text-[14px] text-site-muted">{row.lawyer}</td>
+                    <td className="py-5 px-4 text-[14px] text-accent font-medium">{row.lexeu}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        />
       </div>
 
       {/* Disclaimer */}

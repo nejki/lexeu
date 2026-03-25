@@ -1,5 +1,6 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
 
 const models = [
   {
@@ -46,6 +47,8 @@ const models = [
   },
 ];
 
+type Model = (typeof models)[number];
+
 export default function Models() {
   return (
     <section id="models" className="bg-site-white border-t border-site-border py-16 md:py-24">
@@ -71,63 +74,67 @@ export default function Models() {
 
         {/* Table (lg+) / Cards (mobile) */}
         <FadeIn delay={100}>
-          {/* Mobile card layout */}
-          <div className="lg:hidden">
-            {models.map((m) => (
-              <div
-                key={m.num}
-                className="p-6 border-b border-site-border last:border-b-0"
-              >
-                <span className="text-[12px] text-site-muted font-medium">{m.num}</span>
-                <h3 className="font-serif text-[22px] font-semibold text-site-text leading-none mt-2 mb-3">
-                  {m.name}
-                </h3>
-                <p className="text-[14px] text-site-mid leading-relaxed mb-4">{m.desc}</p>
-                <span className={`inline-block px-3 py-1 rounded-sm text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
-                  {m.tag}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Desktop table layout */}
-          <div className="hidden lg:block overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b border-site-border">
-                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-14">#</th>
-                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-44">Model</th>
-                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted">Description</th>
-                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-36">Category</th>
-                  <th className="w-8"></th>
-                </tr>
-              </thead>
-              <tbody>
-                {models.map((m) => (
-                  <tr
+          <ResponsiveTable<Model>
+            data={models}
+            keyExtractor={(m) => m.num}
+            breakpoint="lg"
+            renderCards={(data) => (
+              <>
+                {data.map((m) => (
+                  <div
                     key={m.num}
-                    className="group border-b border-site-border last:border-b-0 hover:bg-stone transition-colors duration-150 cursor-pointer"
+                    className="p-6 border-b border-site-border last:border-b-0"
                   >
-                    <td className="py-6 px-4 text-[12px] text-site-muted font-medium">{m.num}</td>
-                    <td className="py-6 px-4">
-                      <span className="font-serif text-[22px] font-semibold text-site-text leading-none">
-                        {m.name}
-                      </span>
-                    </td>
-                    <td className="py-6 px-4 text-[14px] text-site-mid leading-relaxed">{m.desc}</td>
-                    <td className="py-6 px-4">
-                      <span className={`inline-block px-3 py-1 rounded-sm text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
-                        {m.tag}
-                      </span>
-                    </td>
-                    <td className="py-6 px-4 text-site-muted group-hover:text-accent transition-colors duration-150 text-lg">
-                      →
-                    </td>
-                  </tr>
+                    <span className="text-[12px] text-site-muted font-medium">{m.num}</span>
+                    <h3 className="font-serif text-[22px] font-semibold text-site-text leading-none mt-2 mb-3">
+                      {m.name}
+                    </h3>
+                    <p className="text-[14px] text-site-mid leading-relaxed mb-4">{m.desc}</p>
+                    <span className={`inline-block px-3 py-1 rounded-sm text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
+                      {m.tag}
+                    </span>
+                  </div>
                 ))}
-              </tbody>
-            </table>
-          </div>
+              </>
+            )}
+            renderTable={(data) => (
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="border-b border-site-border">
+                    <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-14">#</th>
+                    <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-44">Model</th>
+                    <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted">Description</th>
+                    <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-36">Category</th>
+                    <th className="w-8"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.map((m) => (
+                    <tr
+                      key={m.num}
+                      className="group border-b border-site-border last:border-b-0 hover:bg-stone transition-colors duration-150 cursor-pointer"
+                    >
+                      <td className="py-6 px-4 text-[12px] text-site-muted font-medium">{m.num}</td>
+                      <td className="py-6 px-4">
+                        <span className="font-serif text-[22px] font-semibold text-site-text leading-none">
+                          {m.name}
+                        </span>
+                      </td>
+                      <td className="py-6 px-4 text-[14px] text-site-mid leading-relaxed">{m.desc}</td>
+                      <td className="py-6 px-4">
+                        <span className={`inline-block px-3 py-1 rounded-sm text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
+                          {m.tag}
+                        </span>
+                      </td>
+                      <td className="py-6 px-4 text-site-muted group-hover:text-accent transition-colors duration-150 text-lg">
+                        →
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          />
         </FadeIn>
       </div>
     </section>
