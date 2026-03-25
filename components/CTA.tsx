@@ -1,3 +1,4 @@
+import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
@@ -5,14 +6,14 @@ import { FadeIn } from "@/components/ui/FadeIn";
 export default function CTA() {
   return (
     <section className="px-6 md:px-12 py-20">
-      <div className="max-w-[1200px] mx-auto">
+      <Container className="!px-0">
         <FadeIn className="bg-sage-dark rounded-xl px-6 md:px-20 py-14 md:py-20 text-center">
           <SectionHeading
             title={<>Your legal question won&apos;t wait.<br /></>}
             highlight="Your answer shouldn't either."
             separator=""
             highlightColor="text-accent-light"
-            headingClassName="text-[clamp(36px,5vw,58px)] text-white mb-6"
+            headingClassName="text-heading-lg text-white mb-6"
             description={<>A lawyer takes days and charges hundreds. LexEU gives you a cited, legislation-grounded answer in under a minute — starting at &euro;9.90. No appointment. No queue. No retainer.</>}
             descriptionClassName="text-[17px] text-white/65 leading-[1.7] mb-10 max-w-xl mx-auto"
           />
@@ -29,7 +30,7 @@ export default function CTA() {
             </Button>
           </div>
         </FadeIn>
-      </div>
+      </Container>
     </section>
   );
 }

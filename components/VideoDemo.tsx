@@ -1,22 +1,22 @@
 import { Button } from "@/components/ui/Button";
+import { Container } from "@/components/ui/Container";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export default function VideoDemo() {
   return (
     <section id="demo" className="bg-site-white border-t border-b border-site-border py-16 md:py-24">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+      <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
           {/* Text */}
           <div>
-            <p className="section-label-line text-[11px] font-semibold tracking-widest2 uppercase text-accent mb-5">
-              Demo
-            </p>
-            <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] mb-6 text-site-text">
-              See how LexEU{" "}
-              <em className="italic text-accent">drafts a contract</em>
-            </h2>
-            <p className="text-[15px] text-site-mid leading-[1.85] mb-8">
-              From question to a full employment contract draft in 47 seconds — with every required clause grounded in EU and national law. No waiting. No lawyer needed for the first version.
-            </p>
+            <SectionHeading
+              label="Demo"
+              title="See how LexEU"
+              highlight="drafts a contract"
+              headingClassName="text-heading-sm mb-6"
+              description="From question to a full employment contract draft in 47 seconds — with every required clause grounded in EU and national law. No waiting. No lawyer needed for the first version."
+              descriptionClassName="text-[15px] text-site-mid leading-[1.85] mb-8"
+            />
             <Button href="https://app.lexeu.ai">
               TRY IT YOURSELF →
             </Button>
@@ -39,7 +39,7 @@ export default function VideoDemo() {
             </video>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

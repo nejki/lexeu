@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Container } from "@/components/ui/Container";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
@@ -45,15 +46,12 @@ export default function ContentLayout({
       <div className="h-16" />
 
       {/* Breadcrumbs */}
-      <nav
-        aria-label="Breadcrumb"
-        className="max-w-[1200px] mx-auto px-6 md:px-12 pt-6 pb-2"
-      >
+      <Container as="nav" aria-label="Breadcrumb" className="pt-6 pb-2">
         <ol className="flex items-center gap-2 text-[13px] text-site-muted">
           <li>
             <Link
               href="/"
-              className="hover:text-accent transition-colors duration-200"
+              className="hover-accent"
             >
               Home
             </Link>
@@ -68,7 +66,7 @@ export default function ContentLayout({
               ) : (
                 <a
                   href={crumb.href}
-                  className="hover:text-accent transition-colors duration-200"
+                  className="hover-accent"
                 >
                   {crumb.label}
                 </a>
@@ -76,12 +74,12 @@ export default function ContentLayout({
             </li>
           ))}
         </ol>
-      </nav>
+      </Container>
 
       {/* Hero */}
-      <header className="max-w-[1200px] mx-auto px-6 md:px-12 pt-10 pb-12 md:pt-16 md:pb-16">
+      <Container as="header" className="pt-10 pb-12 md:pt-16 md:pb-16">
         <FadeIn>
-          <h1 className="font-serif text-[clamp(36px,5vw,58px)] font-semibold leading-[1.1] text-site-text mb-4">
+          <h1 className="font-serif text-heading-lg font-semibold leading-[1.1] text-site-text mb-4">
             {title}
           </h1>
           {subtitle && (
@@ -90,16 +88,16 @@ export default function ContentLayout({
             </p>
           )}
         </FadeIn>
-      </header>
+      </Container>
 
       {/* Content */}
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 pb-20">
+      <Container className="pb-20">
         {children}
-      </div>
+      </Container>
 
       {/* CTA */}
       <section className="px-6 md:px-12 pb-20">
-        <div className="max-w-[1200px] mx-auto">
+        <Container className="!px-0">
           <FadeIn className="bg-sage-dark rounded-xl px-6 md:px-20 py-12 md:py-16 text-center">
             <h2 className="font-serif text-[clamp(28px,4vw,44px)] font-semibold leading-[1.1] text-white mb-4">
               Have a legal question?
@@ -115,7 +113,7 @@ export default function ContentLayout({
               Start Now — from €9.90
             </Button>
           </FadeIn>
-        </div>
+        </Container>
       </section>
 
       <Footer />

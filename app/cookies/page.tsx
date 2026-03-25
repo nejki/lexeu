@@ -1,28 +1,28 @@
-import { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
+import CompanyContactBlock from "@/components/CompanyContactBlock";
+import {
+  createLegalPageMetadata,
+  LEGAL_PAGES,
+  LEGAL_DATES,
+} from "@/app/legal-pages.config";
 
-export const metadata: Metadata = {
-  title: "Cookie Policy",
-  description:
-    "Cookie Policy for LexEU — learn about the cookies we use, their purpose, and how to manage them.",
-  alternates: { canonical: "https://www.lexeu.ai/cookies/" },
-};
+const page = LEGAL_PAGES.cookies;
 
-const breadcrumbs = [{ label: "Cookie Policy", href: "/cookies/" }];
+export const metadata = createLegalPageMetadata(page);
+
+const breadcrumbs = [{ label: page.title, href: page.slug }];
 
 export default function CookiesPage() {
   return (
     <ContentLayout
       breadcrumbs={breadcrumbs}
-      title="Cookie Policy"
-      subtitle="Learn about the cookies we use and how to manage them."
+      title={page.title}
+      subtitle={page.subtitle}
       article={{
-        title: "Cookie Policy",
-        description:
-          "Cookie Policy for LexEU — learn about the cookies we use, their purpose, and how to manage them.",
-        url: "/cookies/",
-        datePublished: "2026-03-01",
-        dateModified: "2026-03-24",
+        title: page.title,
+        description: page.description,
+        url: page.slug,
+        ...LEGAL_DATES,
       }}
     >
       <div className="legal-prose">
@@ -206,15 +206,7 @@ export default function CookiesPage() {
 
         <h2>7. Contact Us</h2>
         <p>If you have questions about our use of cookies:</p>
-        <p>
-          <strong>LexEU s.r.o.</strong>
-          <br />
-          Galvaniho 33A, 821 04 Bratislava - Ružinov, Slovak Republic
-          <br />
-          IČO: 56316585 | DIČ: 2122278818 | IČ DPH: SK2122278818
-          <br />
-          Email: <a href="mailto:info@lexeu.ai">info@lexeu.ai</a>
-        </p>
+        <CompanyContactBlock />
 
         <hr />
         <p>© 2026 LexEU s.r.o. All rights reserved.</p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Container } from "@/components/ui/Container";
 
 const STORAGE_KEY = "cookie_consent";
 
@@ -32,12 +33,12 @@ export default function CookieBanner() {
       aria-label="Cookie notice"
       className="fixed bottom-0 left-0 right-0 z-50 border-t border-site-border bg-sage-dark/95 backdrop-blur-sm"
     >
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      <Container className="py-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <p className="text-[13px] text-stone-mid flex-1 leading-[1.7]">
           We use cookies to improve your experience on this site.{" "}
           <a
             href="/cookies"
-            className="underline underline-offset-2 hover:text-accent transition-colors duration-200"
+            className="underline underline-offset-2 hover-accent"
           >
             Learn more
           </a>
@@ -57,7 +58,7 @@ export default function CookieBanner() {
             Accept
           </button>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

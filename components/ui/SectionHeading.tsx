@@ -40,7 +40,7 @@ export function SectionHeading({
       )}
       <h2
         className={twMerge(
-          "font-serif text-[clamp(36px,4vw,54px)] font-semibold leading-[1.1] text-site-text",
+          "font-serif text-heading-md font-semibold leading-[1.1] text-site-text",
           headingClassName,
         )}
       >

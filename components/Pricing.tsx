@@ -1,3 +1,4 @@
+import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
 
@@ -56,7 +57,7 @@ type ComparisonRow = (typeof comparison)[number];
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24">
+    <Container as="section" id="pricing" className="py-16 md:py-24">
       {/* Intro */}
       <div className="mb-14">
         <SectionHeading
@@ -64,7 +65,7 @@ export default function Pricing() {
           labelClassName="mb-4"
           title={<>One lawyer&apos;s hour — or a</>}
           highlight="full month of LexEU?"
-          headingClassName="text-[clamp(36px,4vw,52px)] mb-5"
+          headingClassName="text-heading-md mb-5"
           description={<>Lawyers across the EU charge €150–400 per hour. A simple contract review runs €300–500. A legal opinion on an employment dispute can cost over €1,000 before you&apos;ve even entered a courtroom. LexEU gives you cited, legislation-grounded answers and document drafts — starting at €1.98 per question.</>}
           descriptionClassName="text-[17px] text-site-mid leading-[1.7] max-w-2xl"
         />
@@ -83,7 +84,7 @@ export default function Pricing() {
                 : "bg-site-white hover:bg-warm-pale"
             }`}
           >
-            <p className={`text-[11px] font-semibold tracking-[0.12em] uppercase mb-5 ${plan.featured ? "text-white/60" : "text-site-muted"}`}>
+            <p className={`label-xs tracking-[0.12em] mb-5 ${plan.featured ? "text-white/60" : "text-site-muted"}`}>
               {plan.name}
             </p>
 
@@ -129,16 +130,16 @@ export default function Pricing() {
             <div className="space-y-4">
               {data.map((row) => (
                 <div key={row.label} className="border border-site-border rounded-lg p-5">
-                  <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted mb-3">
+                  <p className="label-xs text-site-muted mb-3">
                     {row.label}
                   </p>
                   <div className="flex justify-between items-baseline gap-4">
                     <div>
-                      <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-site-muted/60 mb-1">Lawyer</p>
+                      <p className="label-xs tracking-[0.08em] text-site-muted/60 mb-1">Lawyer</p>
                       <p className="text-[14px] text-site-muted">{row.lawyer}</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-accent/60 mb-1">LexEU</p>
+                      <p className="label-xs tracking-[0.08em] text-accent/60 mb-1">LexEU</p>
                       <p className="text-[14px] text-accent font-medium">{row.lexeu}</p>
                     </div>
                   </div>
@@ -150,9 +151,9 @@ export default function Pricing() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="border-b border-site-border">
-                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted"></th>
-                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted">Lawyer</th>
-                  <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-accent">LexEU</th>
+                  <th className="text-left pb-4 px-4 label-xs text-site-muted"></th>
+                  <th className="text-left pb-4 px-4 label-xs text-site-muted">Lawyer</th>
+                  <th className="text-left pb-4 px-4 label-xs text-accent">LexEU</th>
                 </tr>
               </thead>
               <tbody>
@@ -173,6 +174,6 @@ export default function Pricing() {
       <p className="mt-10 text-center text-[13px] text-site-muted leading-[1.7] max-w-2xl mx-auto">
         LexEU provides AI-generated legal information and document drafts grounded in EU legislation and case law. It is not a substitute for advice from a licensed attorney. For binding legal decisions, court representation, or complex disputes, always consult a qualified legal professional.
       </p>
-    </section>
+    </Container>
   );
 }

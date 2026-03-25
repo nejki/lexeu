@@ -1,28 +1,28 @@
-import { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
+import CompanyContactBlock from "@/components/CompanyContactBlock";
+import {
+  createLegalPageMetadata,
+  LEGAL_PAGES,
+  LEGAL_DATES,
+} from "@/app/legal-pages.config";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description:
-    "Privacy Policy for LexEU — how we collect, use, and protect your personal data under GDPR.",
-  alternates: { canonical: "https://www.lexeu.ai/privacy/" },
-};
+const page = LEGAL_PAGES.privacy;
 
-const breadcrumbs = [{ label: "Privacy Policy", href: "/privacy/" }];
+export const metadata = createLegalPageMetadata(page);
+
+const breadcrumbs = [{ label: page.title, href: page.slug }];
 
 export default function PrivacyPage() {
   return (
     <ContentLayout
       breadcrumbs={breadcrumbs}
-      title="Privacy Policy"
-      subtitle="How we collect, use, and protect your personal data."
+      title={page.title}
+      subtitle={page.subtitle}
       article={{
-        title: "Privacy Policy",
-        description:
-          "Privacy Policy for LexEU — how we collect, use, and protect your personal data under GDPR.",
-        url: "/privacy/",
-        datePublished: "2026-03-01",
-        dateModified: "2026-03-24",
+        title: page.title,
+        description: page.description,
+        url: page.slug,
+        ...LEGAL_DATES,
       }}
     >
       <div className="legal-prose">
@@ -49,15 +49,7 @@ export default function PrivacyPage() {
 
         <h2>2. Data Controller</h2>
         <p>The data controller responsible for your personal data is:</p>
-        <p>
-          <strong>LexEU s.r.o.</strong>
-          <br />
-          Galvaniho 33A, 821 04 Bratislava - Ružinov, Slovak Republic
-          <br />
-          IČO: 56316585 | DIČ: 2122278818 | IČ DPH: SK2122278818
-          <br />
-          Email: <a href="mailto:info@lexeu.ai">info@lexeu.ai</a>
-        </p>
+        <CompanyContactBlock />
 
         <h2>3. Data We Collect</h2>
         <p>We collect the following categories of personal data:</p>
@@ -395,15 +387,7 @@ export default function PrivacyPage() {
 
         <h2>13. Contact Us</h2>
         <p>For any privacy-related questions or to exercise your rights:</p>
-        <p>
-          <strong>LexEU s.r.o.</strong>
-          <br />
-          Galvaniho 33A, 821 04 Bratislava - Ružinov, Slovak Republic
-          <br />
-          IČO: 56316585 | DIČ: 2122278818 | IČ DPH: SK2122278818
-          <br />
-          Email: <a href="mailto:info@lexeu.ai">info@lexeu.ai</a>
-        </p>
+        <CompanyContactBlock />
 
         <hr />
         <p>© 2026 LexEU s.r.o. All rights reserved.</p>

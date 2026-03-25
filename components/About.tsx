@@ -1,3 +1,4 @@
+import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 import { FadeIn } from "@/components/ui/FadeIn";
@@ -23,7 +24,7 @@ const cards = [
 
 export default function About() {
   return (
-    <section id="purpose" className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
+    <Container as="section" id="purpose" className="py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
       {/* Left text */}
       <FadeIn>
         <SectionHeading
@@ -43,6 +44,6 @@ export default function About() {
           </FadeIn>
         ))}
       </div>
-    </section>
+    </Container>
   );
 }

@@ -1,3 +1,4 @@
+import { Container } from "@/components/ui/Container";
 import Logo from "@/components/Logo";
 
 const col1 = [
@@ -53,7 +54,7 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="border-t border-site-border">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-16 pb-10">
+      <Container className="pt-16 pb-10">
         {/* Top */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 mb-14">
           {/* Brand */}
@@ -81,7 +82,7 @@ export default function Footer() {
 
           {/* Column 1: Links */}
           <div>
-            <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
+            <p className="label-xs tracking-[0.14em] text-site-text mb-5">
               Links
             </p>
             <ul className="flex flex-col gap-1">
@@ -89,7 +90,7 @@ export default function Footer() {
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="py-1 text-[14px] text-site-muted hover:text-accent transition-colors duration-200"
+                    className="py-1 text-[14px] text-site-muted hover-accent"
                   >
                     {l.label}
                   </a>
@@ -100,7 +101,7 @@ export default function Footer() {
 
           {/* Column 2: Legal */}
           <div>
-            <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
+            <p className="label-xs tracking-[0.14em] text-site-text mb-5">
               Legal
             </p>
             <ul className="flex flex-col gap-1">
@@ -108,7 +109,7 @@ export default function Footer() {
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="py-1 text-[14px] text-site-muted hover:text-accent transition-colors duration-200"
+                    className="py-1 text-[14px] text-site-muted hover-accent"
                   >
                     {l.label}
                   </a>
@@ -119,7 +120,7 @@ export default function Footer() {
 
           {/* Column 3: Company */}
           <div>
-            <p className="text-[11px] font-semibold tracking-[0.14em] uppercase text-site-text mb-5">
+            <p className="label-xs tracking-[0.14em] text-site-text mb-5">
               Company
             </p>
             <ul className="flex flex-col gap-3 text-[14px] text-site-muted">
@@ -127,7 +128,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@lexeu.ai"
-                  className="hover:text-accent transition-colors duration-200"
+                  className="hover-accent"
                 >
                   info@lexeu.ai
                 </a>
@@ -151,7 +152,7 @@ export default function Footer() {
             © 2025 LexEU. All rights reserved.
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

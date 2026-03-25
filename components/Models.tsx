@@ -1,4 +1,5 @@
-import { SectionLabel } from "@/components/ui/SectionLabel";
+import { Container } from "@/components/ui/Container";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ResponsiveTable } from "@/components/ui/ResponsiveTable";
 
@@ -52,15 +53,17 @@ type Model = (typeof models)[number];
 export default function Models() {
   return (
     <section id="models" className="bg-site-white border-t border-site-border py-16 md:py-24">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+      <Container>
         {/* Header */}
         <FadeIn>
           <div className="mb-14">
-            <SectionLabel className="mb-4">Models</SectionLabel>
-            <h2 className="font-serif text-[clamp(32px,4vw,48px)] font-semibold leading-[1.1] text-site-text mb-10">
-              Six specialised agents.{" "}
-              <em className="italic text-accent">One for each area of law.</em>
-            </h2>
+            <SectionHeading
+              label="Models"
+              labelClassName="mb-4"
+              title="Six specialised agents."
+              highlight="One for each area of law."
+              headingClassName="text-heading-sm mb-10"
+            />
             <div className="max-w-2xl mb-14">
               <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] font-semibold leading-[1.2] text-site-text mb-3">
                 Not just an answer — a legal position with reasoning and citations.
@@ -90,7 +93,7 @@ export default function Models() {
                       {m.name}
                     </h3>
                     <p className="text-[14px] text-site-mid leading-relaxed mb-4">{m.desc}</p>
-                    <span className={`inline-block px-3 py-1 rounded-sm text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
+                    <span className={`inline-block px-3 py-1 rounded-sm label-xs tracking-[0.06em] ${m.tagStyle}`}>
                       {m.tag}
                     </span>
                   </div>
@@ -101,10 +104,10 @@ export default function Models() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-site-border">
-                    <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-14">#</th>
-                    <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-44">Model</th>
-                    <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted">Description</th>
-                    <th className="text-left pb-4 px-4 text-[11px] font-semibold tracking-[0.1em] uppercase text-site-muted w-36">Category</th>
+                    <th className="text-left pb-4 px-4 label-xs text-site-muted w-14">#</th>
+                    <th className="text-left pb-4 px-4 label-xs text-site-muted w-44">Model</th>
+                    <th className="text-left pb-4 px-4 label-xs text-site-muted">Description</th>
+                    <th className="text-left pb-4 px-4 label-xs text-site-muted w-36">Category</th>
                     <th className="w-8"></th>
                   </tr>
                 </thead>
@@ -122,7 +125,7 @@ export default function Models() {
                       </td>
                       <td className="py-6 px-4 text-[14px] text-site-mid leading-relaxed">{m.desc}</td>
                       <td className="py-6 px-4">
-                        <span className={`inline-block px-3 py-1 rounded-sm text-[11px] font-semibold tracking-[0.06em] uppercase ${m.tagStyle}`}>
+                        <span className={`inline-block px-3 py-1 rounded-sm label-xs tracking-[0.06em] ${m.tagStyle}`}>
                           {m.tag}
                         </span>
                       </td>
@@ -136,7 +139,7 @@ export default function Models() {
             )}
           />
         </FadeIn>
-      </div>
+      </Container>
     </section>
   );
 }

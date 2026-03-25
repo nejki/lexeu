@@ -30,6 +30,16 @@
   }
 }
 
+@layer components {
+  .label-xs {
+    @apply text-[11px] font-semibold tracking-[0.1em] uppercase;
+  }
+
+  .hover-accent {
+    @apply hover:text-accent transition-colors duration-200;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -42,17 +52,17 @@
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 600;
   line-height: 1.2;
-  color: #2A2520;
+  color: theme('colors.site.text');
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #E0D9D0;
+  border-bottom: 1px solid theme('colors.site.border');
 }
 
 .legal-prose h3 {
   font-size: 17px;
   font-weight: 600;
-  color: #2A2520;
+  color: theme('colors.site.text');
   margin-top: 1.75rem;
   margin-bottom: 0.5rem;
 }
@@ -60,7 +70,7 @@
 .legal-prose p {
   font-size: 15px;
   line-height: 1.75;
-  color: #5C5650;
+  color: theme('colors.site.mid');
   margin-bottom: 1rem;
 }
 
@@ -68,7 +78,7 @@
 .legal-prose ol {
   font-size: 15px;
   line-height: 1.75;
-  color: #5C5650;
+  color: theme('colors.site.mid');
   margin-bottom: 1rem;
   padding-left: 1.5rem;
 }
@@ -81,18 +91,18 @@
 }
 
 .legal-prose a {
-  color: #BF7A3B;
+  color: theme('colors.accent.DEFAULT');
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color 0.2s;
 }
 
 .legal-prose a:hover {
-  color: #D08E55;
+  color: theme('colors.accent.light');
 }
 
 .legal-prose strong {
-  color: #2A2520;
+  color: theme('colors.site.text');
   font-weight: 600;
 }
 
@@ -106,16 +116,16 @@
 .legal-prose thead th {
   text-align: left;
   font-weight: 600;
-  color: #2A2520;
+  color: theme('colors.site.text');
   padding: 10px 14px;
-  border-bottom: 2px solid #E0D9D0;
-  background: #F5EEE3;
+  border-bottom: 2px solid theme('colors.site.border');
+  background: theme('colors.warm.pale');
 }
 
 .legal-prose tbody td {
   padding: 10px 14px;
-  border-bottom: 1px solid #E0D9D0;
-  color: #5C5650;
+  border-bottom: 1px solid theme('colors.site.border');
+  color: theme('colors.site.mid');
   line-height: 1.6;
 }
 
@@ -125,7 +135,7 @@
 
 .legal-prose hr {
   border: none;
-  border-top: 1px solid #E0D9D0;
+  border-top: 1px solid theme('colors.site.border');
   margin: 2rem 0;
 }
 

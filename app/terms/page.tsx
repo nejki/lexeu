@@ -1,28 +1,28 @@
-import { Metadata } from "next";
 import ContentLayout from "@/components/ContentLayout";
+import CompanyContactBlock from "@/components/CompanyContactBlock";
+import {
+  createLegalPageMetadata,
+  LEGAL_PAGES,
+  LEGAL_DATES,
+} from "@/app/legal-pages.config";
 
-export const metadata: Metadata = {
-  title: "Terms of Use",
-  description:
-    "Terms of Use for LexEU — AI-powered legal information service for EU law. Read our terms before using the platform.",
-  alternates: { canonical: "https://www.lexeu.ai/terms/" },
-};
+const page = LEGAL_PAGES.terms;
 
-const breadcrumbs = [{ label: "Terms of Use", href: "/terms/" }];
+export const metadata = createLegalPageMetadata(page);
+
+const breadcrumbs = [{ label: page.title, href: page.slug }];
 
 export default function TermsPage() {
   return (
     <ContentLayout
       breadcrumbs={breadcrumbs}
-      title="Terms of Use"
-      subtitle="Please read these terms carefully before using the LexEU service."
+      title={page.title}
+      subtitle={page.subtitle}
       article={{
-        title: "Terms of Use",
-        description:
-          "Terms of Use for LexEU — AI-powered legal information service for EU law.",
-        url: "/terms/",
-        datePublished: "2026-03-01",
-        dateModified: "2026-03-24",
+        title: page.title,
+        description: page.description,
+        url: page.slug,
+        ...LEGAL_DATES,
       }}
     >
       <div className="legal-prose">
@@ -45,15 +45,7 @@ export default function TermsPage() {
 
         <h2>2. Who We Are</h2>
         <p>The Service is operated by:</p>
-        <p>
-          <strong>LexEU s.r.o.</strong>
-          <br />
-          Galvaniho 33A, 821 04 Bratislava - Ružinov, Slovak Republic
-          <br />
-          IČO: 56316585 | DIČ: 2122278818 | IČ DPH: SK2122278818
-          <br />
-          Email: <a href="mailto:info@lexeu.ai">info@lexeu.ai</a>
-        </p>
+        <CompanyContactBlock />
         <p>
           References to &ldquo;LexEU,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo; in these Terms
           refer to LexEU s.r.o.
@@ -377,15 +369,7 @@ export default function TermsPage() {
 
         <h2>18. Contact Us</h2>
         <p>For questions, concerns, or support:</p>
-        <p>
-          <strong>LexEU s.r.o.</strong>
-          <br />
-          Galvaniho 33A, 821 04 Bratislava - Ružinov, Slovak Republic
-          <br />
-          IČO: 56316585 | DIČ: 2122278818 | IČ DPH: SK2122278818
-          <br />
-          Email: <a href="mailto:info@lexeu.ai">info@lexeu.ai</a>
-        </p>
+        <CompanyContactBlock />
 
         <hr />
         <p>© 2026 LexEU s.r.o. All rights reserved.</p>

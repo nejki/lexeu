@@ -41,6 +41,11 @@ const config: Config = {
           border: "#E0D9D0",
         },
       },
+      fontSize: {
+        'heading-sm': 'clamp(32px, 4vw, 48px)',
+        'heading-md': 'clamp(36px, 4vw, 54px)',
+        'heading-lg': 'clamp(36px, 5vw, 58px)',
+      },
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

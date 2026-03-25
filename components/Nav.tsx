@@ -84,7 +84,7 @@ export default function Nav() {
           {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-1 text-site-mid hover:text-accent transition-colors duration-200"
+            className="md:hidden p-1 text-site-mid hover-accent"
             aria-label={open ? "Close menu" : "Open menu"}
           >
             {open ? <IconX className="w-5 h-5" /> : <IconMenu className="w-5 h-5" />}
